@@ -517,6 +517,10 @@ window.addEventListener('scroll',function(){if(nav)nav.classList.toggle('scrolle
 // ═══ REVEAL ═══
 var revObs=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vis');revObs.unobserve(e.target)}})},{threshold:0.05,rootMargin:'50px'});
 document.querySelectorAll('.reveal').forEach(function(el){revObs.observe(el)});
+// Force reveal for elements already in viewport
+setTimeout(function(){document.querySelectorAll('.reveal:not(.vis)').forEach(function(el){var r=el.getBoundingClientRect();if(r.top<innerHeight*1.2)el.classList.add('vis')})},300);
+setTimeout(function(){document.querySelectorAll('.reveal:not(.vis)').forEach(function(el){var r=el.getBoundingClientRect();if(r.top<innerHeight*1.2)el.classList.add('vis')})},1000);
+window.addEventListener('scroll',function(){document.querySelectorAll('.reveal:not(.vis)').forEach(function(el){var r=el.getBoundingClientRect();if(r.top<innerHeight*0.95)el.classList.add('vis')})},{passive:true});
 // Force check after load
 setTimeout(function(){document.querySelectorAll('.reveal:not(.vis)').forEach(function(el){var r=el.getBoundingClientRect();if(r.top<innerHeight*1.1)el.classList.add('vis')})},200);
 // Scroll fallback
@@ -756,6 +760,16 @@ function draw(){
   requestAnimationFrame(draw)
 }
 draw();
+
+// Nuclear fallback: reveal all after 2s
+setTimeout(function(){document.querySelectorAll('.reveal:not(.vis)').forEach(function(el){el.classList.add('vis')})},2000);
+// And on first user interaction
+var revealed=false;
+function revealAll(){if(revealed)return;revealed=true;document.querySelectorAll('.reveal:not(.vis)').forEach(function(el){el.classList.add('vis')})}
+document.addEventListener('scroll',revealAll,{once:true,passive:true});
+document.addEventListener('mousemove',revealAll,{once:true,passive:true});
+document.addEventListener('touchstart',revealAll,{once:true,passive:true});
+
 </script>
 </body>
 </html>
