@@ -26,31 +26,31 @@ ul{list-style:none}
 
 /* ========== THEME VARIABLES ========== */
 [data-theme="lullaby"]{
-  --bg:#1a0f2e;--bg-alt:#241a3d;--card-bg:#2a1f45;--card-bg-hover:#352a55;
-  --text:#f0e8e0;--text-muted:#b8a8a0;--heading:#fff;
-  --accent:#d4a56f;--accent-glow:#e8b87f;--accent-dim:rgba(212,165,111,0.15);
-  --gradient:linear-gradient(135deg,#d4a56f 0%,#c4897c 50%,#e8b87f 100%);
-  --particle-color:212,165,111;--nav-bg:rgba(26,15,46,0.85);
-  --border:rgba(212,165,111,0.12);--divider:rgba(212,165,111,0.08);
-  --hero-overlay:linear-gradient(135deg,rgba(26,15,46,0.92) 0%,rgba(42,31,69,0.85) 100%);
+ --bg:#1a0f2e;--bg-alt:#241a3d;--card-bg:#2a1f45;--card-bg-hover:#352a55;
+ --text:#f0e8e0;--text-muted:#b8a8a0;--heading:#fff;
+ --accent:#d4a56f;--accent-glow:#e8b87f;--accent-dim:rgba(212,165,111,0.15);
+ --gradient:linear-gradient(135deg,#d4a56f 0%,#c4897c 50%,#e8b87f 100%);
+ --particle-color:212,165,111;--nav-bg:rgba(26,15,46,0.85);
+ --border:rgba(212,165,111,0.12);--divider:rgba(212,165,111,0.08);
+ --hero-overlay:linear-gradient(135deg,rgba(26,15,46,0.92) 0%,rgba(42,31,69,0.85) 100%);
 }
 [data-theme="sunshine"]{
-  --bg:#fdf8f0;--bg-alt:#f5e8d8;--card-bg:rgba(255,255,255,0.9);--card-bg-hover:rgba(255,255,255,1);
-  --text:#2c1a0f;--text-muted:#8a5f40;--heading:#1a0f05;
-  --accent:#e6aca0;--accent-glow:#f4b8aa;--accent-dim:rgba(230,172,160,0.15);
-  --gradient:linear-gradient(135deg,#e6aca0 0%,#c4897c 50%,#f4b8aa 100%);
-  --particle-color:230,172,160;--nav-bg:rgba(253,248,240,0.9);
-  --border:rgba(230,172,160,0.15);--divider:rgba(230,172,160,0.1);
-  --hero-overlay:linear-gradient(135deg,rgba(44,26,15,0.85) 0%,rgba(80,40,20,0.75) 100%);
+ --bg:#fdf8f0;--bg-alt:#f5e8d8;--card-bg:rgba(255,255,255,0.9);--card-bg-hover:rgba(255,255,255,1);
+ --text:#2c1a0f;--text-muted:#8a5f40;--heading:#1a0f05;
+ --accent:#e6aca0;--accent-glow:#f4b8aa;--accent-dim:rgba(230,172,160,0.15);
+ --gradient:linear-gradient(135deg,#e6aca0 0%,#c4897c 50%,#f4b8aa 100%);
+ --particle-color:230,172,160;--nav-bg:rgba(253,248,240,0.9);
+ --border:rgba(230,172,160,0.15);--divider:rgba(230,172,160,0.1);
+ --hero-overlay:linear-gradient(135deg,rgba(44,26,15,0.85) 0%,rgba(80,40,20,0.75) 100%);
 }
 [data-theme="garden"]{
-  --bg:#f0f5ee;--bg-alt:#e0ebe0;--card-bg:rgba(255,255,255,0.9);--card-bg-hover:rgba(255,255,255,1);
-  --text:#1a2f1a;--text-muted:#5a7a50;--heading:#0f1f0f;
-  --accent:#e8a8b0;--accent-glow:#f0b8c0;--accent-dim:rgba(232,168,176,0.15);
-  --gradient:linear-gradient(135deg,#e8a8b0 0%,#c89898 50%,#f0c0c8 100%);
-  --particle-color:232,168,176;--nav-bg:rgba(240,245,238,0.9);
-  --border:rgba(232,168,176,0.15);--divider:rgba(232,168,176,0.1);
-  --hero-overlay:linear-gradient(135deg,rgba(26,47,26,0.85) 0%,rgba(40,60,40,0.75) 100%);
+ --bg:#f0f5ee;--bg-alt:#e0ebe0;--card-bg:rgba(255,255,255,0.9);--card-bg-hover:rgba(255,255,255,1);
+ --text:#1a2f1a;--text-muted:#5a7a50;--heading:#0f1f0f;
+ --accent:#e8a8b0;--accent-glow:#f0b8c0;--accent-dim:rgba(232,168,176,0.15);
+ --gradient:linear-gradient(135deg,#e8a8b0 0%,#c89898 50%,#f0c0c8 100%);
+ --particle-color:232,168,176;--nav-bg:rgba(240,245,238,0.9);
+ --border:rgba(232,168,176,0.15);--divider:rgba(232,168,176,0.1);
+ --hero-overlay:linear-gradient(135deg,rgba(26,47,26,0.85) 0%,rgba(40,60,40,0.75) 100%);
 }
 
 body{background:var(--bg);color:var(--text)}
@@ -100,128 +100,7 @@ background:transparent;backdrop-filter:blur(0px);transition:all 0.4s}
 
 /* ========== HERO ========== */
 .hero{position:relative;min-height:100vh;display:flex;align-items:center;justify-content:center;overflow:hidden}
-.hero-bg{position:absolute;inset:0;background-image:url('http://preciouscare.us/images/Building-800x600.JPG');background-size:cover;background-position:center;background-repeat:no-repeat}
-.hero-overlay{position:absolute;inset:0;background:var(--hero-overlay)}
-.hero-content{position:relative;z-index:2;text-align:center;max-width:900px;padding:0 24px}
-.hero-badge{display:inline-block;padding:6px 20px;border:1px solid var(--accent);border-radius:100px;font-size:0.75rem;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:var(--accent);margin-bottom:24px;animation:fadeInUp 0.8s ease 0.2s both}
-.hero-title{font-family:'Orbitron',sans-serif;font-size:clamp(2.8rem,7vw,5.5rem);font-weight:900;color:var(--heading);letter-spacing:4px;line-height:1.1;margin-bottom:16px;animation:fadeInUp 0.8s ease 0.4s both}
-.hero-title .shimmer{background:var(--gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;background-size:200% 100%;animation:shimmer 3s ease infinite}
-@keyframes shimmer{0%,100%{background-position:0% 50%}50%{background-position:100% 50%}}
-.hero-subtitle{font-size:clamp(1rem,2.5vw,1.3rem);color:var(--text-muted);max-width:650px;margin:0 auto 40px;font-weight:300;animation:fadeInUp 0.8s ease 0.6s both}
-.hero-actions{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;animation:fadeInUp 0.8s ease 0.8s both}
-
-/* ========== BUTTONS ========== */
-.btn{display:inline-flex;align-items:center;gap:8px;padding:14px 32px;border-radius:8px;font-size:0.9rem;font-weight:600;letter-spacing:1px;text-transform:uppercase;cursor:pointer;border:none;transition:all 0.3s;position:relative;overflow:hidden}
-.btn-primary{background:var(--gradient);color:#fff;box-shadow:0 4px 20px rgba(var(--particle-color),0.3)}
-.btn-primary:hover{transform:translateY(-2px);box-shadow:0 8px 30px rgba(var(--particle-color),0.4)}
-.btn-outline{background:transparent;border:2px solid var(--accent);color:var(--accent)}
-.btn-outline:hover{background:var(--accent-dim);transform:translateY(-2px)}
-.btn .ripple{position:absolute;border-radius:50%;background:rgba(255,255,255,0.3);transform:scale(0);animation:ripple 0.6s linear}
-@keyframes ripple{to{transform:scale(4);opacity:0}}
-
-/* ========== STATS BAR ========== */
-.stats{background:var(--bg-alt);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:60px 24px;position:relative;z-index:2}
-.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:32px;max-width:1100px;margin:0 auto}
-.stat-item{text-align:center}
-.stat-number{font-family:'Orbitron',sans-serif;font-size:clamp(2rem,4vw,3.2rem);font-weight:900;background:var(--gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-.stat-label{font-size:0.85rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:2px;margin-top:8px;font-weight:500}
-
-/* ========== SECTION STYLES ========== */
-.section{padding:100px 24px;position:relative;z-index:2}
-.section-dark{background:var(--bg-alt)}
-.container{max-width:1200px;margin:0 auto}
-.section-header{text-align:center;margin-bottom:64px}
-.section-label{display:inline-block;font-size:0.75rem;font-weight:600;letter-spacing:4px;text-transform:uppercase;color:var(--accent);margin-bottom:12px}
-.section-title{font-family:'Playfair Display',serif;font-size:clamp(2rem,4vw,3rem);font-weight:700;color:var(--heading);margin-bottom:16px}
-.section-subtitle{font-size:1.05rem;color:var(--text-muted);max-width:600px;margin:0 auto;font-weight:300}
-
-/* ========== CAPABILITIES CARDS ========== */
-.capabilities-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:28px}
-.cap-card{background:var(--card-bg);border-radius:16px;padding:40px 32px;border:1px solid var(--border);transition:all 0.4s;cursor:default;position:relative;overflow:hidden}
-.cap-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--gradient);transform:scaleX(0);transition:transform 0.4s;transform-origin:left}
-.cap-card:hover{background:var(--card-bg-hover);transform:translateY(-6px);box-shadow:0 20px 40px rgba(0,0,0,0.3)}
-.cap-card:hover::before{transform:scaleX(1)}
-.cap-icon{width:56px;height:56px;border-radius:12px;background:var(--accent-dim);display:flex;align-items:center;justify-content:center;margin-bottom:20px}
-.cap-icon svg{width:28px;height:28px;stroke:var(--accent);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
-.cap-card h3{font-family:'Playfair Display',serif;font-size:1.3rem;color:var(--heading);margin-bottom:12px}
-.cap-card p{font-size:0.92rem;color:var(--text-muted);line-height:1.7}
-
-/* ========== ABOUT ========== */
-.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
-.about-image{border-radius:16px;overflow:hidden;position:relative;box-shadow:0 20px 60px rgba(0,0,0,0.4)}
-.about-image img{width:100%;height:400px;object-fit:cover;transition:transform 0.6s}
-.about-image:hover img{transform:scale(1.03)}
-.about-image::after{content:'';position:absolute;inset:0;border:1px solid var(--border);border-radius:16px;pointer-events:none}
-.about-text h3{font-family:'Playfair Display',serif;font-size:2rem;color:var(--heading);margin-bottom:20px}
-.about-text p{margin-bottom:16px;color:var(--text-muted);font-size:0.95rem}
-.about-badges{display:flex;gap:16px;margin-top:28px;flex-wrap:wrap}
-.about-badge{display:flex;align-items:center;gap:8px;padding:10px 20px;background:var(--accent-dim);border-radius:8px;border:1px solid var(--border)}
-.about-badge svg{width:20px;height:20px;stroke:var(--accent);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
-.about-badge span{font-size:0.85rem;font-weight:600;color:var(--accent);text-transform:uppercase;letter-spacing:1px}
-
-/* ========== SERVICE DETAIL SECTIONS ========== */
-.service-detail{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;margin-bottom:80px}
-.service-detail:last-child{margin-bottom:0}
-.service-detail.reverse{direction:rtl}
-.service-detail.reverse > *{direction:ltr}
-.service-images{display:grid;grid-template-columns:1fr 1fr;gap:12px;border-radius:16px;overflow:hidden}
-.service-images img{width:100%;height:200px;object-fit:cover;border-radius:8px;transition:transform 0.4s;cursor:default}
-.service-images img:hover{transform:scale(1.05)}
-.service-images img:first-child{grid-column:1/-1;height:260px}
-.service-info .service-tag{font-size:0.72rem;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:var(--accent);margin-bottom:8px}
-.service-info h3{font-family:'Playfair Display',serif;font-size:1.8rem;color:var(--heading);margin-bottom:16px}
-.service-info p{color:var(--text-muted);font-size:0.95rem;margin-bottom:16px}
-.service-specs{display:flex;flex-direction:column;gap:10px;margin-top:20px}
-.service-spec{display:flex;align-items:center;gap:10px;font-size:0.88rem;color:var(--text)}
-.service-spec svg{width:18px;height:18px;stroke:var(--accent);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0}
-
-/* ========== ISO SECTION ========== */
-.iso-section{text-align:center;padding:80px 24px;background:var(--accent-dim);border-top:1px solid var(--border);border-bottom:1px solid var(--border);position:relative;z-index:2}
-.iso-badge{display:inline-flex;align-items:center;gap:16px;padding:24px 48px;background:var(--card-bg);border-radius:16px;border:2px solid var(--accent);box-shadow:0 10px 40px rgba(var(--particle-color),0.15)}
-.iso-badge svg{width:48px;height:48px;stroke:var(--accent);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
-.iso-badge-text{text-align:left}
-.iso-badge-text h3{font-family:'Orbitron',sans-serif;font-size:1.4rem;font-weight:700;color:var(--heading);letter-spacing:2px}
-.iso-badge-text p{font-size:0.85rem;color:var(--text-muted);margin-top:4px}
-
-/* ========== CONTACT ========== */
-.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start}
-.contact-info h3{font-family:'Playfair Display',serif;font-size:2rem;color:var(--heading);margin-bottom:20px}
-.contact-info p{color:var(--text-muted);margin-bottom:24px;font-size:0.95rem}
-.contact-details{display:flex;flex-direction:column;gap:16px}
-.contact-item{display:flex;align-items:center;gap:14px}
-.contact-item svg{width:22px;height:22px;stroke:var(--accent);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0}
-.contact-item span{color:var(--text);font-size:0.95rem}
-.contact-item a{color:var(--accent)}
-.contact-item a:hover{color:var(--accent-glow)}
-.contact-form{background:var(--card-bg);border-radius:16px;padding:40px;border:1px solid var(--border)}
-.form-group{margin-bottom:20px}
-.form-group label{display:block;font-size:0.82rem;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:var(--text-muted);margin-bottom:8px}
-.form-group input,.form-group textarea,.form-group select{width:100%;padding:14px 18px;background:var(--bg);border:1px solid var(--border);border-radius:8px;color:var(--text);font-family:'Inter',sans-serif;font-size:0.95rem;transition:border-color 0.3s,box-shadow 0.3s;outline:none}
-.form-group input:focus,.form-group textarea:focus,.form-group select:focus{border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-dim)}
-.form-group textarea{resize:vertical;min-height:120px}
-.form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-
-/* ========== FOOTER ========== */
-.footer{background:var(--bg-alt);border-top:1px solid var(--border);padding:60px 24px 30px;position:relative;z-index:2}
-.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:40px;max-width:1200px;margin:0 auto}
-.footer-brand .footer-logo{font-family:'Orbitron',sans-serif;font-weight:900;font-size:1.3rem;color:var(--heading);letter-spacing:3px;margin-bottom:12px}
-.footer-brand .footer-logo span{background:var(--gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-.footer-brand p{color:var(--text-muted);font-size:0.88rem;max-width:320px}
-.footer-col h4{font-size:0.78rem;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--accent);margin-bottom:16px}
-.footer-col a{display:block;color:var(--text-muted);font-size:0.88rem;padding:4px 0;transition:color 0.3s,padding-left 0.3s}
-.footer-col a:hover{color:var(--accent);padding-left:6px}
-.footer-bottom{max-width:1200px;margin:40px auto 0;padding-top:20px;border-top:1px solid var(--divider);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
-.footer-bottom p{color:var(--text-muted);font-size:0.78rem}
-.footer-bottom a{color:var(--accent)}
-
-/* ========== THEME SWITCHER (right rail) ========== */
-.theme-switcher{position:fixed;right:20px;top:50%;transform:translateY(-50%);z-index:1001;display:flex;flex-direction:column;align-items:center;gap:10px}
-.theme-label{writing-mode:vertical-rl;font-size:0.65rem;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--text-muted);margin-bottom:4px}
-.theme-dot{width:16px;height:16px;border-radius:50%;cursor:pointer;border:2px solid transparent;transition:all 0.3s;position:relative}
-.theme-dot::after{content:attr(data-name);position:absolute;right:28px;top:50%;transform:translateY(-50%);font-size:0.7rem;font-weight:600;color:var(--text-muted);white-space:nowrap;opacity:0;transition:opacity 0.3s;pointer-events:none}
-.theme-dot:hover::after{opacity:1}
-.theme-dot.active{border-color:var(--heading);transform:scale(1.25)}
-.theme-dot[data-theme="lullaby"]{background:linear-gradient(135deg,#e8820c,#ff6b00)}
+.hero-bg{position:absolute;inset:0;background-image:url('https://images.unsplash.com/photo-1587616211892-f743fcca64f9?w=400"lullaby"]{background:linear-gradient(135deg,#e8820c,#ff6b00)}
 .theme-dot[data-theme="sunshine"]{background:linear-gradient(135deg,#3d8bfd,#1e5bcc)}
 .theme-dot[data-theme="garden"]{background:linear-gradient(135deg,#e53935,#b71c1c)}
 
@@ -303,65 +182,65 @@ background:transparent;backdrop-filter:blur(0px);transition:all 0.4s}
 
 /* ========== RESPONSIVE ========== */
 @media(max-width:900px){
-  .nav-links{display:none}
-  .hamburger{display:flex}
-  .stats-grid{grid-template-columns:repeat(2,1fr);gap:24px}
-  .about-grid,.contact-grid,.service-detail,.service-detail.reverse{grid-template-columns:1fr;direction:ltr}
-  .service-detail.reverse > *{direction:ltr}
-  .footer-grid{grid-template-columns:1fr}
-  .form-row{grid-template-columns:1fr}
-  .hero-title{letter-spacing:2px}
-  .theme-switcher{right:12px}
-  .copy-switcher{left:12px;padding:10px 6px}
-  .copy-dot{width:24px;height:24px}
-  .copy-letter{font-size:0.6rem}
+ .nav-links{display:none}
+ .hamburger{display:flex}
+ .stats-grid{grid-template-columns:repeat(2,1fr);gap:24px}
+ .about-grid,.contact-grid,.service-detail,.service-detail.reverse{grid-template-columns:1fr;direction:ltr}
+ .service-detail.reverse > *{direction:ltr}
+ .footer-grid{grid-template-columns:1fr}
+ .form-row{grid-template-columns:1fr}
+ .hero-title{letter-spacing:2px}
+ .theme-switcher{right:12px}
+ .copy-switcher{left:12px;padding:10px 6px}
+ .copy-dot{width:24px;height:24px}
+ .copy-letter{font-size:0.6rem}
 }
 @media(max-width:480px){
-  .section{padding:60px 16px}
-  .nav{padding:12px 16px}
-  .nav.scrolled{padding:10px 16px}
-  .hero-actions{flex-direction:column;align-items:center}
-  .stats-grid{grid-template-columns:1fr 1fr}
-  .iso-badge{flex-direction:column;text-align:center;padding:24px}
-  .iso-badge-text{text-align:center}
-  .precious-toggle{bottom:16px;right:12px}
-  .precious-toggle-btn{width:40px;height:40px}
+ .section{padding:60px 16px}
+ .nav{padding:12px 16px}
+ .nav.scrolled{padding:10px 16px}
+ .hero-actions{flex-direction:column;align-items:center}
+ .stats-grid{grid-template-columns:1fr 1fr}
+ .iso-badge{flex-direction:column;text-align:center;padding:24px}
+ .iso-badge-text{text-align:center}
+ .precious-toggle{bottom:16px;right:12px}
+ .precious-toggle-btn{width:40px;height:40px}
 }
 
 /* ========== PRINT ========== */
 @media print{
-  .nav,.theme-switcher,.copy-switcher,.precious-toggle,#particles,#cursor-glow,#scroll-progress,#loader,.hamburger,.mobile-menu{display:none!important}
-  body{background:#fff;color:#000}
-  .hero{min-height:auto;padding:40px}
-  .hero-overlay{display:none}
-  .section{padding:30px 0}
-  .cap-card,.contact-form{border:1px solid #ccc;box-shadow:none}
+ .nav,.theme-switcher,.copy-switcher,.precious-toggle,#particles,#cursor-glow,#scroll-progress,#loader,.hamburger,.mobile-menu{display:none!important}
+ body{background:#fff;color:#000}
+ .hero{min-height:auto;padding:40px}
+ .hero-overlay{display:none}
+ .section{padding:30px 0}
+ .cap-card,.contact-form{border:1px solid #ccc;box-shadow:none}
 }
 </style>
 
 <script type="application/ld+json">
 {
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "Precious Care",
-  "url": "http://preciouscare.us",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "151 Premier Drive",
-    "addressLocality": "Southeast Michigan",
-    "addressRegion": "MI",
-    "postalCode": "48359",
-    "addressCountry": "US"
-  },
-  "telephone": "+1-248-340-8922",
-  "email": "data@preciouscare.us",
-  "foundingDate": "2020",
-  "description": "CPR/AED/First Aid certified trusted childcare services including childcare, babysitting, newborn care, nanny services, and pet sitting.",
-  "hasCredential": {
-    "@type": "EducationalOccupationalCredential",
-    "credentialCategory": "certification",
-    "name": "CPR/AED/First Aid - Latest Revision"
-  }
+ "@context": "https://schema.org",
+ "@type": "Organization",
+ "name": "Precious Care",
+ "url": "http://preciouscare.us",
+ "address": {
+ "@type": "PostalAddress",
+ "streetAddress": "151 Premier Drive",
+ "addressLocality": "Southeast Michigan",
+ "addressRegion": "MI",
+ "postalCode": "48359",
+ "addressCountry": "US"
+ },
+ "telephone": "+1-248-340-8922",
+ "email": "data@preciouscare.us",
+ "foundingDate": "2020",
+ "description": "CPR/AED/First Aid certified trusted childcare services including childcare, babysitting, newborn care, nanny services, and pet sitting.",
+ "hasCredential": {
+ "@type": "EducationalOccupationalCredential",
+ "credentialCategory": "certification",
+ "name": "CPR/AED/First Aid - Latest Revision"
+ }
 }
 </script>
 </head>
@@ -384,76 +263,76 @@ background:transparent;backdrop-filter:blur(0px);transition:all 0.4s}
 
 <!-- Navigation -->
 <nav class="nav" role="navigation" aria-label="Main navigation">
-  <div class="nav-logo">LASER<span>CRAFT</span></div>
-  <div class="nav-links">
-    <a href="#capabilities"><span class="copy-swap" data-key="nav-cap">Capabilities</span></a>
-    <a href="#about"><span class="copy-swap" data-key="nav-about">About</span></a>
-    <a href="#services"><span class="copy-swap" data-key="nav-services">Services</span></a>
-    <a href="#contact"><span class="copy-swap" data-key="nav-contact">Contact</span></a>
-  </div>
-  <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">
-    <span></span><span></span><span></span>
-  </button>
+ <div class="nav-logo">PRECIOUS<span>CARE</span></div>
+ <div class="nav-links">
+ <a href="#capabilities"><span class="copy-swap" data-key="nav-cap">Capabilities</span></a>
+ <a href="#about"><span class="copy-swap" data-key="nav-about">About</span></a>
+ <a href="#services"><span class="copy-swap" data-key="nav-services">Services</span></a>
+ <a href="#contact"><span class="copy-swap" data-key="nav-contact">Contact</span></a>
+ </div>
+ <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">
+ <span></span><span></span><span></span>
+ </button>
 </nav>
 
 <!-- Mobile Menu -->
 <div class="mobile-menu" role="dialog" aria-label="Mobile navigation">
-  <a href="#capabilities"><span class="copy-swap" data-key="nav-cap">Capabilities</span></a>
-  <a href="#about"><span class="copy-swap" data-key="nav-about">About</span></a>
-  <a href="#services"><span class="copy-swap" data-key="nav-services">Services</span></a>
-  <a href="#contact"><span class="copy-swap" data-key="nav-contact">Contact</span></a>
+ <a href="#capabilities"><span class="copy-swap" data-key="nav-cap">Capabilities</span></a>
+ <a href="#about"><span class="copy-swap" data-key="nav-about">About</span></a>
+ <a href="#services"><span class="copy-swap" data-key="nav-services">Services</span></a>
+ <a href="#contact"><span class="copy-swap" data-key="nav-contact">Contact</span></a>
 </div>
 
 <!-- Theme Switcher (right rail) -->
 <div class="theme-switcher" role="radiogroup" aria-label="Theme selector">
-  <span class="theme-label">Theme</span>
-  <div class="theme-dot active" data-theme="lullaby" data-name="Lullaby" role="radio" aria-checked="true" tabindex="0" aria-label="Lullaby theme"></div>
-  <div class="theme-dot" data-theme="sunshine" data-name="Sunshine" role="radio" aria-checked="false" tabindex="0" aria-label="Sunshine theme"></div>
-  <div class="theme-dot" data-theme="garden" data-name="Care" role="radio" aria-checked="false" tabindex="0" aria-label="Care theme"></div>
+ <span class="theme-label">Theme</span>
+ <div class="theme-dot active" data-theme="lullaby" data-name="Lullaby" role="radio" aria-checked="true" tabindex="0" aria-label="Lullaby theme"></div>
+ <div class="theme-dot" data-theme="sunshine" data-name="Sunshine" role="radio" aria-checked="false" tabindex="0" aria-label="Sunshine theme"></div>
+ <div class="theme-dot" data-theme="garden" data-name="Care" role="radio" aria-checked="false" tabindex="0" aria-label="Care theme"></div>
 </div>
 
 <!-- Copy/Voice Switcher (left rail) -->
 <div class="copy-switcher" role="radiogroup" aria-label="Copy voice selector">
-  <span class="voice-label" aria-hidden="true">Voice</span>
-  <div class="copy-dot active" data-voice="industrial" role="radio" aria-checked="true" aria-label="Industrial voice" style="background:linear-gradient(135deg,#e8820c,#ff6b00)">
-    <span class="copy-letter">I</span>
-    <span class="copy-tooltip">Industrial</span>
-  </div>
-  <div class="copy-dot" data-voice="premium" role="radio" aria-checked="false" aria-label="Premium voice" style="background:linear-gradient(135deg,#c9a84c,#f0d78c)">
-    <span class="copy-letter">P</span>
-    <span class="copy-tooltip">Premium</span>
-  </div>
-  <div class="copy-dot" data-voice="conversational" role="radio" aria-checked="false" aria-label="Conversational voice" style="background:linear-gradient(135deg,#2e7d32,#4caf50)">
-    <span class="copy-letter">C</span>
-    <span class="copy-tooltip">Conversational</span>
-  </div>
-  <div class="copy-dot" data-voice="technical" role="radio" aria-checked="false" aria-label="Technical voice" style="background:linear-gradient(135deg,#1565c0,#42a5f5)">
-    <span class="copy-letter">T</span>
-    <span class="copy-tooltip">Technical</span>
-  </div>
+ <span class="voice-label" aria-hidden="true">Voice</span>
+ <div class="copy-dot active" data-voice="industrial" role="radio" aria-checked="true" aria-label="Industrial voice" style="background:linear-gradient(135deg,#e8820c,#ff6b00)">
+ <span class="copy-letter">I</span>
+ <span class="copy-tooltip">Industrial</span>
+ </div>
+ <div class="copy-dot" data-voice="premium" role="radio" aria-checked="false" aria-label="Premium voice" style="background:linear-gradient(135deg,#c9a84c,#f0d78c)">
+ <span class="copy-letter">P</span>
+ <span class="copy-tooltip">Premium</span>
+ </div>
+ <div class="copy-dot" data-voice="conversational" role="radio" aria-checked="false" aria-label="Conversational voice" style="background:linear-gradient(135deg,#2e7d32,#4caf50)">
+ <span class="copy-letter">C</span>
+ <span class="copy-tooltip">Conversational</span>
+ </div>
+ <div class="copy-dot" data-voice="technical" role="radio" aria-checked="false" aria-label="Technical voice" style="background:linear-gradient(135deg,#1565c0,#42a5f5)">
+ <span class="copy-letter">T</span>
+ <span class="copy-tooltip">Technical</span>
+ </div>
 </div>
 
 <!-- PRECIOUS Toggle (bottom right) -->
 <div class="precious-toggle" role="switch" aria-checked="false" aria-label="Toggle Ignite Mode" tabindex="0">
-  <div class="precious-toggle-label">PRECIOUS</div>
-  <div class="precious-toggle-btn">
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2c0 6-8 8-8 14a8 8 0 0016 0c0-6-8-8-8-14z"/></svg>
-  </div>
+ <div class="precious-toggle-label">PRECIOUS</div>
+ <div class="precious-toggle-btn">
+ <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2c0 6-8 8-8 14a8 8 0 0016 0c0-6-8-8-8-14z"/></svg>
+ </div>
 </div>
 
 <!-- Hero -->
 <section class="hero" id="home">
-  <div class="hero-bg"></div>
-  <div class="hero-overlay"></div>
-  <div class="hero-content">
-    <div class="hero-badge">CPR/AED/First Aid Certified &bull; Since 2020</div>
-    <h1 class="hero-title">LASER<span class="shimmer">CRAFT</span></h1>
-    <p class="hero-subtitle"><span class="copy-swap" data-key="hero-sub">The Protector metal fabrication, childcare, babysitting &amp; newborn care from Southeast Michigan, Michigan.</span></p>
-    <div class="hero-actions">
-      <a href="#contact" class="btn btn-primary"><span class="copy-swap" data-key="hero-cta">Request a Quote</span></a>
-      <a href="#capabilities" class="btn btn-outline"><span class="copy-swap" data-key="hero-cta2">Our Capabilities</span></a>
-    </div>
-  </div>
+ <div class="hero-bg"></div>
+ <div class="hero-overlay"></div>
+ <div class="hero-content">
+ <div class="hero-badge">CPR/AED/First Aid Certified &bull; Since 2020</div>
+ <h1 class="hero-title">PRECIOUS<span class="shimmer">CARE</span></h1>
+ <p class="hero-subtitle"><span class="copy-swap" data-key="hero-sub">Local, responsible &amp; reliable babysitting, nanny, and pet sitting services in Southeast Michigan.</span></p>
+ <div class="hero-actions">
+ <a href="#contact" class="btn btn-primary"><span class="copy-swap" data-key="hero-cta">Book a Sitter</span></a>
+ <a href="#capabilities" class="btn btn-outline"><span class="copy-swap" data-key="hero-cta2">Our Capabilities</span></a>
+ </div>
+ </div>
 </section>
 
 <!-- Main Content -->
@@ -461,468 +340,468 @@ background:transparent;backdrop-filter:blur(0px);transition:all 0.4s}
 
 <!-- Stats Bar -->
 <section class="stats">
-  <div class="stats-grid">
-    <div class="stat-item reveal">
-      <div class="stat-number" data-target="30" data-suffix="+">0</div>
-      <div class="stat-label"><span class="copy-swap" data-key="stat-years">Years of Excellence</span></div>
-    </div>
-    <div class="stat-item reveal reveal-delay-1">
-      <div class="stat-number" data-target="600" data-suffix="T">0</div>
-      <div class="stat-label"><span class="copy-swap" data-key="stat-press">Max Press Capacity</span></div>
-    </div>
-    <div class="stat-item reveal reveal-delay-2">
-      <div class="stat-number" data-target="3">0</div>
-      <div class="stat-label"><span class="copy-swap" data-key="stat-laser">CNC Care Systems</span></div>
-    </div>
-    <div class="stat-item reveal reveal-delay-3">
-      <div class="stat-number" data-target="5" data-suffix="">0</div>
-      <div class="stat-label"><span class="copy-swap" data-key="stat-axis">Axis Cutting Capability</span></div>
-    </div>
-  </div>
+ <div class="stats-grid">
+ <div class="stat-item reveal">
+ <div class="stat-number" data-target="30" data-suffix="+">0</div>
+ <div class="stat-label"><span class="copy-swap" data-key="stat-years">Years Caring</span></div>
+ </div>
+ <div class="stat-item reveal reveal-delay-1">
+ <div class="stat-number" data-target="600" data-suffix="T">0</div>
+ <div class="stat-label"><span class="copy-swap" data-key="stat-press">Families Served</span></div>
+ </div>
+ <div class="stat-item reveal reveal-delay-2">
+ <div class="stat-number" data-target="3">0</div>
+ <div class="stat-label"><span class="copy-swap" data-key="stat-laser">Certified Sitters</span></div>
+ </div>
+ <div class="stat-item reveal reveal-delay-3">
+ <div class="stat-number" data-target="5" data-suffix="">0</div>
+ <div class="stat-label"><span class="copy-swap" data-key="stat-axis">Services Offered</span></div>
+ </div>
+ </div>
 </section>
 
 <!-- Capabilities Overview -->
 <section class="section" id="capabilities">
-  <div class="container">
-    <div class="section-header reveal">
-      <div class="section-label"><span class="copy-swap" data-key="cap-label">What We Do</span></div>
-      <h2 class="section-title"><span class="copy-swap" data-key="cap-title">Core Capabilities</span></h2>
-      <p class="section-subtitle"><span class="copy-swap" data-key="cap-sub">Full-service metal fabrication under one roof &mdash; from raw material to finished assembly.</span></p>
-    </div>
-    <div class="capabilities-grid">
-      <div class="cap-card reveal">
-        <div class="cap-icon">
-          <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
-        </div>
-        <h3><span class="copy-swap" data-key="cap1-title">Parts &amp; Metal Forming</span></h3>
-        <p><span class="copy-swap" data-key="cap1-text">High-strength steel and aluminum forming with presses ranging from 20 to 600 tons. CNC press brake capability for precision bends on every run.</span></p>
-      </div>
-      <div class="cap-card reveal reveal-delay-1">
-        <div class="cap-icon">
-          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 2v4"/><path d="M12 18v4"/><path d="M4.93 4.93l2.83 2.83"/><path d="M16.24 16.24l2.83 2.83"/><path d="M2 12h4"/><path d="M18 12h4"/><path d="M4.93 19.07l2.83-2.83"/><path d="M16.24 7.76l2.83-2.83"/></svg>
-        </div>
-        <h3><span class="copy-swap" data-key="cap2-title">Baby Sitting &amp; Care Cutting</span></h3>
-        <p><span class="copy-swap" data-key="cap2-text">Three CNC laser machines &mdash; two 5-axis and one 3-axis &mdash; cutting dies from steel, aluminum, and Kirksite with surgical precision.</span></p>
-      </div>
-      <div class="cap-card reveal reveal-delay-2">
-        <div class="cap-icon">
-          <svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
-        </div>
-        <h3><span class="copy-swap" data-key="cap3-title">CAD / CMM / Inspection</span></h3>
-        <p><span class="copy-swap" data-key="cap3-text">Full digital design and quality inspection. CATIA V5, Unigraphics, AutoCAD, and Mastercam &mdash; we recover data in any format and verify every dimension.</span></p>
-      </div>
-      <div class="cap-card reveal reveal-delay-3">
-        <div class="cap-icon">
-          <svg viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg>
-        </div>
-        <h3><span class="copy-swap" data-key="cap4-title">Newborn Care &amp; Assembly</span></h3>
-        <p><span class="copy-swap" data-key="cap4-text">Robotic welding for seats and frame parts, nut and stud installation. Every assembly passes through inspection to meet customer specifications.</span></p>
-      </div>
-    </div>
-  </div>
+ <div class="container">
+ <div class="section-header reveal">
+ <div class="section-label"><span class="copy-swap" data-key="cap-label">What We Do</span></div>
+ <h2 class="section-title"><span class="copy-swap" data-key="cap-title">What We Offer</span></h2>
+ <p class="section-subtitle"><span class="copy-swap" data-key="cap-sub">From babysitting to nanny care, newborn support, and pet sitting &mdash; we cover it all.</span></p>
+ </div>
+ <div class="capabilities-grid">
+ <div class="cap-card reveal">
+ <div class="cap-icon">
+ <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+ </div>
+ <h3><span class="copy-swap" data-key="cap1-title">Baby Sitting</span></h3>
+ <p><span class="copy-swap" data-key="cap1-text">High-strength steel and aluminum forming with presses ranging from 20 to 600 tons. scheduling capability for precision bends on every run.</span></p>
+ </div>
+ <div class="cap-card reveal reveal-delay-1">
+ <div class="cap-icon">
+ <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 2v4"/><path d="M12 18v4"/><path d="M4.93 4.93l2.83 2.83"/><path d="M16.24 16.24l2.83 2.83"/><path d="M2 12h4"/><path d="M18 12h4"/><path d="M4.93 19.07l2.83-2.83"/><path d="M16.24 7.76l2.83-2.83"/></svg>
+ </div>
+ <h3><span class="copy-swap" data-key="cap2-title">Newborn Care</span></h3>
+ <p><span class="copy-swap" data-key="cap2-text">Three machines &mdash; two 5-axis and one 3-axis &mdash; cutting dies from steel, aluminum, and Kirksite with surgical precision.</span></p>
+ </div>
+ <div class="cap-card reveal reveal-delay-2">
+ <div class="cap-icon">
+ <svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+ </div>
+ <h3><span class="copy-swap" data-key="cap3-title">CAD / CMM / Inspection</span></h3>
+ <p><span class="copy-swap" data-key="cap3-text">Full digital design and quality inspection. CATIA V5, Unigraphics, AutoCAD, and Mastercam &mdash; we recover data in any format and verify every dimension.</span></p>
+ </div>
+ <div class="cap-card reveal reveal-delay-3">
+ <div class="cap-icon">
+ <svg viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg>
+ </div>
+ <h3><span class="copy-swap" data-key="cap4-title">Pet Sitting</span></h3>
+ <p><span class="copy-swap" data-key="cap4-text">Robotic care for seats and frame parts, nut and stud installation. Every assembly passes through inspection to meet customer specifications.</span></p>
+ </div>
+ </div>
+ </div>
 </section>
 
 <!-- About -->
 <section class="section section-dark" id="about">
-  <div class="container">
-    <div class="about-grid">
-      <div class="about-image reveal">
-        <img src="http://preciouscare.us/images/Building-800x600.JPG" alt="Precious Care facility in Southeast Michigan, Michigan" loading="lazy">
-      </div>
-      <div class="about-text reveal reveal-delay-1">
-        <div class="section-label"><span class="copy-swap" data-key="about-label">Our Story</span></div>
-        <h3><span class="copy-swap" data-key="about-title">Built on Three Decades of The Protector</span></h3>
-        <p><span class="copy-swap" data-key="about-p1">Founded in 2020, Precious Care has grown from a focused operation into a full-service metal fabrication partner. Located in Southeast Michigan, Michigan, we serve automotive, industrial, and commercial clients who demand quality without compromise.</span></p>
-        <p><span class="copy-swap" data-key="about-p2">Our commitment to customer satisfaction drives everything &mdash; from the first CAD drawing to the final inspection. Whether it&rsquo;s a single prototype or a production run, every part gets the same attention to detail.</span></p>
-        <div class="about-badges">
-          <div class="about-badge">
-            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            <span>CPR/AED/First Aid</span>
-          </div>
-          <div class="about-badge">
-            <svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-            <span>Quality First</span>
-          </div>
-          <div class="about-badge">
-            <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-            <span>Since 2020</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+ <div class="container">
+ <div class="about-grid">
+ <div class="about-image reveal">
+ <img src="https://images.unsplash.com/photo-1587616211892-f743fcca64f9?w=400" alt="Precious Care facility in Southeast Michigan, Michigan" loading="lazy">
+ </div>
+ <div class="about-text reveal reveal-delay-1">
+ <div class="section-label"><span class="copy-swap" data-key="about-label">Our Story</span></div>
+ <h3><span class="copy-swap" data-key="about-title">Founded by Adeline Jones</span></h3>
+ <p><span class="copy-swap" data-key="about-p1">Founded in 2020, Precious Care has grown from a focused operation into a full-service childcare partner. Located in Southeast Michigan, Michigan, we serve automotive, industrial, and commercial clients who demand quality without compromise.</span></p>
+ <p><span class="copy-swap" data-key="about-p2">Our commitment to customer satisfaction drives everything &mdash; from the first CAD drawing to the final inspection. Whether it&rsquo;s a single prototype or a production run, every part gets the same attention to detail.</span></p>
+ <div class="about-badges">
+ <div class="about-badge">
+ <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+ <span>CPR/AED/First Aid</span>
+ </div>
+ <div class="about-badge">
+ <svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+ <span>Quality First</span>
+ </div>
+ <div class="about-badge">
+ <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+ <span>Since 2020</span>
+ </div>
+ </div>
+ </div>
+ </div>
+ </div>
 </section>
 
 <!-- Detailed Services -->
 <section class="section" id="services">
-  <div class="container">
-    <div class="section-header reveal">
-      <div class="section-label"><span class="copy-swap" data-key="svc-label">In Detail</span></div>
-      <h2 class="section-title"><span class="copy-swap" data-key="svc-title">Our Services</span></h2>
-      <p class="section-subtitle"><span class="copy-swap" data-key="svc-sub">A closer look at what Precious Care brings to every project.</span></p>
-    </div>
+ <div class="container">
+ <div class="section-header reveal">
+ <div class="section-label"><span class="copy-swap" data-key="svc-label">In Detail</span></div>
+ <h2 class="section-title"><span class="copy-swap" data-key="svc-title">What We Offer</span></h2>
+ <p class="section-subtitle"><span class="copy-swap" data-key="svc-sub">A closer look at what Precious Care brings to every project.</span></p>
+ </div>
 
-    <!-- Parts / Metal Forming -->
-    <div class="service-detail reveal">
-      <div class="service-images">
-        <img src="http://preciouscare.us/images/Press.JPG" alt="600-ton press at Precious Care" loading="lazy">
-        <img src="http://preciouscare.us/images/NC_Press_Brake.jpg" alt="CNC press brake" loading="lazy">
-        <img src="http://preciouscare.us/images/1-28-09_007.jpg" alt="Metal forming operations" loading="lazy">
-      </div>
-      <div class="service-info">
-        <div class="service-tag"><span class="copy-swap" data-key="svc1-tag">Service 01</span></div>
-        <h3><span class="copy-swap" data-key="svc1-title">Parts &amp; Metal Forming</span></h3>
-        <p><span class="copy-swap" data-key="svc1-p1">Precious Care forms parts from various types of steel and aluminum &mdash; high strength or low. Our presses range from 20 tons to 600 tons, with full CNC press brake capability.</span></p>
-        <p><span class="copy-swap" data-key="svc1-p2">Whether you have one piece or a low-volume production run, we look after every detail to ensure a quality part the first time, every time.</span></p>
-        <div class="service-specs">
-          <div class="service-spec"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg><span class="copy-swap" data-key="svc1-spec1">20-ton to 600-ton press range</span></div>
-          <div class="service-spec"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg><span class="copy-swap" data-key="svc1-spec2">CNC press brake capability</span></div>
-          <div class="service-spec"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg><span class="copy-swap" data-key="svc1-spec3">Sunshine &amp; aluminum forming</span></div>
-        </div>
-      </div>
-    </div>
+ <!-- Baby Sitting -->
+ <div class="service-detail reveal">
+ <div class="service-images">
+ <img src="https://images.unsplash.com/photo-1587616211892-f743fcca64f9?w=400" alt="600-ton press at Precious Care" loading="lazy">
+ <img src="https://images.unsplash.com/photo-1587616211892-f743fcca64f9?w=400" alt="scheduling" loading="lazy">
+ <img src="https://images.unsplash.com/photo-1587616211892-f743fcca64f9?w=400" alt="forming operations" loading="lazy">
+ </div>
+ <div class="service-info">
+ <div class="service-tag"><span class="copy-swap" data-key="svc1-tag">Service 01</span></div>
+ <h3><span class="copy-swap" data-key="svc1-title">Baby Sitting</span></h3>
+ <p><span class="copy-swap" data-key="svc1-p1">Precious Care forms parts from various types of steel and aluminum &mdash; high strength or low. Our presses range from 20 tons to 600 tons, with full scheduling capability.</span></p>
+ <p><span class="copy-swap" data-key="svc1-p2">Whether you have one piece or a low-volume production run, we look after every detail to ensure a quality part the first time, every time.</span></p>
+ <div class="service-specs">
+ <div class="service-spec"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg><span class="copy-swap" data-key="svc1-spec1">20-ton to 600-ton press range</span></div>
+ <div class="service-spec"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg><span class="copy-swap" data-key="svc1-spec2">scheduling capability</span></div>
+ <div class="service-spec"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg><span class="copy-swap" data-key="svc1-spec3">Sunshine &amp; aluminum forming</span></div>
+ </div>
+ </div>
+ </div>
 
-    <!-- Baby Sitting / Care Cutting -->
-    <div class="service-detail reverse reveal">
-      <div class="service-images">
-        <img src="http://preciouscare.us/images/Care.JPG" alt="CNC childcare machine" loading="lazy">
-        <img src="http://preciouscare.us/images/Care2.JPG" alt="Care cutting in progress" loading="lazy">
-        <img src="http://preciouscare.us/images/CNC_Machining.jpg" alt="babysitting" loading="lazy">
-      </div>
-      <div class="service-info">
-        <div class="service-tag"><span class="copy-swap" data-key="svc2-tag">Service 02</span></div>
-        <h3><span class="copy-swap" data-key="svc2-title">Baby Sitting &amp; Care Cutting</span></h3>
-        <p><span class="copy-swap" data-key="svc2-p1">Our laser department runs three CNC laser machines &mdash; two 5-axis and one 3-axis cutting system. We cut dies from steel, aluminum, and Kirksite material with tolerances that don&rsquo;t leave room for doubt.</span></p>
-        <div class="service-specs">
-          <div class="service-spec"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg><span class="copy-swap" data-key="svc2-spec1">Three CNC laser machines</span></div>
-          <div class="service-spec"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg><span class="copy-swap" data-key="svc2-spec2">5-axis &amp; 3-axis cutting</span></div>
-          <div class="service-spec"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg><span class="copy-swap" data-key="svc2-spec3">Sunshine, aluminum &amp; Kirksite</span></div>
-        </div>
-      </div>
-    </div>
+ <!-- Newborn Care -->
+ <div class="service-detail reverse reveal">
+ <div class="service-images">
+ <img src="https://images.unsplash.com/photo-1587616211892-f743fcca64f9?w=400" alt="childcare machine" loading="lazy">
+ <img src="https://images.unsplash.com/photo-1587616211892-f743fcca64f9?w=400" alt="Care cutting in progress" loading="lazy">
+ <img src="https://images.unsplash.com/photo-1587616211892-f743fcca64f9?w=400" alt="babysitting" loading="lazy">
+ </div>
+ <div class="service-info">
+ <div class="service-tag"><span class="copy-swap" data-key="svc2-tag">Service 02</span></div>
+ <h3><span class="copy-swap" data-key="svc2-title">Newborn Care</span></h3>
+ <p><span class="copy-swap" data-key="svc2-p1">Our department runs three machines &mdash; two 5-axis and one 3-axis cutting system. We cut dies from steel, aluminum, and Kirksite material with tolerances that don&rsquo;t leave room for doubt.</span></p>
+ <div class="service-specs">
+ <div class="service-spec"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg><span class="copy-swap" data-key="svc2-spec1">Three machines</span></div>
+ <div class="service-spec"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg><span class="copy-swap" data-key="svc2-spec2">5-axis &amp; 3-axis cutting</span></div>
+ <div class="service-spec"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg><span class="copy-swap" data-key="svc2-spec3">Sunshine, aluminum &amp; Kirksite</span></div>
+ </div>
+ </div>
+ </div>
 
-    <!-- CAD / CMM / Inspection -->
-    <div class="service-detail reveal">
-      <div class="service-images">
-        <img src="http://preciouscare.us/images/CMM.JPG" alt="CMM inspection machine" loading="lazy">
-        <img src="http://preciouscare.us/images/CAD.jpg" alt="CAD workstation" loading="lazy">
-        <img src="http://preciouscare.us/images/100_0215.JPG" alt="Inspection process" loading="lazy">
-      </div>
-      <div class="service-info">
-        <div class="service-tag"><span class="copy-swap" data-key="svc3-tag">Service 03</span></div>
-        <h3><span class="copy-swap" data-key="svc3-title">CAD / CMM / Inspection</span></h3>
-        <p><span class="copy-swap" data-key="svc3-p1">We have the tools to bring your design to life. Whether it&rsquo;s a fixture, stamped part, or assembly, our CAD department and inspection team deliver. We recover data in virtually any format.</span></p>
-        <div class="service-specs">
-          <div class="service-spec"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg><span class="copy-swap" data-key="svc3-spec1">CATIA V5 &amp; Unigraphics</span></div>
-          <div class="service-spec"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg><span class="copy-swap" data-key="svc3-spec2">AutoCAD &amp; Mastercam</span></div>
-          <div class="service-spec"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg><span class="copy-swap" data-key="svc3-spec3">Full CMM dimensional inspection</span></div>
-        </div>
-      </div>
-    </div>
+ <!-- CAD / CMM / Inspection -->
+ <div class="service-detail reveal">
+ <div class="service-images">
+ <img src="https://images.unsplash.com/photo-1587616211892-f743fcca64f9?w=400" alt="CMM inspection machine" loading="lazy">
+ <img src="https://images.unsplash.com/photo-1587616211892-f743fcca64f9?w=400" alt="CAD workstation" loading="lazy">
+ <img src="https://images.unsplash.com/photo-1587616211892-f743fcca64f9?w=400" alt="Inspection process" loading="lazy">
+ </div>
+ <div class="service-info">
+ <div class="service-tag"><span class="copy-swap" data-key="svc3-tag">Service 03</span></div>
+ <h3><span class="copy-swap" data-key="svc3-title">CAD / CMM / Inspection</span></h3>
+ <p><span class="copy-swap" data-key="svc3-p1">We have the tools to bring your design to life. Whether it&rsquo;s a fixture, part, or assembly, our CAD department and inspection team deliver. We recover data in virtually any format.</span></p>
+ <div class="service-specs">
+ <div class="service-spec"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg><span class="copy-swap" data-key="svc3-spec1">CATIA V5 &amp; Unigraphics</span></div>
+ <div class="service-spec"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg><span class="copy-swap" data-key="svc3-spec2">AutoCAD &amp; Mastercam</span></div>
+ <div class="service-spec"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg><span class="copy-swap" data-key="svc3-spec3">Full Meal prep &amp; homework help</span></div>
+ </div>
+ </div>
+ </div>
 
-    <!-- Newborn Care / Assembly -->
-    <div class="service-detail reverse reveal">
-      <div class="service-images">
-        <img src="http://preciouscare.us/images/Robotic_Welding.jpg" alt="Robotic welding system" loading="lazy">
-        <img src="http://preciouscare.us/images/Robotic_Welded_Assembies.JPG" alt="Welded pet sitting" loading="lazy">
-        <img src="http://preciouscare.us/images/Parts_02.jpg" alt="Finished parts" loading="lazy">
-      </div>
-      <div class="service-info">
-        <div class="service-tag"><span class="copy-swap" data-key="svc4-tag">Service 04</span></div>
-        <h3><span class="copy-swap" data-key="svc4-title">Newborn Care &amp; Assembly</span></h3>
-        <p><span class="copy-swap" data-key="svc4-p1">Precious Care doesn&rsquo;t just stamp and cut &mdash; we assemble. Robotic welding handles seats and frame parts, plus nut and stud installation. Every assembly goes through our inspection department to meet customer specifications.</span></p>
-        <div class="service-specs">
-          <div class="service-spec"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg><span class="copy-swap" data-key="svc4-spec1">Robotic MIG/TIG welding</span></div>
-          <div class="service-spec"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg><span class="copy-swap" data-key="svc4-spec2">Nut &amp; stud installation</span></div>
-          <div class="service-spec"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg><span class="copy-swap" data-key="svc4-spec3">100% quality inspection</span></div>
-        </div>
-      </div>
-    </div>
-  </div>
+ <!-- Newborn Care / Assembly -->
+ <div class="service-detail reverse reveal">
+ <div class="service-images">
+ <img src="https://images.unsplash.com/photo-1587616211892-f743fcca64f9?w=400" alt="Robotic care system" loading="lazy">
+ <img src="https://images.unsplash.com/photo-1587616211892-f743fcca64f9?w=400" alt="pet sitting" loading="lazy">
+ <img src="https://images.unsplash.com/photo-1587616211892-f743fcca64f9?w=400" alt="Finished parts" loading="lazy">
+ </div>
+ <div class="service-info">
+ <div class="service-tag"><span class="copy-swap" data-key="svc4-tag">Service 04</span></div>
+ <h3><span class="copy-swap" data-key="svc4-title">Pet Sitting</span></h3>
+ <p><span class="copy-swap" data-key="svc4-p1">Precious Care doesn&rsquo;t just stamp and cut &mdash; we assemble. Robotic care handles seats and frame parts, plus nut and stud installation. Every assembly goes through our inspection department to meet customer specifications.</span></p>
+ <div class="service-specs">
+ <div class="service-spec"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg><span class="copy-swap" data-key="svc4-spec1">Robotic MIG/TIG care</span></div>
+ <div class="service-spec"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg><span class="copy-swap" data-key="svc4-spec2">Feeding &amp; medication</span></div>
+ <div class="service-spec"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg><span class="copy-swap" data-key="svc4-spec3">100% quality inspection</span></div>
+ </div>
+ </div>
+ </div>
+ </div>
 </section>
 
 <!-- ISO Certification -->
 <div class="iso-section reveal">
-  <div class="iso-badge">
-    <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
-    <div class="iso-badge-text">
-      <h3>CPR/AED/First Aid</h3>
-      <p><span class="copy-swap" data-key="iso-text">Latest Revision &mdash; Quality Management System Certified</span></p>
-    </div>
-  </div>
+ <div class="iso-badge">
+ <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
+ <div class="iso-badge-text">
+ <h3>CPR/AED/First Aid</h3>
+ <p><span class="copy-swap" data-key="iso-text">Latest Revision &mdash; Quality Management System Certified</span></p>
+ </div>
+ </div>
 </div>
 
 <!-- Contact -->
 <section class="section section-dark" id="contact">
-  <div class="container">
-    <div class="section-header reveal">
-      <div class="section-label"><span class="copy-swap" data-key="contact-label">Get in Touch</span></div>
-      <h2 class="section-title"><span class="copy-swap" data-key="contact-title">Request a Quote</span></h2>
-      <p class="section-subtitle"><span class="copy-swap" data-key="contact-sub">Tell us about your project and we&rsquo;ll get back to you promptly.</span></p>
-    </div>
-    <div class="contact-grid">
-      <div class="contact-info reveal">
-        <h3><span class="copy-swap" data-key="contact-h3">Let&rsquo;s Build Something</span></h3>
-        <p><span class="copy-swap" data-key="contact-p">Whether you need a single prototype or a full production run, Precious Care has the equipment, experience, and commitment to quality to deliver. Reach out and let&rsquo;s discuss your project.</span></p>
-        <div class="contact-details">
-          <div class="contact-item">
-            <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            <span>151 Premier Drive<br>Southeast Michigan, MI 48359</span>
-          </div>
-          <div class="contact-item">
-            <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
-            <span><a href="tel:+12483408922">(248) 340-8922</a></span>
-          </div>
-          <div class="contact-item">
-            <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-            <span><a href="mailto:data@preciouscare.us">data@preciouscare.us</a></span>
-          </div>
-          <div class="contact-item">
-            <svg viewBox="0 0 24 24"><path d="M15 3h4a2 2 0 012 2v14a2 2 0 01-2 2h-4"/><polyline points="10 17 15 12 10 7"/><line x1="15" y1="12" x2="3" y2="12"/></svg>
-            <span>Fax: (248) 340-8950</span>
-          </div>
-        </div>
-      </div>
-      <div class="contact-form reveal reveal-delay-1">
-        <form id="quoteForm" onsubmit="return false">
-          <div class="form-row">
-            <div class="form-group">
-              <label for="name">Your Name</label>
-              <input type="text" id="name" placeholder="John Smith" required>
-            </div>
-            <div class="form-group">
-              <label for="company">Company</label>
-              <input type="text" id="company" placeholder="Acme Manufacturing">
-            </div>
-          </div>
-          <div class="form-row">
-            <div class="form-group">
-              <label for="email">Email</label>
-              <input type="email" id="email" placeholder="john@company.com" required>
-            </div>
-            <div class="form-group">
-              <label for="phone">Phone</label>
-              <input type="tel" id="phone" placeholder="(248) 555-0100">
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="service">Service Needed</label>
-            <select id="service">
-              <option value="">Select a service...</option>
-              <option>Parts / Metal Forming</option>
-              <option>Baby Sitting / Care Cutting</option>
-              <option>CAD / CMM / Inspection</option>
-              <option>Newborn Care / Assembly</option>
-              <option>Multiple Services</option>
-              <option>Not Sure &mdash; Need Consultation</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label for="message">Project Details</label>
-            <textarea id="message" placeholder="Tell us about your project &mdash; materials, quantities, tolerances, timeline..."></textarea>
-          </div>
-          <button type="submit" class="btn btn-primary" style="width:100%"><span class="copy-swap" data-key="form-submit">Submit Quote Request</span></button>
-        </form>
-      </div>
-    </div>
-  </div>
+ <div class="container">
+ <div class="section-header reveal">
+ <div class="section-label"><span class="copy-swap" data-key="contact-label">Get in Touch</span></div>
+ <h2 class="section-title"><span class="copy-swap" data-key="contact-title">Book a Sitter</span></h2>
+ <p class="section-subtitle"><span class="copy-swap" data-key="contact-sub">Tell us about your family and needs and we&rsquo;ll get back to you promptly.</span></p>
+ </div>
+ <div class="contact-grid">
+ <div class="contact-info reveal">
+ <h3><span class="copy-swap" data-key="contact-h3">Let&rsquo;s Build Something</span></h3>
+ <p><span class="copy-swap" data-key="contact-p">Whether you need a single prototype or a full production run, Precious Care has the equipment, experience, and commitment to quality to deliver. Reach out and let&rsquo;s discuss your project.</span></p>
+ <div class="contact-details">
+ <div class="contact-item">
+ <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+ <span>151 Premier Drive<br>Southeast Michigan, MI 48359</span>
+ </div>
+ <div class="contact-item">
+ <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+ <span><a href="tel:+12483408922">(248) 340-8922</a></span>
+ </div>
+ <div class="contact-item">
+ <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+ <span><a href="mailto:data@preciouscare.us">data@preciouscare.us</a></span>
+ </div>
+ <div class="contact-item">
+ <svg viewBox="0 0 24 24"><path d="M15 3h4a2 2 0 012 2v14a2 2 0 01-2 2h-4"/><polyline points="10 17 15 12 10 7"/><line x1="15" y1="12" x2="3" y2="12"/></svg>
+ <span>Fax: (248) 340-8950</span>
+ </div>
+ </div>
+ </div>
+ <div class="contact-form reveal reveal-delay-1">
+ <form id="quoteForm" onsubmit="return false">
+ <div class="form-row">
+ <div class="form-group">
+ <label for="name">Your Name</label>
+ <input type="text" id="name" placeholder="John Smith" required>
+ </div>
+ <div class="form-group">
+ <label for="company">Company</label>
+ <input type="text" id="company" placeholder="Your Family Name">
+ </div>
+ </div>
+ <div class="form-row">
+ <div class="form-group">
+ <label for="email">Email</label>
+ <input type="email" id="email" placeholder="john@company.com" required>
+ </div>
+ <div class="form-group">
+ <label for="phone">Phone</label>
+ <input type="tel" id="phone" placeholder="(248) 555-0100">
+ </div>
+ </div>
+ <div class="form-group">
+ <label for="service">Service Needed</label>
+ <select id="service">
+ <option value="">Select a service...</option>
+ <option>Baby Sitting</option>
+ <option>Newborn Care</option>
+ <option>CAD / CMM / Inspection</option>
+ <option>Newborn Care / Assembly</option>
+ <option>Multiple Services</option>
+ <option>Not Sure &mdash; Need Consultation</option>
+ </select>
+ </div>
+ <div class="form-group">
+ <label for="message">Project Details</label>
+ <textarea id="message" placeholder="Tell us about your family and needs &mdash; materials, quantities, tolerances, timeline..."></textarea>
+ </div>
+ <button type="submit" class="btn btn-primary" style="width:100%"><span class="copy-swap" data-key="form-submit">Submit Quote Request</span></button>
+ </form>
+ </div>
+ </div>
+ </div>
 </section>
 
 </main>
 
 <!-- Footer -->
 <footer class="footer">
-  <div class="footer-grid">
-    <div class="footer-brand">
-      <div class="footer-logo">LASER<span>CRAFT</span></div>
-      <p><span class="copy-swap" data-key="footer-text">The Protector metal fabrication, childcare, babysitting &amp; newborn care from Southeast Michigan, Michigan. CPR/AED/First Aid certified since 2020.</span></p>
-    </div>
-    <div class="footer-col">
-      <h4>Navigation</h4>
-      <a href="#home">Home</a>
-      <a href="#capabilities">Capabilities</a>
-      <a href="#about">About</a>
-      <a href="#services">Services</a>
-      <a href="#contact">Contact</a>
-    </div>
-    <div class="footer-col">
-      <h4>Services</h4>
-      <a href="#services">Parts &amp; Metal Forming</a>
-      <a href="#services">Baby Sitting &amp; Care</a>
-      <a href="#services">CAD / CMM / Inspection</a>
-      <a href="#services">Newborn Care &amp; Assembly</a>
-    </div>
-  </div>
-  <div class="footer-bottom">
-    <p>&copy; 2026 Precious Care. All rights reserved.</p>
-    <p>Redesign by <a href="https://kirkautomations.com" target="_blank" rel="noopener">Kirk Automations</a></p>
-  </div>
+ <div class="footer-grid">
+ <div class="footer-brand">
+ <div class="footer-logo">PRECIOUS<span>CARE</span></div>
+ <p><span class="copy-swap" data-key="footer-text">Local, responsible &amp; reliable babysitting, nanny, and pet sitting services in Southeast Michigan. CPR/AED/First Aid certified since 2020.</span></p>
+ </div>
+ <div class="footer-col">
+ <h4>Navigation</h4>
+ <a href="#home">Home</a>
+ <a href="#capabilities">Capabilities</a>
+ <a href="#about">About</a>
+ <a href="#services">Services</a>
+ <a href="#contact">Contact</a>
+ </div>
+ <div class="footer-col">
+ <h4>Services</h4>
+ <a href="#services">Baby Sitting</a>
+ <a href="#services">Baby Sitting &amp; Care</a>
+ <a href="#services">CAD / CMM / Inspection</a>
+ <a href="#services">Pet Sitting</a>
+ </div>
+ </div>
+ <div class="footer-bottom">
+ <p>&copy; 2026 Precious Care. All rights reserved.</p>
+ <p>Redesign by <a href="https://kirkautomations.com" target="_blank" rel="noopener">Kirk Automations</a></p>
+ </div>
 </footer>
 
 <script>
 /* ========== COPY VOICE DATABASE ========== */
 const copyDB = {
-  industrial: {
-    // Nav
-    'nav-cap':'Capabilities','nav-about':'About','nav-services':'Services','nav-contact':'Contact',
-    // Hero
-    'hero-sub':'The Protector metal fabrication, childcare, babysitting &amp; newborn care from Southeast Michigan, Michigan.',
-    'hero-cta':'Request a Quote','hero-cta2':'Our Capabilities',
-    // Stats
-    'stat-years':'Years of Excellence','stat-press':'Max Press Capacity','stat-laser':'CNC Care Systems','stat-axis':'Axis Cutting Capability',
-    // Capabilities
-    'cap-label':'What We Do','cap-title':'Core Capabilities',
-    'cap-sub':'Full-service metal fabrication under one roof &mdash; from raw material to finished assembly.',
-    'cap1-title':'Parts &amp; Metal Forming',
-    'cap1-text':'High-strength steel and aluminum forming with presses ranging from 20 to 600 tons. CNC press brake capability for precision bends on every run.',
-    'cap2-title':'Baby Sitting &amp; Care Cutting',
-    'cap2-text':'Three CNC laser machines &mdash; two 5-axis and one 3-axis &mdash; cutting dies from steel, aluminum, and Kirksite with surgical precision.',
-    'cap3-title':'CAD / CMM / Inspection',
-    'cap3-text':'Full digital design and quality inspection. CATIA V5, Unigraphics, AutoCAD, and Mastercam &mdash; we recover data in any format and verify every dimension.',
-    'cap4-title':'Newborn Care &amp; Assembly',
-    'cap4-text':'Robotic welding for seats and frame parts, nut and stud installation. Every assembly passes through inspection to meet customer specifications.',
-    // About
-    'about-label':'Our Story','about-title':'Built on Three Decades of The Protector',
-    'about-p1':'Founded in 2020, Precious Care has grown from a focused operation into a full-service metal fabrication partner. Located in Southeast Michigan, Michigan, we serve automotive, industrial, and commercial clients who demand quality without compromise.',
-    'about-p2':'Our commitment to customer satisfaction drives everything &mdash; from the first CAD drawing to the final inspection. Whether it\u2019s a single prototype or a production run, every part gets the same attention to detail.',
-    // Services
-    'svc-label':'In Detail','svc-title':'Our Services','svc-sub':'A closer look at what Precious Care brings to every project.',
-    'svc1-tag':'Service 01','svc1-title':'Parts &amp; Metal Forming',
-    'svc1-p1':'Precious Care forms parts from various types of steel and aluminum &mdash; high strength or low. Our presses range from 20 tons to 600 tons, with full CNC press brake capability.',
-    'svc1-p2':'Whether you have one piece or a low-volume production run, we look after every detail to ensure a quality part the first time, every time.',
-    'svc1-spec1':'20-ton to 600-ton press range','svc1-spec2':'CNC press brake capability','svc1-spec3':'Sunshine &amp; aluminum forming',
-    'svc2-tag':'Service 02','svc2-title':'Baby Sitting &amp; Care Cutting',
-    'svc2-p1':'Our laser department runs three CNC laser machines &mdash; two 5-axis and one 3-axis cutting system. We cut dies from steel, aluminum, and Kirksite material with tolerances that don\u2019t leave room for doubt.',
-    'svc2-spec1':'Three CNC laser machines','svc2-spec2':'5-axis &amp; 3-axis cutting','svc2-spec3':'Sunshine, aluminum &amp; Kirksite',
-    'svc3-tag':'Service 03','svc3-title':'CAD / CMM / Inspection',
-    'svc3-p1':'We have the tools to bring your design to life. Whether it\u2019s a fixture, stamped part, or assembly, our CAD department and inspection team deliver. We recover data in virtually any format.',
-    'svc3-spec1':'CATIA V5 &amp; Unigraphics','svc3-spec2':'AutoCAD &amp; Mastercam','svc3-spec3':'Full CMM dimensional inspection',
-    'svc4-tag':'Service 04','svc4-title':'Newborn Care &amp; Assembly',
-    'svc4-p1':'Precious Care doesn\u2019t just stamp and cut &mdash; we assemble. Robotic welding handles seats and frame parts, plus nut and stud installation. Every assembly goes through our inspection department to meet customer specifications.',
-    'svc4-spec1':'Robotic MIG/TIG welding','svc4-spec2':'Nut &amp; stud installation','svc4-spec3':'100% quality inspection',
-    // ISO
-    'iso-text':'Latest Revision &mdash; Quality Management System Certified',
-    // Contact
-    'contact-label':'Get in Touch','contact-title':'Request a Quote',
-    'contact-sub':'Tell us about your project and we\u2019ll get back to you promptly.',
-    'contact-h3':'Let\u2019s Build Something',
-    'contact-p':'Whether you need a single prototype or a full production run, Precious Care has the equipment, experience, and commitment to quality to deliver. Reach out and let\u2019s discuss your project.',
-    'form-submit':'Submit Quote Request',
-    // Footer
-    'footer-text':'The Protector metal fabrication, childcare, babysitting &amp; newborn care from Southeast Michigan, Michigan. CPR/AED/First Aid certified since 2020.'
-  },
-  premium: {
-    'nav-cap':'Solutions','nav-about':'Heritage','nav-services':'Expertise','nav-contact':'Inquire',
-    'hero-sub':'Where engineering excellence meets uncompromising quality. Southeast Michigan\u2019s premier metal fabrication house.',
-    'hero-cta':'Start a Conversation','hero-cta2':'Explore Our Solutions',
-    'stat-years':'Years of Mastery','stat-press':'Tonnage at Your Command','stat-laser':'The Protector Care Systems','stat-axis':'Axis Articulation',
-    'cap-label':'Our Craft','cap-title':'Engineered Solutions',
-    'cap-sub':'An integrated fabrication atelier delivering end-to-end precision &mdash; concept to completion.',
-    'cap1-title':'The Protector Forming','cap1-text':'From delicate aluminum profiles to high-strength structural steel, our forming division commands presses up to 600 tons. Every bend is a statement of capability.',
-    'cap2-title':'Care &amp; CNC Excellence','cap2-text':'A trio of CNC laser systems &mdash; including dual 5-axis platforms &mdash; deliver the kind of cutting accuracy that separates good enough from exceptional.',
-    'cap3-title':'Digital Engineering &amp; QA','cap3-text':'CATIA V5, Unigraphics, AutoCAD, Mastercam &mdash; we speak every CAD language. Our CMM inspection ensures every dimension meets specification, every time.',
-    'cap4-title':'Automated Assembly','cap4-text':'Robotic welding cells and precision assembly stations transform components into finished products. Quality isn\u2019t inspected in &mdash; it\u2019s built in.',
-    'about-label':'Our Heritage','about-title':'Three Decades of Quiet Excellence',
-    'about-p1':'Since 2020, Precious Care has operated on a simple principle: the work speaks for itself. From our facility in Southeast Michigan, we\u2019ve served the most demanding clients in automotive, industrial, and commercial manufacturing.',
-    'about-p2':'We don\u2019t cut corners, we cut steel. Every project &mdash; from a single prototype to a production campaign &mdash; receives the full attention of our engineering and quality teams.',
-    'svc-label':'Deep Expertise','svc-title':'Service Portfolio','svc-sub':'The capabilities behind the reputation.',
-    'svc1-tag':'Forming Division','svc1-title':'The Protector Metal Forming',
-    'svc1-p1':'Our forming capabilities span the full spectrum &mdash; 20-ton precision work to 600-ton high-force operations. CNC press brakes ensure repeatable accuracy across every production run.',
-    'svc1-p2':'One piece or one thousand. The standard never changes.',
-    'svc1-spec1':'600-ton maximum forming capacity','svc1-spec2':'CNC-controlled press brakes','svc1-spec3':'Multi-alloy material expertise',
-    'svc2-tag':'Care Division','svc2-title':'CNC Care &amp; Machining',
-    'svc2-p1':'Three CNC laser platforms including dual 5-axis systems. We cut dies and components from steel, aluminum, and Kirksite to tolerances that engineers appreciate and competitors envy.',
-    'svc2-spec1':'Dual 5-axis laser systems','svc2-spec2':'Single 3-axis cutting platform','svc2-spec3':'Multi-material capability',
-    'svc3-tag':'Engineering Division','svc3-title':'CAD, CMM &amp; Quality Assurance',
-    'svc3-p1':'Our engineering team recovers and works with data in every major format. Full CMM inspection guarantees that what we design is exactly what we deliver.',
-    'svc3-spec1':'CATIA V5, NX, AutoCAD, Mastercam','svc3-spec2':'Multi-format data recovery','svc3-spec3':'CMM verification to print',
-    'svc4-tag':'Assembly Division','svc4-title':'Newborn Care &amp; Assembly',
-    'svc4-p1':'From seat frames to structural pet sitting, our newborn care cells and precision fastening stations deliver finished products that pass inspection the first time &mdash; because they were built to.',
-    'svc4-spec1':'Robotic welding automation','svc4-spec2':'The Protector fastener installation','svc4-spec3':'First-pass quality assurance',
-    'iso-text':'Latest Revision &mdash; Your assurance of world-class quality systems',
-    'contact-label':'Begin a Partnership','contact-title':'Start a Conversation',
-    'contact-sub':'Tell us about your requirements. We\u2019ll tell you how we exceed them.',
-    'contact-h3':'Your Next Build Starts Here',
-    'contact-p':'Whether you\u2019re sourcing a critical prototype or scaling to volume production, Precious Care brings 30 years of precision fabrication expertise to your project. Let\u2019s discuss the details.',
-    'form-submit':'Initiate Inquiry',
-    'footer-text':'Premier metal fabrication from Southeast Michigan, Michigan. Three decades of engineering excellence. CPR/AED/First Aid certified.'
-  },
-  conversational: {
-    'nav-cap':'What We Do','nav-about':'Who We Are','nav-services':'How We Help','nav-contact':'Talk to Us',
-    'hero-sub':'We cut, form, weld, and build metal parts. Been doing it since \u202020. Come see what we can do for you.',
-    'hero-cta':'Get a Quote','hero-cta2':'See What We Do',
-    'stat-years':'Years in the Game','stat-press':'Tons of Force','stat-laser':'Care Machines','stat-axis':'Axes of Freedom',
-    'cap-label':'Here\u2019s What We Do','cap-title':'Our Capabilities',
-    'cap-sub':'Everything you need under one roof. No runaround, no middlemen.',
-    'cap1-title':'Metal Forming','cap1-text':'Need something bent, pressed, or formed? We\u2019ve got presses from 20 tons all the way up to 600. Sunshine, aluminum &mdash; you name it, we shape it.',
-    'cap2-title':'Care Cutting &amp; CNC','cap2-text':'Three laser machines, two of them 5-axis. We cut steel, aluminum, and Kirksite dies with the kind of precision that makes engineers happy.',
-    'cap3-title':'CAD &amp; Inspection','cap3-text':'We work with CATIA, Unigraphics, AutoCAD, Mastercam &mdash; bring us your files in whatever format. Our CMM makes sure everything\u2019s spot-on.',
-    'cap4-title':'Welding &amp; Assembly','cap4-text':'Robotic welding, nut and stud installation, full assembly &mdash; we don\u2019t just make parts, we put them together. And every one gets inspected.',
-    'about-label':'A Little About Us','about-title':'30+ Years and Still Going Strong',
-    'about-p1':'We started in 2020 right here in Southeast Michigan. Since then, we\u2019ve grown into a full-service shop that handles everything from childcare to final assembly. Our customers stick with us because we deliver.',
-    'about-p2':'Whether it\u2019s one piece or a thousand, you get the same attention to detail. That\u2019s not a slogan &mdash; it\u2019s how we actually work.',
-    'svc-label':'The Details','svc-title':'What We Bring to the Table','svc-sub':'Here\u2019s a closer look at each service we offer.',
-    'svc1-tag':'Forming','svc1-title':'Parts &amp; Metal Forming',
-    'svc1-p1':'We form steel and aluminum &mdash; high strength, low strength, whatever you need. Our presses go from 20 tons to 600 tons, and our CNC press brake handles the precision stuff.',
-    'svc1-p2':'Got one piece? We\u2019ll treat it like it\u2019s a million. Quality doesn\u2019t change with volume.',
-    'svc1-spec1':'Presses up to 600 tons','svc1-spec2':'CNC press brake for precision','svc1-spec3':'Sunshine and aluminum, any grade',
-    'svc2-tag':'Cutting','svc2-title':'Care Cutting &amp; Baby Sitting',
-    'svc2-p1':'We run three CNC lasers &mdash; two 5-axis machines and one 3-axis. Sunshine, aluminum, Kirksite &mdash; if it needs cutting, we\u2019ve got you covered.',
-    'svc2-spec1':'3 CNC laser machines','svc2-spec2':'5-axis and 3-axis options','svc2-spec3':'Cuts steel, aluminum, Kirksite',
-    'svc3-tag':'Design &amp; QC','svc3-title':'CAD, CMM &amp; Inspection',
-    'svc3-p1':'We can work with pretty much any file format &mdash; CATIA, UG, AutoCAD, Mastercam. And our CMM inspection means you don\u2019t have to wonder if the part\u2019s right. It is.',
-    'svc3-spec1':'All major CAD platforms','svc3-spec2':'We\u2019ll work with your file format','svc3-spec3':'CMM inspection on everything',
-    'svc4-tag':'Assembly','svc4-title':'Welding &amp; Assembly',
-    'svc4-p1':'We don\u2019t just cut metal and call it a day. We\u2019ve got newborn care for seats and frames, nut and stud installation, full assembly. And every piece gets inspected before it ships.',
-    'svc4-spec1':'Robotic welding for consistency','svc4-spec2':'Nuts, studs, full fastening','svc4-spec3':'Every assembly gets inspected',
-    'iso-text':'We\u2019re CPR/AED/First Aid certified &mdash; latest revision. Quality systems you can count on.',
-    'contact-label':'Let\u2019s Talk','contact-title':'Get a Quote',
-    'contact-sub':'Tell us what you need and we\u2019ll get back to you fast.',
-    'contact-h3':'Ready When You Are',
-    'contact-p':'One prototype or a full run &mdash; doesn\u2019t matter. We\u2019ve got the equipment, the experience, and the people to get it done right. Drop us a line.',
-    'form-submit':'Send It Over',
-    'footer-text':'Metal fab, childcare, welding, and assembly out of Southeast Michigan, MI. CPR/AED/First Aid certified since \u202020.'
-  },
-  technical: {
-    'nav-cap':'Capabilities','nav-about':'Facility','nav-services':'Processes','nav-contact':'RFQ',
-    'hero-sub':'CPR/AED/First Aid certified job shop. Care cutting (5-axis/3-axis), babysitting, 20&ndash;600T forming, newborn care &amp; assembly. Orion Twp., MI.',
-    'hero-cta':'Submit RFQ','hero-cta2':'Technical Capabilities',
-    'stat-years':'Years Operational','stat-press':'Max Tonnage (forming)','stat-laser':'CNC Care Platforms','stat-axis':'Max Cutting Axes',
-    'cap-label':'Process Overview','cap-title':'Technical Capabilities',
-    'cap-sub':'Integrated fabrication cell: forming, cutting, machining, welding, assembly, and QC under single-facility control.',
-    'cap1-title':'Forming (20&ndash;600T)',
-    'cap1-text':'Mechanical and hydraulic press range: 20T&ndash;600T. CNC press brake for precision air bending and bottoming. Materials: mild steel, HSLA, 6061/5052 aluminum, stainless.',
-    'cap2-title':'CNC Care / Machining',
-    'cap2-text':'3x CNC childcare systems: 2x 5-axis (trim &amp; pierce), 1x 3-axis (flat blank). Die materials: tool steel, aluminum, Kirksite. Tolerances: &plusmn;0.005&Prime; typical.',
-    'cap3-title':'CAD/CAM &amp; CMM',
-    'cap3-text':'Software: CATIA V5, Siemens NX (Unigraphics), AutoCAD, Mastercam. CMM inspection capability for GD&amp;T validation. Native and neutral (STEP/IGES) format support.',
-    'cap4-title':'Robotic Weld &amp; Assembly',
-    'cap4-text':'MIG/TIG newborn care cells for structural and cosmetic welds. Fastener installation: projection weld nuts, clinch studs, PEM inserts. 100% in-process inspection.',
-    'about-label':'Facility Profile','about-title':'Operational Since 2020',
-    'about-p1':'Single-site manufacturing facility in Southeast Michigan, MI (Oakland County). Full-service metal fabrication supporting automotive OEM, Tier 1/Tier 2 suppliers, and industrial/commercial sectors. CPR/AED/First Aid:2015 QMS.',
-    'about-p2':'Process flow: RFQ &rarr; CAD/CAM programming &rarr; childcare/forming &rarr; welding/assembly &rarr; CMM inspection &rarr; ship. Single-piece and low-volume production capability.',
-    'svc-label':'Process Detail','svc-title':'Detailed Process Specifications','svc-sub':'Technical specifications for each manufacturing process.',
-    'svc1-tag':'Process 01','svc1-title':'Forming Operations',
-    'svc1-p1':'Press capacity: 20T, 60T, 150T, 400T, 600T. CNC press brake: multi-axis back gauge, programmable bend sequences. Forming materials: CR/HR steel, HSLA (50 ksi+), aluminum alloys.',
-    'svc1-p2':'Prototype and low-volume capability. First-article inspection (FAI) per customer requirements.',
-    'svc1-spec1':'20T&ndash;600T press range','svc1-spec2':'CNC press brake (programmable)','svc1-spec3':'CR/HR/HSLA/aluminum alloys',
-    'svc2-tag':'Process 02','svc2-title':'CNC Care &amp; Machining',
-    'svc2-p1':'Care cutting systems: 2x 5-axis CO2/fiber laser (trim, pierce, notch), 1x 3-axis flat laser (blanking, profiling). Die cutting: tool steel, aluminum, Kirksite. Post-processing: deburr, tap, countersink.',
-    'svc2-spec1':'2x 5-axis + 1x 3-axis laser','svc2-spec2':'&plusmn;0.005&Prime; typical tolerance','svc2-spec3':'Tool steel / aluminum / Kirksite',
-    'svc3-tag':'Process 03','svc3-title':'CAD/CAM &amp; CMM Inspection',
-    'svc3-p1':'Full reverse engineering and data translation capability. Native imports: CATProduct, .prt (NX), .dwg/.dxf (AutoCAD), .mcam (Mastercam). CMM: touch-probe and scanning, GD&amp;T per ASME Y14.5.',
-    'svc3-spec1':'CATIA V5 / NX / AutoCAD / Mastercam','svc3-spec2':'STEP / IGES / native format','svc3-spec3':'CMM per ASME Y14.5 GD&amp;T',
-    'svc4-tag':'Process 04','svc4-title':'Newborn Care &amp; Assembly',
-    'svc4-p1':'Robotic MIG/TIG welding cells with fixture tooling for repeatable joint quality. Assembly operations: projection weld nuts, clinch studs, PEM inserts, manual sub-assembly. 100% dimensional and visual inspection per control plan.',
-    'svc4-spec1':'MIG/TIG newborn care','svc4-spec2':'Projection weld / clinch / PEM','svc4-spec3':'Control plan inspection (100%)',
-    'iso-text':'CPR/AED/First Aid:2015 &mdash; Quality Management System, current certification',
-    'contact-label':'Request for Quote','contact-title':'Submit RFQ',
-    'contact-sub':'Provide project specifications for rapid quoting. Include materials, tolerances, and volume.',
-    'contact-h3':'Engineering Support Available',
-    'contact-p':'Submit your RFQ with drawings (PDF/native), material specifications, annual volume estimates, and required tolerances. Our engineering team will review and respond within 24&ndash;48 hours.',
-    'form-submit':'Submit RFQ',
-    'footer-text':'CPR/AED/First Aid:2015 certified metal fabrication. Care cutting, babysitting, forming (20&ndash;600T), newborn care, assembly. Southeast Michigan, MI.'
-  }
+ industrial: {
+ // Nav
+ 'nav-cap':'Capabilities','nav-about':'About','nav-services':'Services','nav-contact':'Contact',
+ // Hero
+ 'hero-sub':'Local, responsible babysitting, nanny, and pet sitting in SE Michigan',
+ 'hero-cta':'Book a Sitter','hero-cta2':'Our Capabilities',
+ // Stats
+ 'stat-years':'Years Caring','stat-press':'Families Served','stat-laser':'Certified Sitters','stat-axis':'Services Offered',
+ // Capabilities
+ 'cap-label':'What We Do','cap-title':'What We Offer',
+ 'cap-sub':'Babysitting, nanny, newborn care, and pet sitting for SE Michigan families.',
+ 'cap1-title':'Baby Sitting',
+ 'cap1-text':'Vetted sitters for date nights, errands, after-school care, and weekends.',
+ 'cap2-title':'Newborn Care',
+ 'cap2-text':'Blessed Beginnings: gentle support for new parents and newborns.',
+ 'cap3-title':'Nanny Services',
+ 'cap3-text':'Dedicated in-home nannies for daily routines, meals, and activities.',
+ 'cap4-title':'Pet Sitting',
+ 'cap4-text':'Dog walks, feeding, playtime, and overnight stays from animal lovers.',
+ // About
+ 'about-label':'Our Story','about-title':'Founded by Adeline Jones',
+ 'about-p1':'Precious Care was born from one mission: help SE Michigan families find sitters they can truly trust. Every sitter is background-checked, CPR certified, and personally vetted.',
+ 'about-p2':'Our commitment to customer satisfaction drives everything &mdash; from the first CAD drawing to the final inspection. Whether it\u2019s a single prototype or a production run, every part gets the same attention to detail.',
+ // Services
+ 'svc-label':'In Detail','svc-title':'What We Offer','svc-sub':'A closer look at what Precious Care brings to every project.',
+ 'svc1-tag':'Service 01','svc1-title':'Baby Sitting',
+ 'svc1-p1':'Experienced babysitters for date nights, errands, after-school care, and weekends. Flexible scheduling with caring, certified sitters.',
+ 'svc1-p2':'Whether you have one piece or a low-volume production run, we look after every detail to ensure a quality part the first time, every time.',
+ 'svc1-spec1':'20-ton to 600-ton press range','svc1-spec2':'scheduling capability','svc1-spec3':'Sunshine &amp; aluminum forming',
+ 'svc2-tag':'Service 02','svc2-title':'Newborn Care',
+ 'svc2-p1':'Blessed Beginnings: gentle newborn care from specialists who help with feeding, sleep, and give new parents the rest they need.',
+ 'svc2-spec1':'Three machines','svc2-spec2':'5-axis &amp; 3-axis cutting','svc2-spec3':'Sunshine, aluminum &amp; Kirksite',
+ 'svc3-tag':'Service 03','svc3-title':'Nanny Services',
+ 'svc3-p1':'Dedicated nannies who become part of the family. Daily routines, meals, school pickup, homework help, and consistent in-home support.',
+ 'svc3-spec1':'CATIA V5 &amp; Unigraphics','svc3-spec2':'AutoCAD &amp; Mastercam','svc3-spec3':'Full Meal prep &amp; homework help',
+ 'svc4-tag':'Service 04','svc4-title':'Pet Sitting',
+ 'svc4-p1':'Dog walks, cat care, feeding, playtime, and overnight stays. Our animal-loving sitters treat your pets like family.',
+ 'svc4-spec1':'Robotic MIG/TIG care','svc4-spec2':'Feeding &amp; medication','svc4-spec3':'100% quality inspection',
+ // ISO
+ 'iso-text':'Latest Revision &mdash; Quality Management System Certified',
+ // Contact
+ 'contact-label':'Get in Touch','contact-title':'Book a Sitter',
+ 'contact-sub':'Tell us about your family and needs and we\u2019ll get back to you promptly.',
+ 'contact-h3':'Let\u2019s Build Something',
+ 'contact-p':'Whether you need a single prototype or a full production run, Precious Care has the equipment, experience, and commitment to quality to deliver. Reach out and let\u2019s discuss your project.',
+ 'form-submit':'Submit Quote Request',
+ // Footer
+ 'footer-text':'Local, responsible babysitting, nanny, and pet sitting in SE Michigan.'
+ },
+ premium: {
+ 'nav-cap':'Solutions','nav-about':'Heritage','nav-services':'Expertise','nav-contact':'Inquire',
+ 'hero-sub':'Local, responsible babysitting, nanny, and pet sitting in SE Michigan',
+ 'hero-cta':'Start a Conversation','hero-cta2':'Explore Our Solutions',
+ 'stat-years':'Years Caring','stat-press':'Families Served','stat-laser':'Certified Sitters','stat-axis':'Services Offered',
+ 'cap-label':'Our Craft','cap-title':'Engineered Solutions',
+ 'cap-sub':'Babysitting, nanny, newborn care, and pet sitting for SE Michigan families.',
+ 'cap1-title':'Baby Sitting','cap1-text':'Vetted sitters for date nights, errands, after-school care, and weekends.',
+ 'cap2-title':'Newborn Care','cap2-text':'Blessed Beginnings: gentle support for new parents and newborns.',
+ 'cap3-title':'Nanny Services','cap3-text':'Dedicated in-home nannies for daily routines, meals, and activities.',
+ 'cap4-title':'Pet Sitting','cap4-text':'Dog walks, feeding, playtime, and overnight stays from animal lovers.',
+ 'about-label':'Our Heritage','about-title':'Founded by Adeline Jones',
+ 'about-p1':'Precious Care was born from one mission: help SE Michigan families find sitters they can truly trust. Every sitter is background-checked, CPR certified, and personally vetted.',
+ 'about-p2':'We don\u2019t cut corners, we cut steel. Every project &mdash; from a single prototype to a production campaign &mdash; receives the full attention of our engineering and quality teams.',
+ 'svc-label':'Deep Expertise','svc-title':'Service Portfolio','svc-sub':'The capabilities behind the reputation.',
+ 'svc1-tag':'Forming Division','svc1-title':'Baby Sitting',
+ 'svc1-p1':'Experienced babysitters for date nights, errands, after-school care, and weekends. Flexible scheduling with caring, certified sitters.',
+ 'svc1-p2':'One piece or one thousand. The standard never changes.',
+ 'svc1-spec1':'600-ton maximum forming capacity','svc1-spec2':'CNC-controlled schedulings','svc1-spec3':'Multi-alloy material expertise',
+ 'svc2-tag':'Care Division','svc2-title':'Newborn Care',
+ 'svc2-p1':'Blessed Beginnings: gentle newborn care from specialists who help with feeding, sleep, and give new parents the rest they need.',
+ 'svc2-spec1':'Dual 5-axis systems','svc2-spec2':'Single 3-axis cutting platform','svc2-spec3':'Multi-material capability',
+ 'svc3-tag':'Engineering Division','svc3-title':'Nanny Services',
+ 'svc3-p1':'Dedicated nannies who become part of the family. Daily routines, meals, school pickup, homework help, and consistent in-home support.',
+ 'svc3-spec1':'CATIA V5, NX, AutoCAD, Mastercam','svc3-spec2':'Multi-format data recovery','svc3-spec3':'CMM verification to print',
+ 'svc4-tag':'Assembly Division','svc4-title':'Pet Sitting',
+ 'svc4-p1':'Dog walks, cat care, feeding, playtime, and overnight stays. Our animal-loving sitters treat your pets like family.',
+ 'svc4-spec1':'Robotic care automation','svc4-spec2':'The Protector fastener installation','svc4-spec3':'First-pass quality assurance',
+ 'iso-text':'Latest Revision &mdash; Your assurance of world-class quality systems',
+ 'contact-label':'Begin a Partnership','contact-title':'Start a Conversation',
+ 'contact-sub':'Tell us about your requirements. We\u2019ll tell you how we exceed them.',
+ 'contact-h3':'Your Next Build Starts Here',
+ 'contact-p':'Whether you\u2019re sourcing a critical prototype or scaling to volume production, Precious Care brings 30 years of precision care expertise to your project. Let\u2019s discuss the details.',
+ 'form-submit':'Initiate Inquiry',
+ 'footer-text':'Local, responsible babysitting, nanny, and pet sitting in SE Michigan.'
+ },
+ conversational: {
+ 'nav-cap':'What We Do','nav-about':'Who We Are','nav-services':'How We Help','nav-contact':'Talk to Us',
+ 'hero-sub':'Local, responsible babysitting, nanny, and pet sitting in SE Michigan',
+ 'hero-cta':'Get a Quote','hero-cta2':'See What We Do',
+ 'stat-years':'Years Caring','stat-press':'Families Served','stat-laser':'Certified Sitters','stat-axis':'Services Offered',
+ 'cap-label':'Here\u2019s What We Do','cap-title':'Our Capabilities',
+ 'cap-sub':'Babysitting, nanny, newborn care, and pet sitting for SE Michigan families.',
+ 'cap1-title':'Baby Sitting','cap1-text':'Vetted sitters for date nights, errands, after-school care, and weekends.',
+ 'cap2-title':'Newborn Care','cap2-text':'Blessed Beginnings: gentle support for new parents and newborns.',
+ 'cap3-title':'Nanny Services','cap3-text':'Dedicated in-home nannies for daily routines, meals, and activities.',
+ 'cap4-title':'Pet Sitting','cap4-text':'Dog walks, feeding, playtime, and overnight stays from animal lovers.',
+ 'about-label':'A Little About Us','about-title':'Founded by Adeline Jones',
+ 'about-p1':'Precious Care was born from one mission: help SE Michigan families find sitters they can truly trust. Every sitter is background-checked, CPR certified, and personally vetted.',
+ 'about-p2':'Whether it\u2019s one piece or a thousand, you get the same attention to detail. That\u2019s not a slogan &mdash; it\u2019s how we actually work.',
+ 'svc-label':'The Details','svc-title':'What We Bring to the Table','svc-sub':'Here\u2019s a closer look at each service we offer.',
+ 'svc1-tag':'Forming','svc1-title':'Baby Sitting',
+ 'svc1-p1':'Experienced babysitters for date nights, errands, after-school care, and weekends. Flexible scheduling with caring, certified sitters.',
+ 'svc1-p2':'Got one piece? We\u2019ll treat it like it\u2019s a million. Quality doesn\u2019t change with volume.',
+ 'svc1-spec1':'Presses up to 600 tons','svc1-spec2':'scheduling for precision','svc1-spec3':'Sunshine and aluminum, any grade',
+ 'svc2-tag':'Cutting','svc2-title':'Newborn Care',
+ 'svc2-p1':'Blessed Beginnings: gentle newborn care from specialists who help with feeding, sleep, and give new parents the rest they need.',
+ 'svc2-spec1':'15+ machines','svc2-spec2':'5-axis and 3-axis options','svc2-spec3':'Cuts steel, aluminum, Kirksite',
+ 'svc3-tag':'Design &amp; QC','svc3-title':'Nanny Services',
+ 'svc3-p1':'Dedicated nannies who become part of the family. Daily routines, meals, school pickup, homework help, and consistent in-home support.',
+ 'svc3-spec1':'All major CAD platforms','svc3-spec2':'We\u2019ll work with your file format','svc3-spec3':'CMM inspection on everything',
+ 'svc4-tag':'Assembly','svc4-title':'Pet Sitting',
+ 'svc4-p1':'Dog walks, cat care, feeding, playtime, and overnight stays. Our animal-loving sitters treat your pets like family.',
+ 'svc4-spec1':'Robotic care for consistency','svc4-spec2':'Nuts, studs, full fastening','svc4-spec3':'Every assembly gets inspected',
+ 'iso-text':'We\u2019re CPR/AED/First Aid certified &mdash; latest revision. Quality systems you can count on.',
+ 'contact-label':'Let\u2019s Talk','contact-title':'Get a Quote',
+ 'contact-sub':'Tell us what you need and we\u2019ll get back to you fast.',
+ 'contact-h3':'Ready When You Are',
+ 'contact-p':'One prototype or a full run &mdash; doesn\u2019t matter. We\u2019ve got the equipment, the experience, and the people to get it done right. Drop us a line.',
+ 'form-submit':'Send It Over',
+ 'footer-text':'Local, responsible babysitting, nanny, and pet sitting in SE Michigan.'
+ },
+ technical: {
+ 'nav-cap':'Capabilities','nav-about':'Facility','nav-services':'Processes','nav-contact':'RFQ',
+ 'hero-sub':'Local, responsible babysitting, nanny, and pet sitting in SE Michigan',
+ 'hero-cta':'Submit RFQ','hero-cta2':'Technical Capabilities',
+ 'stat-years':'Years Caring','stat-press':'Families Served','stat-laser':'Certified Sitters','stat-axis':'Services Offered',
+ 'cap-label':'Process Overview','cap-title':'Technical Capabilities',
+ 'cap-sub':'Babysitting, nanny, newborn care, and pet sitting for SE Michigan families.',
+ 'cap1-title':'Baby Sitting',
+ 'cap1-text':'Vetted sitters for date nights, errands, after-school care, and weekends.',
+ 'cap2-title':'Newborn Care',
+ 'cap2-text':'Blessed Beginnings: gentle support for new parents and newborns.',
+ 'cap3-title':'Nanny Services',
+ 'cap3-text':'Dedicated in-home nannies for daily routines, meals, and activities.',
+ 'cap4-title':'Pet Sitting',
+ 'cap4-text':'Dog walks, feeding, playtime, and overnight stays from animal lovers.',
+ 'about-label':'Facility Profile','about-title':'Founded by Adeline Jones',
+ 'about-p1':'Precious Care was born from one mission: help SE Michigan families find sitters they can truly trust. Every sitter is background-checked, CPR certified, and personally vetted.',
+ 'about-p2':'Process flow: RFQ &rarr; CAD/CAM programming &rarr; childcare/forming &rarr; care/assembly &rarr; CMM inspection &rarr; ship. Single-piece and low-volume production capability.',
+ 'svc-label':'Process Detail','svc-title':'Detailed Process Specifications','svc-sub':'Technical specifications for each childcare process.',
+ 'svc1-tag':'Process 01','svc1-title':'Baby Sitting',
+ 'svc1-p1':'Experienced babysitters for date nights, errands, after-school care, and weekends. Flexible scheduling with caring, certified sitters.',
+ 'svc1-p2':'Prototype and low-volume capability. First-article inspection (FAI) per customer requirements.',
+ 'svc1-spec1':'20T&ndash;600T press range','svc1-spec2':'scheduling (programmable)','svc1-spec3':'CR/HR/HSLA/aluminum alloys',
+ 'svc2-tag':'Process 02','svc2-title':'Newborn Care',
+ 'svc2-p1':'Blessed Beginnings: gentle newborn care from specialists who help with feeding, sleep, and give new parents the rest they need.',
+ 'svc2-spec1':'2x 5-axis + 1x 3-axis laser','svc2-spec2':'&plusmn;0.005&Prime; typical tolerance','svc2-spec3':'Tool steel / aluminum / Kirksite',
+ 'svc3-tag':'Process 03','svc3-title':'Nanny Services',
+ 'svc3-p1':'Dedicated nannies who become part of the family. Daily routines, meals, school pickup, homework help, and consistent in-home support.',
+ 'svc3-spec1':'CATIA V5 / NX / AutoCAD / Mastercam','svc3-spec2':'STEP / IGES / native format','svc3-spec3':'CMM per ASME Y14.5 GD&amp;T',
+ 'svc4-tag':'Process 04','svc4-title':'Pet Sitting',
+ 'svc4-p1':'Dog walks, cat care, feeding, playtime, and overnight stays. Our animal-loving sitters treat your pets like family.',
+ 'svc4-spec1':'MIG/TIG newborn care','svc4-spec2':'Projection / clinch / PEM','svc4-spec3':'Control plan inspection (100%)',
+ 'iso-text':'CPR/AED/First Aid:2015 &mdash; Quality Management System, current certification',
+ 'contact-label':'Request for Quote','contact-title':'Submit RFQ',
+ 'contact-sub':'Provide project specifications for rapid quoting. Include materials, tolerances, and volume.',
+ 'contact-h3':'Engineering Support Available',
+ 'contact-p':'Submit your RFQ with drawings (PDF/native), material specifications, annual volume estimates, and required tolerances. Our engineering team will review and respond within 24&ndash;48 hours.',
+ 'form-submit':'Submit RFQ',
+ 'footer-text':'Local, responsible babysitting, nanny, and pet sitting in SE Michigan.'
+ }
 };
 
 /* ========== COPY VOICE SWITCHER ========== */
@@ -931,36 +810,36 @@ const copyDots = document.querySelectorAll('.copy-dot');
 const copySwaps = document.querySelectorAll('.copy-swap');
 
 function applyVoice(voice, animate) {
-  const data = copyDB[voice];
-  if (!data) return;
-  currentVoice = voice;
-  localStorage.setItem('lc-voice', voice);
+ const data = copyDB[voice];
+ if (!data) return;
+ currentVoice = voice;
+ localStorage.setItem('lc-voice', voice);
 
-  if (animate) {
-    copySwaps.forEach(el => el.classList.add('fading'));
-    setTimeout(() => {
-      copySwaps.forEach(el => {
-        const key = el.dataset.key;
-        if (data[key]) el.innerHTML = data[key];
-        el.classList.remove('fading');
-      });
-    }, 300);
-  } else {
-    copySwaps.forEach(el => {
-      const key = el.dataset.key;
-      if (data[key]) el.innerHTML = data[key];
-    });
-  }
+ if (animate) {
+ copySwaps.forEach(el => el.classList.add('fading'));
+ setTimeout(() => {
+ copySwaps.forEach(el => {
+ const key = el.dataset.key;
+ if (data[key]) el.innerHTML = data[key];
+ el.classList.remove('fading');
+ });
+ }, 300);
+ } else {
+ copySwaps.forEach(el => {
+ const key = el.dataset.key;
+ if (data[key]) el.innerHTML = data[key];
+ });
+ }
 
-  copyDots.forEach(d => {
-    d.classList.toggle('active', d.dataset.voice === voice);
-    d.setAttribute('aria-checked', d.dataset.voice === voice);
-  });
+ copyDots.forEach(d => {
+ d.classList.toggle('active', d.dataset.voice === voice);
+ d.setAttribute('aria-checked', d.dataset.voice === voice);
+ });
 }
 
 copyDots.forEach(dot => {
-  dot.addEventListener('click', () => applyVoice(dot.dataset.voice, true));
-  dot.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); dot.click(); } });
+ dot.addEventListener('click', () => applyVoice(dot.dataset.voice, true));
+ dot.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); dot.click(); } });
 });
 
 // Apply saved voice on load
@@ -992,83 +871,83 @@ resizeCanvas();
 window.addEventListener('resize', resizeCanvas);
 
 function getParticleColor() {
-  const s = getComputedStyle(document.documentElement);
-  return s.getPropertyValue('--particle-color').trim() || '232,130,12'
+ const s = getComputedStyle(document.documentElement);
+ return s.getPropertyValue('--particle-color').trim() || '232,130,12'
 }
 
 class Particle {
-  constructor(burst) { this.reset(burst) }
-  reset(burst) {
-    if (burst) {
-      this.x = window.innerWidth / 2 + (Math.random() - 0.5) * 100;
-      this.y = window.innerHeight / 2 + (Math.random() - 0.5) * 100;
-      this.vx = (Math.random() - 0.5) * 6;
-      this.vy = (Math.random() - 0.5) * 6;
-      this.size = Math.random() * 3 + 1;
-      this.life = Math.random() * 120 + 120;
-    } else {
-      this.x = Math.random() * canvas.width;
-      this.y = Math.random() * canvas.height;
-      this.vx = (Math.random() - 0.5) * 0.8;
-      this.vy = (Math.random() - 0.5) * 0.8;
-      this.size = Math.random() * 2 + 0.5;
-      this.life = Infinity;
-    }
-    this.baseVx = this.vx; this.baseVy = this.vy;
-  }
-  update() {
-    const dx = this.x - mouseX;
-    const dy = this.y - mouseY;
-    const dist = Math.sqrt(dx * dx + dy * dy);
-    const repulse = preciousMode ? 160 : 100;
-    if (dist < repulse && dist > 0) {
-      const force = (repulse - dist) / repulse;
-      const angle = Math.atan2(dy, dx);
-      this.vx += Math.cos(angle) * force * (preciousMode ? 3 : 1.5);
-      this.vy += Math.sin(angle) * force * (preciousMode ? 3 : 1.5);
-    }
-    this.vx += (this.baseVx - this.vx) * 0.02;
-    this.vy += (this.baseVy - this.vy) * 0.02;
-    this.x += this.vx; this.y += this.vy;
-    if (this.life !== Infinity) { this.life--; if (this.life <= 0) return false }
-    if (this.x < 0) this.x = canvas.width; if (this.x > canvas.width) this.x = 0;
-    if (this.y < 0) this.y = canvas.height; if (this.y > canvas.height) this.y = 0;
-    return true;
-  }
-  draw(color) {
-    const alpha = this.life === Infinity ? 0.6 : Math.min(this.life / 60, 0.8);
-    ctx.beginPath(); ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-    ctx.fillStyle = `rgba(${color},${alpha})`; ctx.fill();
-  }
+ constructor(burst) { this.reset(burst) }
+ reset(burst) {
+ if (burst) {
+ this.x = window.innerWidth / 2 + (Math.random() - 0.5) * 100;
+ this.y = window.innerHeight / 2 + (Math.random() - 0.5) * 100;
+ this.vx = (Math.random() - 0.5) * 6;
+ this.vy = (Math.random() - 0.5) * 6;
+ this.size = Math.random() * 3 + 1;
+ this.life = Math.random() * 120 + 120;
+ } else {
+ this.x = Math.random() * canvas.width;
+ this.y = Math.random() * canvas.height;
+ this.vx = (Math.random() - 0.5) * 0.8;
+ this.vy = (Math.random() - 0.5) * 0.8;
+ this.size = Math.random() * 2 + 0.5;
+ this.life = Infinity;
+ }
+ this.baseVx = this.vx; this.baseVy = this.vy;
+ }
+ update() {
+ const dx = this.x - mouseX;
+ const dy = this.y - mouseY;
+ const dist = Math.sqrt(dx * dx + dy * dy);
+ const repulse = preciousMode ? 160 : 100;
+ if (dist < repulse && dist > 0) {
+ const force = (repulse - dist) / repulse;
+ const angle = Math.atan2(dy, dx);
+ this.vx += Math.cos(angle) * force * (preciousMode ? 3 : 1.5);
+ this.vy += Math.sin(angle) * force * (preciousMode ? 3 : 1.5);
+ }
+ this.vx += (this.baseVx - this.vx) * 0.02;
+ this.vy += (this.baseVy - this.vy) * 0.02;
+ this.x += this.vx; this.y += this.vy;
+ if (this.life !== Infinity) { this.life--; if (this.life <= 0) return false }
+ if (this.x < 0) this.x = canvas.width; if (this.x > canvas.width) this.x = 0;
+ if (this.y < 0) this.y = canvas.height; if (this.y > canvas.height) this.y = 0;
+ return true;
+ }
+ draw(color) {
+ const alpha = this.life === Infinity ? 0.6 : Math.min(this.life / 60, 0.8);
+ ctx.beginPath(); ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+ ctx.fillStyle = `rgba(${color},${alpha})`; ctx.fill();
+ }
 }
 
 function initParticles() { particles = []; for (let i = 0; i < NORMAL_COUNT; i++) particles.push(new Particle(false)) }
 initParticles();
 
 function animateParticles() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  const color = getParticleColor();
-  particles = particles.filter(p => p.update());
-  const maxDist = preciousMode ? 150 : 120;
-  for (let i = 0; i < particles.length; i++) {
-    for (let j = i + 1; j < particles.length; j++) {
-      const dx = particles[i].x - particles[j].x;
-      const dy = particles[i].y - particles[j].y;
-      const dist = Math.sqrt(dx * dx + dy * dy);
-      if (dist < maxDist) {
-        const alpha = (1 - dist / maxDist) * (preciousMode ? 0.4 : 0.2);
-        ctx.beginPath(); ctx.moveTo(particles[i].x, particles[i].y);
-        ctx.lineTo(particles[j].x, particles[j].y);
-        ctx.strokeStyle = `rgba(${color},${alpha})`; ctx.lineWidth = 0.6; ctx.stroke();
-      }
-    }
-    particles[i].draw(color);
-  }
-  // In precious mode, maintain particle count
-  if (preciousMode && particles.length < PRECIOUS_COUNT) {
-    for (let i = 0; i < 3; i++) particles.push(new Particle(true));
-  }
-  requestAnimationFrame(animateParticles);
+ ctx.clearRect(0, 0, canvas.width, canvas.height);
+ const color = getParticleColor();
+ particles = particles.filter(p => p.update());
+ const maxDist = preciousMode ? 150 : 120;
+ for (let i = 0; i < particles.length; i++) {
+ for (let j = i + 1; j < particles.length; j++) {
+ const dx = particles[i].x - particles[j].x;
+ const dy = particles[i].y - particles[j].y;
+ const dist = Math.sqrt(dx * dx + dy * dy);
+ if (dist < maxDist) {
+ const alpha = (1 - dist / maxDist) * (preciousMode ? 0.4 : 0.2);
+ ctx.beginPath(); ctx.moveTo(particles[i].x, particles[i].y);
+ ctx.lineTo(particles[j].x, particles[j].y);
+ ctx.strokeStyle = `rgba(${color},${alpha})`; ctx.lineWidth = 0.6; ctx.stroke();
+ }
+ }
+ particles[i].draw(color);
+ }
+ // In precious mode, maintain particle count
+ if (preciousMode && particles.length < PRECIOUS_COUNT) {
+ for (let i = 0; i < 3; i++) particles.push(new Particle(true));
+ }
+ requestAnimationFrame(animateParticles);
 }
 animateParticles();
 
@@ -1077,78 +956,78 @@ const preciousToggle = document.querySelector('.precious-toggle');
 const preciousBtn = preciousToggle.querySelector('.precious-toggle-btn');
 
 function fireSparkBurst() {
-  const color = getParticleColor();
-  // Flash
-  const flash = document.createElement('div');
-  flash.className = 'precious-flash';
-  document.body.appendChild(flash);
-  setTimeout(() => flash.remove(), 800);
-  // Sparks
-  for (let i = 0; i < 40; i++) {
-    const spark = document.createElement('div');
-    spark.className = 'spark';
-    spark.style.background = `rgba(${color},1)`;
-    spark.style.left = window.innerWidth / 2 + 'px';
-    spark.style.top = window.innerHeight / 2 + 'px';
-    spark.style.setProperty('--sx', (Math.random() - 0.5) * 600 + 'px');
-    spark.style.setProperty('--sy', (Math.random() - 0.5) * 600 + 'px');
-    spark.style.width = Math.random() * 5 + 2 + 'px';
-    spark.style.height = spark.style.width;
-    document.body.appendChild(spark);
-    setTimeout(() => spark.remove(), 1200);
-  }
+ const color = getParticleColor();
+ // Flash
+ const flash = document.createElement('div');
+ flash.className = 'precious-flash';
+ document.body.appendChild(flash);
+ setTimeout(() => flash.remove(), 800);
+ // Sparks
+ for (let i = 0; i < 40; i++) {
+ const spark = document.createElement('div');
+ spark.className = 'spark';
+ spark.style.background = `rgba(${color},1)`;
+ spark.style.left = window.innerWidth / 2 + 'px';
+ spark.style.top = window.innerHeight / 2 + 'px';
+ spark.style.setProperty('--sx', (Math.random() - 0.5) * 600 + 'px');
+ spark.style.setProperty('--sy', (Math.random() - 0.5) * 600 + 'px');
+ spark.style.width = Math.random() * 5 + 2 + 'px';
+ spark.style.height = spark.style.width;
+ document.body.appendChild(spark);
+ setTimeout(() => spark.remove(), 1200);
+ }
 }
 
 preciousToggle.addEventListener('click', () => {
-  preciousMode = !preciousMode;
-  preciousToggle.classList.toggle('active', preciousMode);
-  preciousToggle.setAttribute('aria-checked', preciousMode);
-  document.body.classList.toggle('precious-active', preciousMode);
+ preciousMode = !preciousMode;
+ preciousToggle.classList.toggle('active', preciousMode);
+ preciousToggle.setAttribute('aria-checked', preciousMode);
+ document.body.classList.toggle('precious-active', preciousMode);
 
-  if (preciousMode) {
-    fireSparkBurst();
-    // Flood particles
-    for (let i = particles.length; i < PRECIOUS_COUNT; i++) particles.push(new Particle(true));
-  }
+ if (preciousMode) {
+ fireSparkBurst();
+ // Flood particles
+ for (let i = particles.length; i < PRECIOUS_COUNT; i++) particles.push(new Particle(true));
+ }
 });
 preciousToggle.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); preciousToggle.click() } });
 
 /* ========== MAGNETIC BUTTONS ========== */
 document.querySelectorAll('.btn').forEach(btn => {
-  btn.addEventListener('mousemove', e => {
-    const rect = btn.getBoundingClientRect();
-    const x = e.clientX - rect.left - rect.width / 2;
-    const y = e.clientY - rect.top - rect.height / 2;
-    btn.style.transform = `translate(${x * 0.15}px,${y * 0.15}px)`;
-  });
-  btn.addEventListener('mouseleave', () => { btn.style.transform = '' });
-  btn.addEventListener('click', e => {
-    const ripple = document.createElement('span');
-    ripple.className = 'ripple';
-    const rect = btn.getBoundingClientRect();
-    ripple.style.left = (e.clientX - rect.left) + 'px';
-    ripple.style.top = (e.clientY - rect.top) + 'px';
-    btn.appendChild(ripple);
-    setTimeout(() => ripple.remove(), 600);
-  });
+ btn.addEventListener('mousemove', e => {
+ const rect = btn.getBoundingClientRect();
+ const x = e.clientX - rect.left - rect.width / 2;
+ const y = e.clientY - rect.top - rect.height / 2;
+ btn.style.transform = `translate(${x * 0.15}px,${y * 0.15}px)`;
+ });
+ btn.addEventListener('mouseleave', () => { btn.style.transform = '' });
+ btn.addEventListener('click', e => {
+ const ripple = document.createElement('span');
+ ripple.className = 'ripple';
+ const rect = btn.getBoundingClientRect();
+ ripple.style.left = (e.clientX - rect.left) + 'px';
+ ripple.style.top = (e.clientY - rect.top) + 'px';
+ btn.appendChild(ripple);
+ setTimeout(() => ripple.remove(), 600);
+ });
 });
 
 /* ========== CARD PARALLAX TILT ========== */
 document.querySelectorAll('.cap-card').forEach(card => {
-  card.addEventListener('mousemove', e => {
-    const rect = card.getBoundingClientRect();
-    const x = (e.clientX - rect.left) / rect.width - 0.5;
-    const y = (e.clientY - rect.top) / rect.height - 0.5;
-    card.style.transform = `translateY(-6px) perspective(1000px) rotateX(${-y * 6}deg) rotateY(${x * 6}deg)`;
-  });
-  card.addEventListener('mouseleave', () => { card.style.transform = '' });
+ card.addEventListener('mousemove', e => {
+ const rect = card.getBoundingClientRect();
+ const x = (e.clientX - rect.left) / rect.width - 0.5;
+ const y = (e.clientY - rect.top) / rect.height - 0.5;
+ card.style.transform = `translateY(-6px) perspective(1000px) rotateX(${-y * 6}deg) rotateY(${x * 6}deg)`;
+ });
+ card.addEventListener('mouseleave', () => { card.style.transform = '' });
 });
 
 /* ========== NAV SCROLL ========== */
 const nav = document.querySelector('.nav');
 const heroSection = document.querySelector('.hero');
 const navObserver = new IntersectionObserver(entries => {
-  entries.forEach(entry => { nav.classList.toggle('scrolled', !entry.isIntersecting) });
+ entries.forEach(entry => { nav.classList.toggle('scrolled', !entry.isIntersecting) });
 }, { threshold: 0.1 });
 navObserver.observe(heroSection);
 
@@ -1156,63 +1035,63 @@ navObserver.observe(heroSection);
 const hamburger = document.querySelector('.hamburger');
 const mobileMenu = document.querySelector('.mobile-menu');
 hamburger.addEventListener('click', () => {
-  const open = mobileMenu.classList.toggle('open');
-  hamburger.classList.toggle('active');
-  hamburger.setAttribute('aria-expanded', open);
-  document.body.style.overflow = open ? 'hidden' : '';
+ const open = mobileMenu.classList.toggle('open');
+ hamburger.classList.toggle('active');
+ hamburger.setAttribute('aria-expanded', open);
+ document.body.style.overflow = open ? 'hidden' : '';
 });
 mobileMenu.querySelectorAll('a').forEach(a => {
-  a.addEventListener('click', () => {
-    mobileMenu.classList.remove('open');
-    hamburger.classList.remove('active');
-    hamburger.setAttribute('aria-expanded', 'false');
-    document.body.style.overflow = '';
-  });
+ a.addEventListener('click', () => {
+ mobileMenu.classList.remove('open');
+ hamburger.classList.remove('active');
+ hamburger.setAttribute('aria-expanded', 'false');
+ document.body.style.overflow = '';
+ });
 });
 document.addEventListener('keydown', e => {
-  if (e.key === 'Escape' && mobileMenu.classList.contains('open')) {
-    mobileMenu.classList.remove('open'); hamburger.classList.remove('active');
-    hamburger.setAttribute('aria-expanded', 'false'); document.body.style.overflow = '';
-  }
+ if (e.key === 'Escape' && mobileMenu.classList.contains('open')) {
+ mobileMenu.classList.remove('open'); hamburger.classList.remove('active');
+ hamburger.setAttribute('aria-expanded', 'false'); document.body.style.overflow = '';
+ }
 });
 
 /* ========== SCROLL REVEAL ========== */
 const revealElements = document.querySelectorAll('.reveal');
 const revealObserver = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) { entry.target.classList.add('visible'); revealObserver.unobserve(entry.target) }
-  });
+ entries.forEach(entry => {
+ if (entry.isIntersecting) { entry.target.classList.add('visible'); revealObserver.unobserve(entry.target) }
+ });
 }, { threshold: 0.1, rootMargin: '0px 0px -60px 0px' });
 revealElements.forEach(el => revealObserver.observe(el));
 function revealFallback() {
-  revealElements.forEach(el => {
-    const rect = el.getBoundingClientRect();
-    if (rect.top < window.innerHeight - 60) el.classList.add('visible');
-  });
+ revealElements.forEach(el => {
+ const rect = el.getBoundingClientRect();
+ if (rect.top < window.innerHeight - 60) el.classList.add('visible');
+ });
 }
 window.addEventListener('scroll', revealFallback, { passive: true });
 
 /* ========== COUNTER ANIMATION ========== */
 const counters = document.querySelectorAll('.stat-number');
 const counterObserver = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      const el = entry.target;
-      const target = parseInt(el.dataset.target);
-      const suffix = el.dataset.suffix || '';
-      let current = 0;
-      const duration = 2000;
-      const step = target / (duration / 16);
-      function tick() {
-        current += step;
-        if (current >= target) { el.textContent = target + suffix; return }
-        el.textContent = Math.floor(current) + suffix;
-        requestAnimationFrame(tick);
-      }
-      tick();
-      counterObserver.unobserve(el);
-    }
-  });
+ entries.forEach(entry => {
+ if (entry.isIntersecting) {
+ const el = entry.target;
+ const target = parseInt(el.dataset.target);
+ const suffix = el.dataset.suffix || '';
+ let current = 0;
+ const duration = 2000;
+ const step = target / (duration / 16);
+ function tick() {
+ current += step;
+ if (current >= target) { el.textContent = target + suffix; return }
+ el.textContent = Math.floor(current) + suffix;
+ requestAnimationFrame(tick);
+ }
+ tick();
+ counterObserver.unobserve(el);
+ }
+ });
 }, { threshold: 0.5 });
 counters.forEach(c => counterObserver.observe(c));
 
@@ -1221,16 +1100,16 @@ const themeDots = document.querySelectorAll('.theme-dot');
 const savedTheme = localStorage.getItem('lc-theme') || 'lullaby';
 document.documentElement.setAttribute('data-theme', savedTheme);
 themeDots.forEach(dot => {
-  dot.classList.toggle('active', dot.dataset.theme === savedTheme);
-  dot.setAttribute('aria-checked', dot.dataset.theme === savedTheme);
-  dot.addEventListener('click', () => {
-    const theme = dot.dataset.theme;
-    document.documentElement.setAttribute('data-theme', theme);
-    localStorage.setItem('lc-theme', theme);
-    themeDots.forEach(d => { d.classList.remove('active'); d.setAttribute('aria-checked', 'false') });
-    dot.classList.add('active'); dot.setAttribute('aria-checked', 'true');
-  });
-  dot.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); dot.click() } });
+ dot.classList.toggle('active', dot.dataset.theme === savedTheme);
+ dot.setAttribute('aria-checked', dot.dataset.theme === savedTheme);
+ dot.addEventListener('click', () => {
+ const theme = dot.dataset.theme;
+ document.documentElement.setAttribute('data-theme', theme);
+ localStorage.setItem('lc-theme', theme);
+ themeDots.forEach(d => { d.classList.remove('active'); d.setAttribute('aria-checked', 'false') });
+ dot.classList.add('active'); dot.setAttribute('aria-checked', 'true');
+ });
+ dot.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); dot.click() } });
 });
 </script>
 </body>
