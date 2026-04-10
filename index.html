@@ -180,6 +180,70 @@ footer a:hover{color:var(--accent)}
   nav{padding:12px 16px}
 }
 @media print{nav,.themes,#glow,#loader,#progress,canvas{display:none!important}body{background:#fff;color:#000}.hero{min-height:auto;padding:40px 0}}
+
+/* ═══ MAGNETIC BTN ═══ */
+.mag{position:relative;overflow:hidden;transition:transform .2s}
+.mag .ripple{position:absolute;border-radius:50%;background:rgba(255,255,255,0.3);transform:scale(0);animation:rip .6s ease-out}
+@keyframes rip{to{transform:scale(4);opacity:0}}
+
+/* ═══ CARD TILT ═══ */
+.card{transform-style:preserve-3d;perspective:800px}
+
+/* ═══ SHIMMER ═══ */
+.shimmer{background:linear-gradient(90deg,var(--heading),var(--accent),var(--heading),var(--accent-glow));background-size:300% 100%;-webkit-background-clip:text;-webkit-text-fill-color:transparent;animation:shim 5s ease infinite}
+@keyframes shim{0%,100%{background-position:0% 50%}50%{background-position:100% 50%}}
+
+/* ═══ TYPED CURSOR ═══ */
+.typed-wrap{min-height:1.8em;margin-bottom:32px}
+#typed{border-right:2px solid var(--accent);padding-right:4px;animation:blink 1s step-end infinite}
+@keyframes blink{50%{border-color:transparent}}
+
+/* ═══ HERO PATTERN ═══ */
+.hero-pattern{position:absolute;inset:0;opacity:.04;background-image:radial-gradient(circle at 25% 25%,var(--accent) 1px,transparent 1px),radial-gradient(circle at 75% 75%,var(--accent) 1px,transparent 1px);background-size:50px 50px}
+
+/* ═══ VOICE SWITCHER ═══ */
+.voices{position:fixed;bottom:24px;left:24px;z-index:9000;display:flex;align-items:center;gap:8px}
+.voice-btn{width:42px;height:42px;border-radius:50%;background:rgba(var(--particle-color),0.08);backdrop-filter:blur(12px);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;cursor:pointer;transition:all .3s;font-size:1.1rem}
+.voice-btn:hover{background:rgba(var(--particle-color),0.15)}
+.vdots{display:flex;gap:5px;background:rgba(var(--particle-color),0.06);backdrop-filter:blur(12px);border:1px solid var(--border);border-radius:24px;padding:8px 12px;opacity:0;visibility:hidden;transform:translateX(-8px);transition:all .3s}
+.voices.open .vdots{opacity:1;visibility:visible;transform:translateX(0)}
+.vd{width:18px;height:18px;border-radius:50%;cursor:pointer;border:2px solid transparent;transition:all .3s;display:flex;align-items:center;justify-content:center;font-size:.5rem;font-weight:800;color:#fff}
+.vd:hover{transform:scale(1.15)}
+.vd.on{border-color:var(--heading);box-shadow:0 0 8px rgba(var(--particle-color),0.3)}
+.vd[data-v="caregiver"]{background:#E6ACA0}
+.vd[data-v="professional"]{background:#8B9DAF}
+.vd[data-v="neighbor"]{background:#8FBF7A}
+.vd[data-v="protector"]{background:#C49A6C}
+.vd[data-v="storyteller"]{background:#B08FD4}
+.vd[data-v="advisor"]{background:#6BA3B0}
+.vd[data-v="heart"]{background:#D4897A}
+[data-vk]{transition:opacity .25s}
+[data-vk].fading{opacity:0}
+
+/* ═══ PRECIOUS BUTTON ═══ */
+.pow{position:fixed;bottom:24px;right:24px;z-index:9000;width:50px;height:50px;border-radius:50%;background:var(--card-bg);backdrop-filter:blur(12px);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;cursor:pointer;transition:all .3s;font-size:1.2rem}
+.pow:hover{border-color:var(--accent)}
+.pow.on{border-color:var(--accent);box-shadow:0 0 20px rgba(var(--particle-color),0.4);animation:powpulse 2s ease infinite}
+@keyframes powpulse{0%,100%{box-shadow:0 0 20px rgba(var(--particle-color),0.4)}50%{box-shadow:0 0 35px rgba(var(--particle-color),0.6)}}
+
+/* ═══ FAQ ═══ */
+.faq{max-width:700px;margin:0 auto}
+.faq-item{border:1px solid var(--border);border-radius:14px;margin-bottom:10px;overflow:hidden;transition:border-color .3s}
+.faq-item.open{border-color:var(--accent)}
+.faq-q{display:flex;align-items:center;justify-content:space-between;padding:18px 22px;cursor:pointer;font-weight:600;font-size:.95rem;background:var(--card-bg);transition:color .3s}
+.faq-q:hover{color:var(--accent)}
+.faq-q svg{width:18px;height:18px;transition:transform .3s;color:var(--accent);flex-shrink:0;stroke:currentColor;fill:none;stroke-width:2}
+.faq-item.open .faq-q svg{transform:rotate(180deg)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .4s ease}
+.faq-a-inner{padding:0 22px 18px;color:var(--text-muted);font-size:.9rem;line-height:1.7}
+
+/* ═══ ANIM SWITCHER ═══ */
+.anims{position:fixed;left:16px;top:50%;transform:translateY(-50%);z-index:9000;display:flex;flex-direction:column;align-items:center;gap:6px;background:rgba(var(--particle-color),0.06);backdrop-filter:blur(12px);border:1px solid var(--border);border-radius:18px;padding:12px 7px}
+.anims .lbl{writing-mode:vertical-rl;font-size:.55rem;letter-spacing:2px;text-transform:uppercase;color:var(--text-muted);font-weight:700;margin-bottom:3px}
+.adot{width:16px;height:16px;border-radius:50%;cursor:pointer;border:2px solid var(--border);background:var(--card-bg);transition:all .3s;display:flex;align-items:center;justify-content:center;font-size:.45rem;color:var(--text-muted)}
+.adot:hover{border-color:var(--accent);color:var(--accent)}
+.adot.on{border-color:var(--accent);background:var(--accent-dim);color:var(--accent)}
+
 </style>
 </head>
 <body>
@@ -205,16 +269,17 @@ footer a:hover{color:var(--accent)}
     <a href="#process">How It Works</a>
     <a href="#reviews">Reviews</a>
   </div>
-  <a href="https://preciouscare.org/start/" class="nav-cta" target="_blank">Book a Sitter</a>
+  <a href="https://preciouscare.org/start/" class="nav-cta mag" target="_blank">Book a Sitter</a>
   <div class="hamburger" onclick="this.classList.toggle('active')"><span></span><span></span><span></span></div>
 </nav>
 
 <!-- Hero -->
 <section class="hero">
+  <div class="hero-pattern"></div>
   <div class="hero-content">
-    <h1>Local, Responsible &amp; <span>Reliable</span> Care</h1>
-    <p>Connecting SE Michigan families with vetted, certified babysitters, nannies, and pet sitters since 2020.</p>
-    <a href="https://preciouscare.org/start/" class="btn" target="_blank">Find Your Sitter</a>
+    <h1>Local, Responsible &amp; <span class="shimmer">Reliable</span> Care</h1>
+    <div class="typed-wrap"><span id="typed"></span></div>
+    <a href="https://preciouscare.org/start/" class="btn mag" target="_blank">Find Your Sitter</a>
   </div>
 </section>
 
@@ -232,28 +297,28 @@ footer a:hover{color:var(--accent)}
 <section id="services" class="alt">
   <div class="container center">
     <div class="section-label reveal">Our Services</div>
-    <div class="section-title reveal">Care Tailored to Your Family</div>
+    <div class="section-title reveal" data-vk="svcTitle">Care Tailored to Your Family</div>
     <div class="section-sub reveal">From date-night sitters to full-time nannies and pet care, we have you covered.</div>
     <div class="cards">
       <div class="card reveal">
         <div class="icon"><svg viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" fill="var(--accent)" stroke="none"/></svg></div>
-        <h3>Baby Sitting</h3>
-        <p>Book a sitter for date nights, daytime appointments, or weekend sessions. Flexible scheduling with caring, certified sitters.</p>
+        <h3 data-vk="svc1Title">Baby Sitting</h3>
+        <p><span data-vk="svc1Desc">Book a sitter for date nights, daytime appointments, or weekend sessions. Flexible scheduling with caring, certified sitters.</span></p>
       </div>
       <div class="card reveal d1">
         <div class="icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><path d="M12 3v2" stroke-dasharray="1 2"/></svg></div>
-        <h3>Newborn Care</h3>
-        <p>Blessed Beginnings: gentle support for new parents with feeding guidance, sleep help, and emotional care.</p>
+        <h3 data-vk="svc2Title">Newborn Care</h3>
+        <p><span data-vk="svc2Desc">Blessed Beginnings: gentle support for new parents with feeding guidance, sleep help, and emotional care.</span></p>
       </div>
       <div class="card reveal d2">
         <div class="icon"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
-        <h3>Nanny Services</h3>
-        <p>Dedicated in-home nannies for daily routines, meals, school pickup, homework, and consistent family support.</p>
+        <h3 data-vk="svc3Title">Nanny Services</h3>
+        <p><span data-vk="svc3Desc">Dedicated in-home nannies for daily routines, meals, school pickup, homework, and consistent family support.</span></p>
       </div>
       <div class="card reveal d3">
         <div class="icon"><svg viewBox="0 0 24 24"><path d="M10 5.172C10 3.782 8.423 2.679 6.5 3c-2.823.47-4.113 6.006-4 7 .08.703 1.725 1.722 3.656 1 1.261-.472 1.96-1.45 2.344-2.5"/><path d="M14.267 5.172c0-1.39 1.577-2.493 3.5-2.172 2.823.47 4.113 6.006 4 7-.08.703-1.725 1.722-3.656 1-1.261-.472-1.855-1.45-2.239-2.5"/><path d="M8 14v.5M16 14v.5"/><path d="M11.25 16.25h1.5L12 17l-.75-.75z"/><path d="M4.42 11.247A13.152 13.152 0 0 0 4 14.556C4 18.728 7.582 21 12 21s8-2.272 8-6.444a13.152 13.152 0 0 0-.42-3.31"/></svg></div>
-        <h3>Pet Sitting</h3>
-        <p>Walks, feeding, playtime, and overnight stays. Our animal-loving sitters treat your pets like family.</p>
+        <h3 data-vk="svc4Title">Pet Sitting</h3>
+        <p><span data-vk="svc4Desc">Walks, feeding, playtime, and overnight stays. Our animal-loving sitters treat your pets like family.</span></p>
       </div>
     </div>
   </div>
@@ -263,7 +328,7 @@ footer a:hover{color:var(--accent)}
 <section>
   <div class="container center">
     <div class="section-label reveal">Why Precious Care</div>
-    <div class="section-title reveal">Trust Built on Safety</div>
+    <div class="section-title reveal" data-vk="trustTitle">Trust Built on Safety</div>
     <div class="section-sub reveal">Every sitter is vetted so you can relax with total peace of mind.</div>
     <div class="values">
       <div class="value reveal">
@@ -311,7 +376,7 @@ footer a:hover{color:var(--accent)}
 <section id="process">
   <div class="container center">
     <div class="section-label reveal">Simple &amp; Secure</div>
-    <div class="section-title reveal">How It Works</div>
+    <div class="section-title reveal" data-vk="procTitle">How It Works</div>
     <div class="section-sub reveal">Four easy steps from first contact to a sitter you love.</div>
     <div class="steps">
       <div class="step reveal"><div class="num">1</div><h4>Fill Out Our Form</h4><p>Tell us what you need: dates, ages, and any special requirements.</p></div>
@@ -326,21 +391,38 @@ footer a:hover{color:var(--accent)}
 <section id="reviews" class="alt">
   <div class="container center">
     <div class="section-label reveal">Testimonials</div>
-    <div class="section-title reveal">What Families Say</div>
+    <div class="section-title reveal" data-vk="revTitle">What Families Say</div>
     <div class="section-sub reveal">Real stories from happy parents.</div>
     <div class="testimonials">
       <div class="testi reveal">
         <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-        <blockquote>Adeline has been regularly babysitting my two girls since May 2024. She is now like a part of our family! She does light housekeeping on top of taking care of the kids, and they love her. She is trustworthy and dependable.</blockquote>
+        <blockquote>Adeline has been regularly babysitting my two girls (3 &amp; 1) since May 2024. We have never used a babysitter prior to this, and I was apprehensive at first. Adeline is now like a part of our family! She does light housekeeping on top of taking care of the kids, and they love her. I don&#39;t know how she does it. I love coming home from work to a clean house and happy kids! We also took Adeline on our family vacation, and she was a godsend when myself and one of my kids came down very sick. She is trustworthy and dependable, I don&#39;t know what I would do without her.</blockquote>
         <div class="author">Faith</div>
         <div class="role">Mom of 2 &bull; Mar 2025</div>
       </div>
       <div class="testi reveal d1">
         <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-        <blockquote>I am so happy Precious Care was recommended to me. Georgia was amazing with our three kids, certified, and they adored her!</blockquote>
+        <blockquote>I&#39;m so happy Precious Care was recommended to me.</blockquote>
         <div class="author">Eleni</div>
         <div class="role">Mom of 3 &bull; Nov 2024</div>
       </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- FAQ -->
+<section>
+  <div class="container center">
+    <div class="section-label reveal">Common Questions</div>
+    <div class="section-title reveal" data-vk="faqTitle">Frequently Asked Questions</div>
+    <div class="section-sub reveal">Everything you need to know about booking with Precious Care.</div>
+    <div class="faq">
+      <div class="faq-item reveal"><div class="faq-q" onclick="this.parentElement.classList.toggle('open')">How are sitters vetted?<svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></div><div class="faq-a"><div class="faq-a-inner">Every sitter goes through a comprehensive background check, is CPR/AED/First Aid certified, and is personally interviewed and vetted by our founder Adeline.</div></div></div>
+      <div class="faq-item reveal d1"><div class="faq-q" onclick="this.parentElement.classList.toggle('open')">What ages do you cover?<svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></div><div class="faq-a"><div class="faq-a-inner">We care for children of all ages, from newborns through teenagers. Our Blessed Beginnings program specializes in newborn care.</div></div></div>
+      <div class="faq-item reveal d2"><div class="faq-q" onclick="this.parentElement.classList.toggle('open')">What areas do you serve?<svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></div><div class="faq-a"><div class="faq-a-inner">We serve families throughout Southeast Michigan including Troy, Rochester Hills, Sterling Heights, Birmingham, Bloomfield Hills, and surrounding areas.</div></div></div>
+      <div class="faq-item reveal d3"><div class="faq-q" onclick="this.parentElement.classList.toggle('open')">How much does it cost?<svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></div><div class="faq-a"><div class="faq-a-inner">Hourly pricing is based on the sitter age, experience, client expectations, and number of children/pets. Contact us for a personalized quote.</div></div></div>
+      <div class="faq-item reveal"><div class="faq-q" onclick="this.parentElement.classList.toggle('open')">Do you offer pet sitting too?<svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></div><div class="faq-a"><div class="faq-a-inner">Yes! We offer dog walking, cat care, feeding, playtime, and overnight pet sitting from sitters who love animals.</div></div></div>
     </div>
   </div>
 </section>
@@ -349,7 +431,7 @@ footer a:hover{color:var(--accent)}
 <section class="cta-section">
   <h2>Ready to Find Your Perfect Sitter?</h2>
   <p>Fill out our quick form and we will match you with a caring, certified sitter.</p>
-  <a href="https://preciouscare.org/start/" class="btn" target="_blank">Get Started Today</a>
+  <a href="https://preciouscare.org/start/" class="btn mag" target="_blank">Get Started Today</a>
 </section>
 
 <!-- Footer -->
@@ -383,6 +465,32 @@ footer a:hover{color:var(--accent)}
   <div class="footer-bottom">Hourly rates based on sitter experience and family needs. All sitters background-checked and certified. &copy; 2025 Precious Care. Built by <a href="https://kirkautomations.com" target="_blank" style="color:var(--accent)">Kirk Automations</a>.</div>
 </footer>
 
+<!-- Voice Switcher -->
+<div class="voices" id="voicePanel">
+  <div class="voice-btn" onclick="document.getElementById('voicePanel').classList.toggle('open')">&#x1F399;</div>
+  <div class="vdots">
+    <div class="vd on" data-v="caregiver" title="The Caregiver">C</div>
+    <div class="vd" data-v="professional" title="The Professional">P</div>
+    <div class="vd" data-v="neighbor" title="The Neighbor">N</div>
+    <div class="vd" data-v="protector" title="The Protector">R</div>
+    <div class="vd" data-v="storyteller" title="The Storyteller">S</div>
+    <div class="vd" data-v="advisor" title="The Advisor">A</div>
+    <div class="vd" data-v="heart" title="The Heart">H</div>
+  </div>
+</div>
+
+<!-- PRECIOUS Button -->
+<div class="pow" id="powBtn" title="PRECIOUS Mode" onclick="togglePow()">&#x2728;</div>
+
+<!-- Anim Switcher -->
+<div class="anims">
+  <div class="lbl">ANIM</div>
+  <div class="adot on" data-a="particles" title="Particles">P</div>
+  <div class="adot" data-a="fireflies" title="Fireflies">F</div>
+  <div class="adot" data-a="bubbles" title="Bubbles">B</div>
+</div>
+
+
 <!-- Theme Switcher -->
 <div class="themes">
   <div class="lbl">THEME</div>
@@ -392,44 +500,257 @@ footer a:hover{color:var(--accent)}
 </div>
 
 <script>
-// Loader
+// ═══ LOADER ═══
 setTimeout(function(){var l=document.getElementById('loader');if(l){l.classList.add('hidden');setTimeout(function(){l.style.display='none'},500)}},1600);
 
-// Scroll progress
-window.addEventListener('scroll',function(){var h=document.documentElement.scrollHeight-window.innerHeight;var p=document.getElementById('progress');if(p&&h>0)p.style.width=(window.scrollY/h*100)+'%'},{passive:true});
+// ═══ SCROLL PROGRESS ═══
+window.addEventListener('scroll',function(){var h=document.documentElement.scrollHeight-innerHeight;var p=document.getElementById('progress');if(p&&h>0)p.style.width=(scrollY/h*100)+'%'},{passive:true});
 
-// Cursor glow
+// ═══ CURSOR GLOW ═══
 var glow=document.getElementById('glow');
 document.addEventListener('mousemove',function(e){if(glow){glow.style.left=e.clientX+'px';glow.style.top=e.clientY+'px'}});
 
-// Nav scroll
+// ═══ NAV SCROLL ═══
 var nav=document.querySelector('nav');
-window.addEventListener('scroll',function(){if(nav)nav.classList.toggle('scrolled',window.scrollY>60)},{passive:true});
+window.addEventListener('scroll',function(){if(nav)nav.classList.toggle('scrolled',scrollY>60)},{passive:true});
 
-// Reveal
-var revEls=document.querySelectorAll('.reveal');
+// ═══ REVEAL ═══
 var revObs=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vis');revObs.unobserve(e.target)}})},{threshold:0.1});
-revEls.forEach(function(el){revObs.observe(el)});
+document.querySelectorAll('.reveal').forEach(function(el){revObs.observe(el)});
 
-// Counter animation
+// ═══ COUNTERS ═══
 var counted=new Set();
 var cObs=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting&&!counted.has(e.target)){counted.add(e.target);var t=parseInt(e.target.dataset.c);var dur=1800;var st=performance.now();(function tick(now){var p=Math.min((now-st)/dur,1);var ease=1-Math.pow(1-p,3);e.target.textContent=Math.floor(ease*t)+(t>=100?'+':'');if(p<1)requestAnimationFrame(tick)})(performance.now())}})},{threshold:0.5});
 document.querySelectorAll('[data-c]').forEach(function(el){cObs.observe(el)});
 
-// Theme switcher
+// ═══ THEME SWITCHER ═══
 var curTheme=localStorage.getItem('pc-theme')||'blush';
 function setTheme(t){curTheme=t;document.documentElement.setAttribute('data-theme',t);localStorage.setItem('pc-theme',t);document.querySelectorAll('.tdot').forEach(function(d){d.classList.toggle('on',d.dataset.t===t)})}
 setTheme(curTheme);
 document.querySelectorAll('.tdot').forEach(function(d){d.addEventListener('click',function(){setTheme(d.dataset.t)})});
 
-// Particles
+// ═══ MAGNETIC BUTTONS ═══
+document.querySelectorAll('.mag').forEach(function(btn){
+  btn.addEventListener('mousemove',function(e){var r=btn.getBoundingClientRect();var dx=(e.clientX-r.left-r.width/2)*.25;var dy=(e.clientY-r.top-r.height/2)*.25;btn.style.transform='translate('+dx+'px,'+dy+'px)'});
+  btn.addEventListener('mouseleave',function(){btn.style.transform=''});
+  btn.addEventListener('click',function(e){var rip=document.createElement('span');rip.className='ripple';var r=btn.getBoundingClientRect();rip.style.left=(e.clientX-r.left)+'px';rip.style.top=(e.clientY-r.top)+'px';rip.style.width=rip.style.height=Math.max(r.width,r.height)+'px';btn.appendChild(rip);setTimeout(function(){rip.remove()},600)})
+});
+
+// ═══ CARD TILT ═══
+document.querySelectorAll('.card').forEach(function(card){
+  card.addEventListener('mousemove',function(e){var r=card.getBoundingClientRect();var x=(e.clientX-r.left)/r.width-.5;var y=(e.clientY-r.top)/r.height-.5;card.style.transform='perspective(800px) rotateY('+x*8+'deg) rotateX('+(-y*8)+'deg) translateY(-4px)'});
+  card.addEventListener('mouseleave',function(){card.style.transform=''})
+});
+
+// ═══ TYPED HERO TEXT ═══
+var phrases=['Baby Sitting','Newborn Care','Nanny Services','Pet Sitting','Trusted by Families','CPR Certified Sitters','SE Michigan'];
+var pi=0,ci=0,del=false,typedEl=document.getElementById('typed');
+function typeLoop(){if(!typedEl)return;if(!del){typedEl.textContent=phrases[pi].substring(0,ci+1);ci++;if(ci>=phrases[pi].length){del=true;setTimeout(typeLoop,2000);return}}else{typedEl.textContent=phrases[pi].substring(0,ci);ci--;if(ci<0){del=false;ci=0;pi=(pi+1)%phrases.length}}setTimeout(typeLoop,del?30:80)}
+setTimeout(typeLoop,2000);
+
+// ═══ FAQ TOGGLE ═══
+document.querySelectorAll('.faq-item').forEach(function(item){
+  var ans=item.querySelector('.faq-a');
+  var inner=item.querySelector('.faq-a-inner');
+  if(ans&&inner){
+    // Set max-height when opened
+    var q=item.querySelector('.faq-q');
+    if(q)q.addEventListener('click',function(){
+      var isOpen=item.classList.contains('open');
+      // close all
+      document.querySelectorAll('.faq-item').forEach(function(fi){fi.classList.remove('open');fi.querySelector('.faq-a').style.maxHeight='0'});
+      if(!isOpen){item.classList.add('open');ans.style.maxHeight=inner.scrollHeight+'px'}
+    });
+  }
+});
+
+// ═══ VOICES ═══
+var VOICES={
+  caregiver:{
+    svcTitle:'Care Tailored to Your Family',
+    trustTitle:'Trust Built on Safety',
+    revTitle:'What Families Say',
+    procTitle:'How It Works',
+    faqTitle:'Frequently Asked Questions',
+    svc1Title:'Baby Sitting',svc2Title:'Newborn Care',svc3Title:'Nanny Services',svc4Title:'Pet Sitting',
+    svc1Desc:'Book a sitter for date nights, daytime appointments, or weekend sessions. Flexible scheduling with caring, certified sitters.',
+    svc2Desc:'Blessed Beginnings: gentle support for new parents with feeding guidance, sleep help, and emotional care.',
+    svc3Desc:'Dedicated in-home nannies for daily routines, meals, school pickup, homework, and consistent family support.',
+    svc4Desc:'Walks, feeding, playtime, and overnight stays. Our animal-loving sitters treat your pets like family.',
+    typed:['Baby Sitting','Newborn Care','Nanny Services','Pet Sitting','Trusted by Families']
+  },
+  professional:{
+    svcTitle:'Comprehensive Childcare Solutions',
+    trustTitle:'Industry-Leading Safety Standards',
+    revTitle:'Client Testimonials',
+    procTitle:'Our Proven Process',
+    faqTitle:'Information Center',
+    svc1Title:'Babysitting Services',svc2Title:'Newborn Specialist Care',svc3Title:'Professional Nanny Placement',svc4Title:'Pet Care Services',
+    svc1Desc:'On-demand and scheduled childcare solutions with vetted, certified professionals for maximum flexibility.',
+    svc2Desc:'Specialized postnatal support through our Blessed Beginnings program. Evidence-based feeding and sleep guidance.',
+    svc3Desc:'Long-term nanny placement with rigorous matching. Daily childcare management, educational activities, and household support.',
+    svc4Desc:'Comprehensive pet care: scheduled walks, dietary management, companionship, and extended boarding arrangements.',
+    typed:['Professional Childcare','Certified Team','Proven Results','SE Michigan Leader','Safety First']
+  },
+  neighbor:{
+    svcTitle:'Help When You Need It',
+    trustTitle:'People You Can Count On',
+    revTitle:'Hear From Other Parents',
+    procTitle:'Super Easy to Get Started',
+    faqTitle:'Got Questions?',
+    svc1Title:'Need a Sitter?',svc2Title:'New Baby Help',svc3Title:'Full-Time Nanny',svc4Title:'Pet Help Too!',
+    svc1Desc:'Date night? Running errands? We have got awesome sitters ready to hang with your kids.',
+    svc2Desc:'Brand new baby? Our Blessed Beginnings crew helps with feeding, sleep, and keeping you sane.',
+    svc3Desc:'Need someone every day? Our nannies handle meals, school runs, homework, the whole deal.',
+    svc4Desc:'Dog walks, cat cuddles, overnight stays. We love animals as much as your family does!',
+    typed:['Hey Neighbor!','Need a Sitter?','We Got You','Right Down the Street','Pet Lovers Too']
+  },
+  protector:{
+    svcTitle:'Safeguarding Your Family',
+    trustTitle:'Uncompromising Safety Protocols',
+    revTitle:'Verified Parent Reviews',
+    procTitle:'Secure Onboarding Process',
+    faqTitle:'Safety FAQ',
+    svc1Title:'Supervised Childcare',svc2Title:'Certified Newborn Protection',svc3Title:'Vetted Nanny Guardians',svc4Title:'Trusted Pet Guardianship',
+    svc1Desc:'Every session supervised by background-checked, CPR-certified caregivers trained in emergency response.',
+    svc2Desc:'Blessed Beginnings: medically-informed newborn care with certified specialists trained in infant safety.',
+    svc3Desc:'Nannies with verified credentials, continuous background monitoring, and ongoing safety training.',
+    svc4Desc:'Bonded and insured pet care with documented check-ins, feeding logs, and GPS-tracked walks.',
+    typed:['Safety First','Background Checked','CPR Certified','Fully Insured','Zero Compromise']
+  },
+  storyteller:{
+    svcTitle:'Adventures in Every Visit',
+    trustTitle:'A Circle of Trust',
+    revTitle:'Stories From Happy Homes',
+    procTitle:'Your Journey Begins',
+    faqTitle:'Curious Minds Ask',
+    svc1Title:'Magical Evenings',svc2Title:'The Gentle Dawn',svc3Title:'A Second Home',svc4Title:'Furry Friend Adventures',
+    svc1Desc:'Every babysitting session is a new chapter: games, stories, giggles, and memories that last.',
+    svc2Desc:'Blessed Beginnings: the tender first pages of parenthood, guided by gentle hands and warm hearts.',
+    svc3Desc:'A nanny who becomes part of your story. Daily adventures, cozy routines, and growing together.',
+    svc4Desc:'Tail-wagging walks, purring cuddle sessions, and backyard adventures for your beloved companions.',
+    typed:['Once Upon a Time','A Story of Care','Happily Ever After','Adventures Await','The Precious Chapter']
+  },
+  advisor:{
+    svcTitle:'Evidence-Based Childcare',
+    trustTitle:'Data-Driven Trust Metrics',
+    revTitle:'Outcome-Verified Reviews',
+    procTitle:'Optimized Matching Process',
+    faqTitle:'Knowledge Base',
+    svc1Title:'Flexible Childcare',svc2Title:'Newborn Specialist Program',svc3Title:'Strategic Nanny Matching',svc4Title:'Pet Wellness Services',
+    svc1Desc:'Research-backed scheduling and care approaches. Sitters trained in child development best practices.',
+    svc2Desc:'Blessed Beginnings: pediatrician-aligned newborn care. Sleep science, feeding optimization, and parent education.',
+    svc3Desc:'Algorithm-matched nannies based on family dynamics, child ages, schedule needs, and personality fit.',
+    svc4Desc:'Structured pet care routines with activity tracking, dietary adherence, and behavioral enrichment.',
+    typed:['Smart Matching','Research-Backed','Optimal Care','Data-Driven','Best Practices']
+  },
+  heart:{
+    svcTitle:'Care From the Heart',
+    trustTitle:'Built on Love and Trust',
+    revTitle:'Love Notes From Families',
+    procTitle:'A Simple Promise',
+    faqTitle:'Ask Me Anything',
+    svc1Title:'Baby Sitting',svc2Title:'Blessed Beginnings',svc3Title:'Nanny Family',svc4Title:'Pet Love',
+    svc1Desc:'I personally match every family with a sitter I trust. Your children deserve nothing less than the best.',
+    svc2Desc:'My passion project for new moms. Those first weeks are everything, and no parent should face them alone.',
+    svc3Desc:'Our nannies become family. I hand-pick each one because your home deserves someone special.',
+    svc4Desc:'We treat every pet like our own. Because they are family too.',
+    typed:['From My Heart','Family Is Everything','I Am Adeline','Precious Care','Made With Love']
+  }
+};
+
+var curVoice=localStorage.getItem('pc-voice')||'caregiver';
+function setVoice(v){
+  curVoice=v;localStorage.setItem('pc-voice',v);
+  document.querySelectorAll('.vd').forEach(function(d){d.classList.toggle('on',d.dataset.v===v)});
+  var voice=VOICES[v];if(!voice)return;
+  // Update typed phrases
+  phrases=voice.typed||phrases;pi=0;ci=0;del=false;
+  // Crossfade text elements
+  document.querySelectorAll('[data-vk]').forEach(function(el){
+    var key=el.dataset.vk;
+    if(voice[key]!==undefined){
+      el.classList.add('fading');
+      setTimeout(function(){el.textContent=voice[key];el.classList.remove('fading')},250);
+    }
+  });
+}
+setVoice(curVoice);
+document.querySelectorAll('.vd').forEach(function(d){d.addEventListener('click',function(){setVoice(d.dataset.v)})});
+
+// ═══ PRECIOUS MODE ═══
+var powOn=localStorage.getItem('pc-pow')==='on';
+function togglePow(){powOn=!powOn;localStorage.setItem('pc-pow',powOn?'on':'off');document.getElementById('powBtn').classList.toggle('on',powOn);if(powOn){particleCount=90}else{particleCount=45}initParticles()}
+if(powOn)document.getElementById('powBtn').classList.add('on');
+
+// ═══ PARTICLES + ANIMATIONS ═══
 var cv=document.getElementById('cv');var ctx=cv.getContext('2d');var W,H;
-function resize(){W=cv.width=innerWidth;H=cv.height=innerHeight}resize();
-window.addEventListener('resize',resize);
-var pts=[];for(var i=0;i<45;i++)pts.push({x:Math.random()*innerWidth,y:Math.random()*innerHeight,vx:(Math.random()-.5)*.4,vy:(Math.random()-.5)*.4,r:Math.random()*2+1});
-var mx=innerWidth/2,my=innerHeight/2;
+function rsz(){W=cv.width=innerWidth;H=cv.height=innerHeight}rsz();
+window.addEventListener('resize',rsz);
+
+var particleCount=powOn?90:45;
+var pts=[];
+function initParticles(){pts=[];for(var i=0;i<particleCount;i++)pts.push({x:Math.random()*W,y:Math.random()*H,vx:(Math.random()-.5)*.4,vy:(Math.random()-.5)*.4,r:Math.random()*2+1})}
+initParticles();
+
+var mx=W/2,my=H/2;
 document.addEventListener('mousemove',function(e){mx=e.clientX;my=e.clientY});
-function draw(){ctx.clearRect(0,0,W,H);var cs=getComputedStyle(document.documentElement);var pc=cs.getPropertyValue('--particle-color').trim()||'230,172,160';pts.forEach(function(p){p.x+=p.vx;p.y+=p.vy;if(p.x<0||p.x>W)p.vx*=-1;if(p.y<0||p.y>H)p.vy*=-1;var dx=p.x-mx,dy=p.y-my,dist=Math.sqrt(dx*dx+dy*dy);if(dist<100){p.x+=dx/dist*1.5;p.y+=dy/dist*1.5}ctx.beginPath();ctx.arc(p.x,p.y,p.r,0,Math.PI*2);ctx.fillStyle='rgba('+pc+',0.25)';ctx.fill()});for(var a=0;a<pts.length;a++)for(var b=a+1;b<pts.length;b++){var dx=pts[a].x-pts[b].x,dy=pts[a].y-pts[b].y,d=Math.sqrt(dx*dx+dy*dy);if(d<120){ctx.beginPath();ctx.moveTo(pts[a].x,pts[a].y);ctx.lineTo(pts[b].x,pts[b].y);ctx.strokeStyle='rgba('+pc+','+(0.08*(1-d/120))+')';ctx.stroke()}}requestAnimationFrame(draw)}
+
+var curAnim=localStorage.getItem('pc-anim')||'particles';
+document.querySelectorAll('.adot').forEach(function(d){
+  d.classList.toggle('on',d.dataset.a===curAnim);
+  d.addEventListener('click',function(){curAnim=d.dataset.a;localStorage.setItem('pc-anim',curAnim);document.querySelectorAll('.adot').forEach(function(dd){dd.classList.toggle('on',dd.dataset.a===curAnim)})});
+});
+
+function getPC(){var s=getComputedStyle(document.documentElement).getPropertyValue('--particle-color').trim();return s||'230,172,160'}
+
+function drawParticles(){
+  var pc=getPC();
+  pts.forEach(function(p){
+    p.x+=p.vx;p.y+=p.vy;
+    if(p.x<0||p.x>W)p.vx*=-1;if(p.y<0||p.y>H)p.vy*=-1;
+    var dx=p.x-mx,dy=p.y-my,dist=Math.sqrt(dx*dx+dy*dy);
+    if(dist<100){p.x+=dx/dist*1.5;p.y+=dy/dist*1.5}
+    ctx.beginPath();ctx.arc(p.x,p.y,p.r,0,Math.PI*2);ctx.fillStyle='rgba('+pc+',0.25)';ctx.fill()
+  });
+  for(var a=0;a<pts.length;a++)for(var b=a+1;b<pts.length;b++){
+    var dx=pts[a].x-pts[b].x,dy=pts[a].y-pts[b].y,d=Math.sqrt(dx*dx+dy*dy);
+    if(d<120){ctx.beginPath();ctx.moveTo(pts[a].x,pts[a].y);ctx.lineTo(pts[b].x,pts[b].y);ctx.strokeStyle='rgba('+pc+','+(0.08*(1-d/120))+')';ctx.stroke()}
+  }
+}
+
+// Fireflies
+var flies=[];for(var i=0;i<30;i++)flies.push({x:Math.random()*2000,y:Math.random()*2000,phase:Math.random()*Math.PI*2,speed:.3+Math.random()*.5,r:2+Math.random()*3});
+function drawFireflies(){
+  var pc=getPC();var t=Date.now()/1000;
+  flies.forEach(function(f){
+    f.x+=Math.sin(t*f.speed+f.phase)*.5;f.y+=Math.cos(t*f.speed*0.7+f.phase)*.5;
+    if(f.x<0)f.x=W;if(f.x>W)f.x=0;if(f.y<0)f.y=H;if(f.y>H)f.y=0;
+    var glow=(.5+.5*Math.sin(t*2+f.phase));
+    ctx.beginPath();ctx.arc(f.x,f.y,f.r*glow,0,Math.PI*2);ctx.fillStyle='rgba('+pc+','+(0.4*glow)+')';ctx.fill();
+    ctx.beginPath();ctx.arc(f.x,f.y,f.r*3*glow,0,Math.PI*2);ctx.fillStyle='rgba('+pc+','+(0.08*glow)+')';ctx.fill()
+  });
+}
+
+// Bubbles
+var bubs=[];for(var i=0;i<20;i++)bubs.push({x:Math.random()*2000,y:Math.random()*2000+H,r:10+Math.random()*30,speed:.3+Math.random()*.7,wobble:Math.random()*Math.PI*2});
+function drawBubbles(){
+  var pc=getPC();var t=Date.now()/1000;
+  bubs.forEach(function(b){
+    b.y-=b.speed;b.x+=Math.sin(t+b.wobble)*.3;
+    if(b.y<-b.r*2){b.y=H+b.r*2;b.x=Math.random()*W}
+    ctx.beginPath();ctx.arc(b.x,b.y,b.r,0,Math.PI*2);ctx.strokeStyle='rgba('+pc+',0.15)';ctx.lineWidth=1.5;ctx.stroke();
+    ctx.beginPath();ctx.arc(b.x-b.r*.3,b.y-b.r*.3,b.r*.15,0,Math.PI*2);ctx.fillStyle='rgba('+pc+',0.1)';ctx.fill()
+  });
+}
+
+function draw(){
+  ctx.clearRect(0,0,W,H);
+  if(curAnim==='particles')drawParticles();
+  else if(curAnim==='fireflies')drawFireflies();
+  else if(curAnim==='bubbles')drawBubbles();
+  requestAnimationFrame(draw)
+}
 draw();
 </script>
 </body>
