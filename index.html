@@ -1,1116 +1,436 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="lullaby">
+<html lang="en" data-theme="blush">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Precious Care &mdash; Babysitting, Pet Sitting &amp; Nanny Services | SE Michigan</title>
-<meta name="description" content="Precious Care connects SE Michigan families with vetted, certified babysitters, pet sitters, and nannies. Founded by Adeline Jones. Local, Responsible &amp; Reliable.">
-<meta name="keywords" content="babysitting, pet sitting, nanny, newborn care, SE Michigan, Troy MI, CPR certified, Adeline Jones">
-<meta property="og:title" content="Precious Care &mdash; Babysitting &amp; Childcare">
-<meta property="og:description" content="Local, responsible &amp; reliable babysitting, nanny, and pet sitting services in Southeast Michigan.">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://preciouscare.org">
-<meta name="twitter:card" content="summary_large_image">
+<title>Precious Care &mdash; Babysitting, Nanny &amp; Pet Sitting | SE Michigan</title>
+<meta name="description" content="Precious Care connects SE Michigan families with vetted, CPR-certified babysitters, nannies, and pet sitters. Founded by Adeline Jones. Local, Responsible &amp; Reliable.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@300;400;500;600;700&family=Orbitron:wght@500;700;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
 <style>
-/* ========== CSS RESET & BASE ========== */
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth;overflow-x:hidden}
-body{font-family:'Inter',sans-serif;line-height:1.7;overflow-x:hidden;transition:background-color 0.6s,color 0.6s}
-a{text-decoration:none;color:inherit;transition:color 0.3s}
-img{max-width:100%;height:auto;display:block}
+body{font-family:'Nunito',sans-serif;background:var(--bg);color:var(--text);line-height:1.7;overflow-x:hidden;transition:background .5s,color .5s}
+a{text-decoration:none;color:inherit;transition:color .3s}
+img{max-width:100%;display:block}
 ul{list-style:none}
-::selection{background:var(--accent);color:var(--bg)}
+button{cursor:pointer;border:none;background:none;font-family:inherit}
+::selection{background:var(--accent);color:#fff}
 
-/* ========== THEME VARIABLES ========== */
-[data-theme="lullaby"]{
- --bg:#1a0f2e;--bg-alt:#241a3d;--card-bg:#2a1f45;--card-bg-hover:#352a55;
- --text:#f0e8e0;--text-muted:#b8a8a0;--heading:#fff;
- --accent:#d4a56f;--accent-glow:#e8b87f;--accent-dim:rgba(212,165,111,0.15);
- --gradient:linear-gradient(135deg,#d4a56f 0%,#c4897c 50%,#e8b87f 100%);
- --particle-color:212,165,111;--nav-bg:rgba(26,15,46,0.85);
- --border:rgba(212,165,111,0.12);--divider:rgba(212,165,111,0.08);
- --hero-overlay:linear-gradient(135deg,rgba(26,15,46,0.92) 0%,rgba(42,31,69,0.85) 100%);
+/* ═══ THEMES ═══ */
+[data-theme="blush"]{
+  --bg:#FFF5F2;--bg-alt:#FFF0EC;--card-bg:#fff;--card-hover:#fff;
+  --text:#3D2C2C;--text-muted:#8B7070;--heading:#2D1A1A;
+  --accent:#E6ACA0;--accent-glow:#D4897A;--accent-dim:rgba(230,172,160,0.12);
+  --gradient:linear-gradient(135deg,#E6ACA0,#D4897A);
+  --particle-color:230,172,160;--nav-bg:rgba(255,245,242,0.92);
+  --border:rgba(230,172,160,0.18);--divider:rgba(230,172,160,0.1);
+  --hero-overlay:linear-gradient(135deg,rgba(61,44,44,0.82),rgba(139,112,112,0.6));
 }
-[data-theme="sunshine"]{
- --bg:#fdf8f0;--bg-alt:#f5e8d8;--card-bg:rgba(255,255,255,0.9);--card-bg-hover:rgba(255,255,255,1);
- --text:#2c1a0f;--text-muted:#8a5f40;--heading:#1a0f05;
- --accent:#e6aca0;--accent-glow:#f4b8aa;--accent-dim:rgba(230,172,160,0.15);
- --gradient:linear-gradient(135deg,#e6aca0 0%,#c4897c 50%,#f4b8aa 100%);
- --particle-color:230,172,160;--nav-bg:rgba(253,248,240,0.9);
- --border:rgba(230,172,160,0.15);--divider:rgba(230,172,160,0.1);
- --hero-overlay:linear-gradient(135deg,rgba(44,26,15,0.85) 0%,rgba(80,40,20,0.75) 100%);
+[data-theme="lavender"]{
+  --bg:#F5F0FA;--bg-alt:#EDE6F5;--card-bg:#fff;--card-hover:#fff;
+  --text:#2D2640;--text-muted:#7B6F96;--heading:#1A1030;
+  --accent:#B08FD4;--accent-glow:#9370BD;--accent-dim:rgba(176,143,212,0.12);
+  --gradient:linear-gradient(135deg,#B08FD4,#9370BD);
+  --particle-color:176,143,212;--nav-bg:rgba(245,240,250,0.92);
+  --border:rgba(176,143,212,0.18);--divider:rgba(176,143,212,0.1);
+  --hero-overlay:linear-gradient(135deg,rgba(45,38,64,0.82),rgba(123,111,150,0.6));
 }
-[data-theme="garden"]{
- --bg:#f0f5ee;--bg-alt:#e0ebe0;--card-bg:rgba(255,255,255,0.9);--card-bg-hover:rgba(255,255,255,1);
- --text:#1a2f1a;--text-muted:#5a7a50;--heading:#0f1f0f;
- --accent:#e8a8b0;--accent-glow:#f0b8c0;--accent-dim:rgba(232,168,176,0.15);
- --gradient:linear-gradient(135deg,#e8a8b0 0%,#c89898 50%,#f0c0c8 100%);
- --particle-color:232,168,176;--nav-bg:rgba(240,245,238,0.9);
- --border:rgba(232,168,176,0.15);--divider:rgba(232,168,176,0.1);
- --hero-overlay:linear-gradient(135deg,rgba(26,47,26,0.85) 0%,rgba(40,60,40,0.75) 100%);
+[data-theme="sage"]{
+  --bg:#F2F7F0;--bg-alt:#E8F0E4;--card-bg:#fff;--card-hover:#fff;
+  --text:#2A3528;--text-muted:#6B8060;--heading:#1A2518;
+  --accent:#8FBF7A;--accent-glow:#72A85C;--accent-dim:rgba(143,191,122,0.12);
+  --gradient:linear-gradient(135deg,#8FBF7A,#72A85C);
+  --particle-color:143,191,122;--nav-bg:rgba(242,247,240,0.92);
+  --border:rgba(143,191,122,0.18);--divider:rgba(143,191,122,0.1);
+  --hero-overlay:linear-gradient(135deg,rgba(42,53,40,0.82),rgba(107,128,96,0.6));
 }
 
-body{background:var(--bg);color:var(--text)}
-
-/* ========== LOADING SCREEN ========== */
-#loader{position:fixed;inset:0;z-index:10000;background:var(--bg);display:flex;align-items:center;justify-content:center;transition:opacity 0.5s}
+/* ═══ LOADER ═══ */
+#loader{position:fixed;inset:0;z-index:10000;background:var(--bg);display:flex;flex-direction:column;align-items:center;justify-content:center;transition:opacity .5s}
 #loader.hidden{opacity:0;pointer-events:none}
-.loader-content{text-align:center}
-.loader-brand{font-family:'Orbitron',sans-serif;font-size:2rem;font-weight:900;background:var(--gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;letter-spacing:4px}
-.loader-bar{width:200px;height:3px;background:var(--card-bg);margin:20px auto 0;border-radius:4px;overflow:hidden}
-.loader-bar::after{content:'';display:block;width:40%;height:100%;background:var(--gradient);border-radius:4px;animation:loaderSlide 1s ease infinite}
-@keyframes loaderSlide{0%{transform:translateX(-100%)}100%{transform:translateX(350%)}}
+#loader .heart{font-size:3rem;animation:pulse 1.2s ease infinite}
+#loader p{margin-top:12px;font-family:'Playfair Display',serif;font-size:1.4rem;color:var(--accent);letter-spacing:3px}
+@keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.15)}}
 
-/* ========== SCROLL PROGRESS ========== */
-#scroll-progress{position:fixed;top:0;left:0;height:3px;background:var(--gradient);z-index:9999;width:0%;transition:width 0.1s}
+/* ═══ SCROLL PROGRESS ═══ */
+#progress{position:fixed;top:0;left:0;height:3px;background:var(--gradient);width:0%;z-index:9999;transition:width .1s}
 
-/* ========== CURSOR GLOW ========== */
-#cursor-glow{position:fixed;width:600px;height:600px;border-radius:50%;pointer-events:none;z-index:1;opacity:0;transition:opacity 0.4s;
-background:radial-gradient(circle,rgba(var(--particle-color),0.08) 0%,transparent 70%)}
+/* ═══ CURSOR GLOW ═══ */
+#glow{position:fixed;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(var(--particle-color),0.06) 0%,transparent 70%);pointer-events:none;z-index:1;transform:translate(-50%,-50%);transition:opacity .3s;opacity:0}
+body:hover #glow{opacity:1}
 
-/* ========== PARTICLES CANVAS ========== */
-#particles{position:fixed;inset:0;z-index:0;pointer-events:none}
+/* ═══ NAV ═══ */
+nav{position:fixed;top:0;left:0;width:100%;z-index:1000;padding:16px 40px;display:flex;align-items:center;justify-content:space-between;transition:all .4s}
+nav.scrolled{background:var(--nav-bg);backdrop-filter:blur(16px);box-shadow:0 2px 20px rgba(0,0,0,0.06);padding:10px 40px}
+.logo{font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:700;color:var(--heading)}
+.logo span{color:var(--accent)}
+.nav-links{display:flex;gap:28px}
+.nav-links a{color:var(--text-muted);font-size:.88rem;font-weight:600;letter-spacing:.5px;transition:color .3s}
+.nav-links a:hover{color:var(--accent)}
+.nav-cta{background:var(--accent);color:#fff;padding:10px 24px;border-radius:50px;font-weight:700;font-size:.85rem;transition:all .3s}
+.nav-cta:hover{background:var(--accent-glow);transform:translateY(-1px);box-shadow:0 4px 16px rgba(var(--particle-color),0.3)}
+.hamburger{display:none;flex-direction:column;gap:5px;width:26px;cursor:pointer}
+.hamburger span{display:block;width:100%;height:2px;background:var(--text);transition:all .3s}
 
-/* ========== NAV ========== */
-.nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:16px 40px;display:flex;align-items:center;justify-content:space-between;
-background:transparent;backdrop-filter:blur(0px);transition:all 0.4s}
-.nav.scrolled{background:var(--nav-bg);backdrop-filter:blur(16px);box-shadow:0 2px 20px rgba(0,0,0,0.3);padding:12px 40px}
-.nav-logo{font-family:'Orbitron',sans-serif;font-weight:900;font-size:1.4rem;color:var(--heading);letter-spacing:3px;position:relative}
-.nav-logo span{background:var(--gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-.nav-links{display:flex;gap:32px;align-items:center}
-.nav-links a{font-size:0.88rem;font-weight:500;letter-spacing:1px;text-transform:uppercase;color:var(--text-muted);position:relative;padding:4px 0}
-.nav-links a::after{content:'';position:absolute;bottom:-2px;left:0;width:0;height:2px;background:var(--accent);transition:width 0.3s}
-.nav-links a:hover{color:var(--heading)}
-.nav-links a:hover::after{width:100%}
-.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;z-index:1001;background:none;border:none;padding:8px}
-.hamburger span{width:26px;height:2px;background:var(--heading);transition:all 0.3s;display:block}
-.hamburger.active span:nth-child(1){transform:rotate(45deg) translate(5px,5px)}
-.hamburger.active span:nth-child(2){opacity:0}
-.hamburger.active span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px)}
-.mobile-menu{display:none;position:fixed;inset:0;background:var(--bg);z-index:999;flex-direction:column;align-items:center;justify-content:center;gap:28px;opacity:0;transition:opacity 0.3s}
-.mobile-menu.open{display:flex;opacity:1}
-.mobile-menu a{font-family:'Orbitron',sans-serif;font-size:1.2rem;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--text)}
+/* ═══ HERO ═══ */
+.hero{position:relative;min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:120px 24px 80px;background:url('https://images.unsplash.com/photo-1587616211892-f743fcca64f9?w=1400&q=80') center/cover;overflow:hidden}
+.hero::after{content:'';position:absolute;inset:0;background:var(--hero-overlay)}
+.hero-content{position:relative;z-index:2;max-width:700px}
+.hero h1{font-family:'Playfair Display',serif;font-size:clamp(2.2rem,5vw,3.8rem);color:#fff;margin-bottom:16px;line-height:1.2}
+.hero h1 span{background:var(--gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.hero p{color:rgba(255,255,255,0.85);font-size:1.15rem;margin-bottom:32px;max-width:500px;margin-left:auto;margin-right:auto}
+.hero .btn{display:inline-block;background:var(--accent);color:#fff;padding:16px 40px;border-radius:50px;font-weight:700;font-size:1rem;transition:all .3s}
+.hero .btn:hover{background:var(--accent-glow);transform:translateY(-2px);box-shadow:0 8px 30px rgba(var(--particle-color),0.35)}
 
-/* ========== SKIP LINK ========== */
-.skip-link{position:absolute;top:-100%;left:16px;background:var(--accent);color:#fff;padding:8px 16px;z-index:99999;border-radius:4px;font-weight:600}
-.skip-link:focus{top:8px}
+/* ═══ SECTIONS ═══ */
+section{position:relative;z-index:2;padding:90px 24px}
+.alt{background:var(--bg-alt)}
+.container{max-width:1100px;margin:0 auto}
+.section-label{font-size:.75rem;text-transform:uppercase;letter-spacing:3px;color:var(--accent);font-weight:700;margin-bottom:6px}
+.section-title{font-family:'Playfair Display',serif;font-size:clamp(1.6rem,3.5vw,2.6rem);color:var(--heading);margin-bottom:12px}
+.section-sub{color:var(--text-muted);font-size:1rem;max-width:560px;margin-bottom:48px}
+.center{text-align:center}.center .section-sub{margin-left:auto;margin-right:auto}
 
-/* ========== HERO ========== */
-.hero{position:relative;min-height:100vh;display:flex;align-items:center;justify-content:center;overflow:hidden}
-.hero-bg{position:absolute;inset:0;background-image:url('https://images.unsplash.com/photo-1587616211892-f743fcca64f9?w=400"lullaby"]{background:linear-gradient(135deg,#e8820c,#ff6b00)}
-.theme-dot[data-theme="sunshine"]{background:linear-gradient(135deg,#3d8bfd,#1e5bcc)}
-.theme-dot[data-theme="garden"]{background:linear-gradient(135deg,#e53935,#b71c1c)}
+/* ═══ STATS ═══ */
+.stats{background:var(--bg-alt);border-top:1px solid var(--divider);border-bottom:1px solid var(--divider);padding:40px 24px}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;max-width:900px;margin:0 auto;text-align:center}
+.stats-grid .num{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,3vw,2.6rem);font-weight:700;color:var(--accent)}
+.stats-grid .lbl{font-size:.85rem;color:var(--text-muted);margin-top:2px}
 
-/* ========== COPY/VOICE SWITCHER (left rail) ========== */
-.copy-switcher{position:fixed;left:20px;top:50%;transform:translateY(-50%);z-index:1001;display:flex;flex-direction:column;align-items:center;gap:10px;background:rgba(0,0,0,0.25);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-radius:24px;padding:14px 8px;border:1px solid rgba(255,255,255,0.08)}
-.voice-label{writing-mode:vertical-rl;text-orientation:mixed;transform:rotate(180deg);font-size:0.6rem;font-weight:700;text-transform:uppercase;letter-spacing:3px;color:rgba(255,255,255,0.5);margin-bottom:6px}
-.copy-dot{width:30px;height:30px;border-radius:50%;cursor:pointer;border:2px solid rgba(255,255,255,0.2);transition:all 0.3s;position:relative;display:flex;align-items:center;justify-content:center}
-.copy-dot:hover{transform:scale(1.15)}
-.copy-dot.active{border-color:#fff;box-shadow:0 0 10px rgba(255,255,255,0.2)}
-.copy-letter{color:#fff;font-size:0.7rem;font-weight:700;pointer-events:none}
-.copy-tooltip{position:absolute;left:42px;background:rgba(0,0,0,0.85);color:#fff;padding:4px 10px;border-radius:6px;font-size:0.7rem;font-weight:600;white-space:nowrap;opacity:0;pointer-events:none;transition:opacity 0.3s}
-.copy-dot:hover .copy-tooltip{opacity:1}
+/* ═══ CARDS ═══ */
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:28px}
+.card{background:var(--card-bg);border:1px solid var(--border);border-radius:16px;padding:36px 28px;transition:all .35s;text-align:center}
+.card:hover{transform:translateY(-4px);box-shadow:0 12px 40px rgba(var(--particle-color),0.1);border-color:var(--accent)}
+.card .icon{width:56px;height:56px;margin:0 auto 20px;background:var(--accent-dim);border-radius:14px;display:flex;align-items:center;justify-content:center}
+.card .icon svg{width:28px;height:28px;stroke:var(--accent);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.card h3{font-size:1.15rem;color:var(--heading);margin-bottom:8px}
+.card p{font-size:.9rem;color:var(--text-muted);line-height:1.6}
 
-/* Copy swap animation */
-.copy-swap{transition:opacity 0.3s ease}
-.copy-swap.fading{opacity:0}
+/* ═══ VALUES ═══ */
+.values{display:grid;grid-template-columns:repeat(4,1fr);gap:32px}
+.value{text-align:center}
+.value .ico{width:52px;height:52px;margin:0 auto 16px;border:2px solid var(--border);border-radius:14px;display:flex;align-items:center;justify-content:center;transition:all .3s}
+.value:hover .ico{border-color:var(--accent);background:var(--accent-dim)}
+.value .ico svg{width:24px;height:24px;stroke:var(--accent);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.value h4{font-size:.95rem;color:var(--heading);margin-bottom:6px}
+.value p{font-size:.82rem;color:var(--text-muted)}
 
-/* ========== PRECIOUS TOGGLE (bottom right) ========== */
-.precious-toggle{position:fixed;bottom:24px;right:20px;z-index:1001;display:flex;align-items:center;gap:8px}
-.precious-toggle-label{writing-mode:vertical-rl;text-orientation:mixed;transform:rotate(180deg);font-size:0.65rem;font-weight:700;text-transform:uppercase;letter-spacing:3px;color:rgba(255,255,255,0.4);transition:color 0.5s}
-.precious-toggle-btn{width:48px;height:48px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;background:rgba(20,15,10,0.6);border:2px solid rgba(var(--particle-color),0.3);color:rgba(var(--particle-color),0.6);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);transition:all 0.5s ease;box-shadow:0 0 15px rgba(var(--particle-color),0.1)}
-.precious-toggle-btn:hover{transform:scale(1.1);box-shadow:0 0 25px rgba(var(--particle-color),0.3);border-color:rgba(var(--particle-color),0.5);color:rgba(var(--particle-color),0.8)}
-.precious-toggle.active .precious-toggle-btn{background:rgba(var(--particle-color),0.2);border-color:var(--accent);color:var(--accent);box-shadow:0 0 30px rgba(var(--particle-color),0.5),0 0 60px rgba(var(--particle-color),0.2);animation:preciousBtnPulse 2s ease-in-out infinite}
-.precious-toggle.active .precious-toggle-label{color:var(--accent)}
-@keyframes preciousBtnPulse{0%,100%{box-shadow:0 0 30px rgba(var(--particle-color),0.5),0 0 60px rgba(var(--particle-color),0.2)}50%{box-shadow:0 0 40px rgba(var(--particle-color),0.7),0 0 80px rgba(var(--particle-color),0.3)}}
+/* ═══ ABOUT ═══ */
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.about-img{border-radius:16px;overflow:hidden;background:var(--accent-dim);aspect-ratio:4/5;display:flex;align-items:center;justify-content:center;font-size:4rem}
+.about-text p{color:var(--text-muted);margin-bottom:16px;font-size:.95rem}
+.about-badge{display:inline-block;background:var(--accent-dim);border:1px solid var(--border);border-radius:12px;padding:14px 20px;margin-top:12px;font-size:.85rem}
+.about-badge strong{color:var(--accent)}
 
-/* ========== PRECIOUS MODE EFFECTS ========== */
-/* Headings glow pulse */
-.precious-active h1,.precious-active h2,.precious-active h3,.precious-active h4{animation:preciousTextPulse 3s ease-in-out infinite}
-@keyframes preciousTextPulse{0%,100%{text-shadow:0 0 0 transparent}50%{text-shadow:0 0 12px rgba(var(--particle-color),0.5),0 0 24px rgba(var(--particle-color),0.3)}}
+/* ═══ PROCESS ═══ */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.step{text-align:center;padding:24px 16px}
+.step .num{width:44px;height:44px;border-radius:50%;background:var(--accent);color:#fff;display:flex;align-items:center;justify-content:center;margin:0 auto 16px;font-weight:800;font-size:1.1rem}
+.step h4{font-size:1rem;color:var(--heading);margin-bottom:6px}
+.step p{font-size:.85rem;color:var(--text-muted)}
 
-/* Card hover ascension */
-.precious-active .cap-card:hover,.precious-active .contact-form:hover{transform:perspective(800px) translateY(-15px) scale(1.02)!important;box-shadow:0 20px 60px rgba(var(--particle-color),0.25),0 0 30px rgba(var(--particle-color),0.15)!important}
-.precious-active .cap-card,.precious-active .contact-form{position:relative}
-.precious-active .cap-card::after{content:'';position:absolute;bottom:-10px;left:10%;width:80%;height:20px;background:radial-gradient(ellipse,rgba(var(--particle-color),0.3),transparent);border-radius:50%;opacity:0;transition:opacity 0.4s;pointer-events:none}
-.precious-active .cap-card:hover::after{opacity:1}
+/* ═══ TESTIMONIALS ═══ */
+.testimonials{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:28px}
+.testi{background:var(--card-bg);border:1px solid var(--border);border-radius:16px;padding:32px;position:relative}
+.testi .stars{color:var(--accent);font-size:1.1rem;margin-bottom:12px}
+.testi blockquote{font-style:italic;color:var(--text-muted);font-size:.92rem;line-height:1.7;margin-bottom:16px}
+.testi .author{font-weight:700;font-size:.88rem;color:var(--heading)}
+.testi .role{font-size:.78rem;color:var(--text-muted)}
 
-/* Button shimmer sweep */
-.precious-active .btn{animation:preciousBtnScale 2s ease-in-out infinite;position:relative;overflow:hidden}
-@keyframes preciousBtnScale{0%,100%{transform:scale(1)}50%{transform:scale(1.03)}}
-.precious-active .btn::before{content:'';position:absolute;top:0;left:-100%;width:100%;height:100%;background:linear-gradient(90deg,transparent,rgba(var(--particle-color),0.3),transparent);animation:preciousShimmerSweep 2.5s ease-in-out infinite;pointer-events:none}
-@keyframes preciousShimmerSweep{0%{left:-100%}100%{left:100%}}
+/* ═══ CTA / FORM ═══ */
+.cta-section{background:var(--gradient);color:#fff;text-align:center;padding:80px 24px}
+.cta-section h2{font-family:'Playfair Display',serif;font-size:clamp(1.6rem,3vw,2.4rem);margin-bottom:12px}
+.cta-section p{opacity:.9;margin-bottom:32px;max-width:500px;margin-left:auto;margin-right:auto}
+.cta-section .btn{background:#fff;color:var(--accent);padding:16px 40px;border-radius:50px;font-weight:700;transition:all .3s;display:inline-block}
+.cta-section .btn:hover{transform:translateY(-2px);box-shadow:0 8px 30px rgba(0,0,0,0.15)}
 
-/* Section dividers - light rays */
-.precious-active .section{position:relative}
-.precious-active .section::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,rgba(var(--particle-color),0.6),transparent);animation:preciousSectionPulse 3s ease-in-out infinite;pointer-events:none;z-index:1}
-@keyframes preciousSectionPulse{0%,100%{opacity:.3}50%{opacity:1}}
+/* ═══ FOOTER ═══ */
+footer{background:var(--bg-alt);border-top:1px solid var(--divider);padding:60px 24px 32px}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;max-width:1100px;margin:0 auto}
+footer h4{font-size:.8rem;text-transform:uppercase;letter-spacing:2px;color:var(--accent);margin-bottom:14px}
+footer a{color:var(--text-muted);font-size:.88rem;display:block;margin-bottom:8px;transition:color .3s}
+footer a:hover{color:var(--accent)}
+.footer-bottom{max-width:1100px;margin:32px auto 0;padding-top:20px;border-top:1px solid var(--divider);text-align:center;font-size:.75rem;color:var(--text-muted)}
 
-/* Hero overlay intensified */
-.precious-active .hero-overlay{background:linear-gradient(135deg,var(--hero-overlay),rgba(var(--particle-color),0.12))!important}
-.precious-active .hero-title .shimmer{animation:shimmer 1.5s ease-in-out infinite!important}
+/* ═══ THEME SWITCHER ═══ */
+.themes{position:fixed;right:16px;top:50%;transform:translateY(-50%);z-index:9000;display:flex;flex-direction:column;align-items:center;gap:10px;background:rgba(var(--particle-color),0.06);backdrop-filter:blur(12px);border:1px solid var(--border);border-radius:20px;padding:14px 8px}
+.themes .lbl{writing-mode:vertical-rl;font-size:.6rem;letter-spacing:2px;text-transform:uppercase;color:var(--text-muted);font-weight:700;margin-bottom:4px}
+.tdot{width:20px;height:20px;border-radius:50%;cursor:pointer;border:2px solid transparent;transition:all .3s}
+.tdot:hover{transform:scale(1.2)}
+.tdot.on{border-color:var(--heading);box-shadow:0 0 10px rgba(var(--particle-color),0.4)}
+.tdot[data-t="blush"]{background:linear-gradient(135deg,#FFF5F2,#E6ACA0)}
+.tdot[data-t="lavender"]{background:linear-gradient(135deg,#F5F0FA,#B08FD4)}
+.tdot[data-t="sage"]{background:linear-gradient(135deg,#F2F7F0,#8FBF7A)}
 
-/* Scroll progress glow */
-.precious-active #scroll-progress{box-shadow:0 0 10px rgba(var(--particle-color),0.6),0 0 20px rgba(var(--particle-color),0.3)}
+/* ═══ REVEAL ═══ */
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .6s,transform .6s}
+.reveal.vis{opacity:1;transform:translateY(0)}
+.d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}
 
-/* Service images glow on hover */
-.precious-active .service-images img:hover{box-shadow:0 0 20px rgba(var(--particle-color),0.4);transform:scale(1.08)}
-
-/* ISO badge pulse */
-.precious-active .iso-badge{animation:preciousBadgePulse 2s ease-in-out infinite}
-@keyframes preciousBadgePulse{0%,100%{box-shadow:0 10px 40px rgba(var(--particle-color),0.15)}50%{box-shadow:0 10px 40px rgba(var(--particle-color),0.4),0 0 60px rgba(var(--particle-color),0.2)}}
-
-/* Spark burst animation on toggle */
-.spark{position:fixed;width:4px;height:4px;border-radius:50%;pointer-events:none;z-index:9998;animation:sparkFly 1.2s ease-out forwards}
-@keyframes sparkFly{0%{opacity:1;transform:translate(0,0) scale(1)}100%{opacity:0;transform:translate(var(--sx),var(--sy)) scale(0)}}
-.precious-flash{position:fixed;inset:0;z-index:9997;pointer-events:none;background:radial-gradient(circle at center,rgba(var(--particle-color),0.3),transparent 70%);opacity:0;animation:preciousFlash 0.8s ease forwards}
-@keyframes preciousFlash{0%{opacity:0}15%{opacity:1}100%{opacity:0}}
-
-/* ========== SCROLL REVEAL ========== */
-.reveal{opacity:0;transform:translateY(30px);transition:opacity 0.8s ease,transform 0.8s ease}
-.reveal.visible{opacity:1;transform:translateY(0)}
-.reveal-delay-1{transition-delay:0.1s}
-.reveal-delay-2{transition-delay:0.2s}
-.reveal-delay-3{transition-delay:0.3s}
-.reveal-delay-4{transition-delay:0.4s}
-
-/* ========== ANIMATIONS ========== */
-@keyframes fadeInUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
-
-/* ========== RESPONSIVE ========== */
+/* ═══ RESPONSIVE ═══ */
 @media(max-width:900px){
- .nav-links{display:none}
- .hamburger{display:flex}
- .stats-grid{grid-template-columns:repeat(2,1fr);gap:24px}
- .about-grid,.contact-grid,.service-detail,.service-detail.reverse{grid-template-columns:1fr;direction:ltr}
- .service-detail.reverse > *{direction:ltr}
- .footer-grid{grid-template-columns:1fr}
- .form-row{grid-template-columns:1fr}
- .hero-title{letter-spacing:2px}
- .theme-switcher{right:12px}
- .copy-switcher{left:12px;padding:10px 6px}
- .copy-dot{width:24px;height:24px}
- .copy-letter{font-size:0.6rem}
+  .nav-links{display:none}.hamburger{display:flex}
+  .footer-grid,.about-grid{grid-template-columns:1fr}
+  .stats-grid,.values,.steps{grid-template-columns:1fr 1fr}
 }
-@media(max-width:480px){
- .section{padding:60px 16px}
- .nav{padding:12px 16px}
- .nav.scrolled{padding:10px 16px}
- .hero-actions{flex-direction:column;align-items:center}
- .stats-grid{grid-template-columns:1fr 1fr}
- .iso-badge{flex-direction:column;text-align:center;padding:24px}
- .iso-badge-text{text-align:center}
- .precious-toggle{bottom:16px;right:12px}
- .precious-toggle-btn{width:40px;height:40px}
+@media(max-width:600px){
+  .stats-grid,.values,.steps{grid-template-columns:1fr}
+  nav{padding:12px 16px}
 }
-
-/* ========== PRINT ========== */
-@media print{
- .nav,.theme-switcher,.copy-switcher,.precious-toggle,#particles,#cursor-glow,#scroll-progress,#loader,.hamburger,.mobile-menu{display:none!important}
- body{background:#fff;color:#000}
- .hero{min-height:auto;padding:40px}
- .hero-overlay{display:none}
- .section{padding:30px 0}
- .cap-card,.contact-form{border:1px solid #ccc;box-shadow:none}
-}
+@media print{nav,.themes,#glow,#loader,#progress,canvas{display:none!important}body{background:#fff;color:#000}.hero{min-height:auto;padding:40px 0}}
 </style>
-
-<script type="application/ld+json">
-{
- "@context": "https://schema.org",
- "@type": "Organization",
- "name": "Precious Care",
- "url": "http://preciouscare.us",
- "address": {
- "@type": "PostalAddress",
- "streetAddress": "151 Premier Drive",
- "addressLocality": "Southeast Michigan",
- "addressRegion": "MI",
- "postalCode": "48359",
- "addressCountry": "US"
- },
- "telephone": "+1-248-340-8922",
- "email": "data@preciouscare.us",
- "foundingDate": "2020",
- "description": "CPR/AED/First Aid certified trusted childcare services including childcare, babysitting, newborn care, nanny services, and pet sitting.",
- "hasCredential": {
- "@type": "EducationalOccupationalCredential",
- "credentialCategory": "certification",
- "name": "CPR/AED/First Aid - Latest Revision"
- }
-}
-</script>
 </head>
 <body>
+<!-- Loader -->
+<div id="loader"><div class="heart">&#x1F497;</div><p>PRECIOUS CARE</p></div>
 
-<!-- Loading Screen -->
-<div id="loader"><div class="loader-content"><div class="loader-brand">PRECIOUS CARE</div><div class="loader-bar"></div></div></div>
+<!-- Progress -->
+<div id="progress"></div>
 
-<!-- Scroll Progress -->
-<div id="scroll-progress"></div>
+<!-- Glow -->
+<div id="glow"></div>
 
-<!-- Cursor Glow -->
-<div id="cursor-glow"></div>
+<!-- Canvas -->
+<canvas id="cv"></canvas>
+<style>#cv{position:fixed;top:0;left:0;width:100%;height:100%;z-index:0;pointer-events:none}</style>
 
-<!-- Particles Canvas -->
-<canvas id="particles"></canvas>
-
-<!-- Skip Link -->
-<a href="#main" class="skip-link">Skip to content</a>
-
-<!-- Navigation -->
-<nav class="nav" role="navigation" aria-label="Main navigation">
- <div class="nav-logo">PRECIOUS<span>CARE</span></div>
- <div class="nav-links">
- <a href="#capabilities"><span class="copy-swap" data-key="nav-cap">Capabilities</span></a>
- <a href="#about"><span class="copy-swap" data-key="nav-about">About</span></a>
- <a href="#services"><span class="copy-swap" data-key="nav-services">Services</span></a>
- <a href="#contact"><span class="copy-swap" data-key="nav-contact">Contact</span></a>
- </div>
- <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">
- <span></span><span></span><span></span>
- </button>
+<!-- Nav -->
+<nav>
+  <div class="logo"><span>Precious</span> Care</div>
+  <div class="nav-links">
+    <a href="#services">Services</a>
+    <a href="#about">About</a>
+    <a href="#process">How It Works</a>
+    <a href="#reviews">Reviews</a>
+  </div>
+  <a href="https://preciouscare.org/start/" class="nav-cta" target="_blank">Book a Sitter</a>
+  <div class="hamburger" onclick="this.classList.toggle('active')"><span></span><span></span><span></span></div>
 </nav>
 
-<!-- Mobile Menu -->
-<div class="mobile-menu" role="dialog" aria-label="Mobile navigation">
- <a href="#capabilities"><span class="copy-swap" data-key="nav-cap">Capabilities</span></a>
- <a href="#about"><span class="copy-swap" data-key="nav-about">About</span></a>
- <a href="#services"><span class="copy-swap" data-key="nav-services">Services</span></a>
- <a href="#contact"><span class="copy-swap" data-key="nav-contact">Contact</span></a>
-</div>
-
-<!-- Theme Switcher (right rail) -->
-<div class="theme-switcher" role="radiogroup" aria-label="Theme selector">
- <span class="theme-label">Theme</span>
- <div class="theme-dot active" data-theme="lullaby" data-name="Lullaby" role="radio" aria-checked="true" tabindex="0" aria-label="Lullaby theme"></div>
- <div class="theme-dot" data-theme="sunshine" data-name="Sunshine" role="radio" aria-checked="false" tabindex="0" aria-label="Sunshine theme"></div>
- <div class="theme-dot" data-theme="garden" data-name="Care" role="radio" aria-checked="false" tabindex="0" aria-label="Care theme"></div>
-</div>
-
-<!-- Copy/Voice Switcher (left rail) -->
-<div class="copy-switcher" role="radiogroup" aria-label="Copy voice selector">
- <span class="voice-label" aria-hidden="true">Voice</span>
- <div class="copy-dot active" data-voice="industrial" role="radio" aria-checked="true" aria-label="Industrial voice" style="background:linear-gradient(135deg,#e8820c,#ff6b00)">
- <span class="copy-letter">I</span>
- <span class="copy-tooltip">Industrial</span>
- </div>
- <div class="copy-dot" data-voice="premium" role="radio" aria-checked="false" aria-label="Premium voice" style="background:linear-gradient(135deg,#c9a84c,#f0d78c)">
- <span class="copy-letter">P</span>
- <span class="copy-tooltip">Premium</span>
- </div>
- <div class="copy-dot" data-voice="conversational" role="radio" aria-checked="false" aria-label="Conversational voice" style="background:linear-gradient(135deg,#2e7d32,#4caf50)">
- <span class="copy-letter">C</span>
- <span class="copy-tooltip">Conversational</span>
- </div>
- <div class="copy-dot" data-voice="technical" role="radio" aria-checked="false" aria-label="Technical voice" style="background:linear-gradient(135deg,#1565c0,#42a5f5)">
- <span class="copy-letter">T</span>
- <span class="copy-tooltip">Technical</span>
- </div>
-</div>
-
-<!-- PRECIOUS Toggle (bottom right) -->
-<div class="precious-toggle" role="switch" aria-checked="false" aria-label="Toggle Ignite Mode" tabindex="0">
- <div class="precious-toggle-label">PRECIOUS</div>
- <div class="precious-toggle-btn">
- <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2c0 6-8 8-8 14a8 8 0 0016 0c0-6-8-8-8-14z"/></svg>
- </div>
-</div>
-
 <!-- Hero -->
-<section class="hero" id="home">
- <div class="hero-bg"></div>
- <div class="hero-overlay"></div>
- <div class="hero-content">
- <div class="hero-badge">CPR/AED/First Aid Certified &bull; Since 2020</div>
- <h1 class="hero-title">PRECIOUS<span class="shimmer">CARE</span></h1>
- <p class="hero-subtitle"><span class="copy-swap" data-key="hero-sub">Local, responsible &amp; reliable babysitting, nanny, and pet sitting services in Southeast Michigan.</span></p>
- <div class="hero-actions">
- <a href="#contact" class="btn btn-primary"><span class="copy-swap" data-key="hero-cta">Book a Sitter</span></a>
- <a href="#capabilities" class="btn btn-outline"><span class="copy-swap" data-key="hero-cta2">Our Capabilities</span></a>
- </div>
- </div>
+<section class="hero">
+  <div class="hero-content">
+    <h1>Local, Responsible &amp; <span>Reliable</span> Care</h1>
+    <p>Connecting SE Michigan families with vetted, certified babysitters, nannies, and pet sitters since 2020.</p>
+    <a href="https://preciouscare.org/start/" class="btn" target="_blank">Find Your Sitter</a>
+  </div>
 </section>
 
-<!-- Main Content -->
-<main id="main">
+<!-- Stats -->
+<div class="stats">
+  <div class="stats-grid">
+    <div class="reveal"><div class="num" data-c="500">0</div><div class="lbl">Families Served</div></div>
+    <div class="reveal d1"><div class="num" data-c="15">0</div><div class="lbl">Sitters on Team</div></div>
+    <div class="reveal d2"><div class="num" data-c="5">0</div><div class="lbl">Years of Care</div></div>
+    <div class="reveal d3"><div class="num" data-c="150">0</div><div class="lbl">5-Star Reviews</div></div>
+  </div>
+</div>
 
-<!-- Stats Bar -->
-<section class="stats">
- <div class="stats-grid">
- <div class="stat-item reveal">
- <div class="stat-number" data-target="30" data-suffix="+">0</div>
- <div class="stat-label"><span class="copy-swap" data-key="stat-years">Years Caring</span></div>
- </div>
- <div class="stat-item reveal reveal-delay-1">
- <div class="stat-number" data-target="600" data-suffix="T">0</div>
- <div class="stat-label"><span class="copy-swap" data-key="stat-press">Families Served</span></div>
- </div>
- <div class="stat-item reveal reveal-delay-2">
- <div class="stat-number" data-target="3">0</div>
- <div class="stat-label"><span class="copy-swap" data-key="stat-laser">Certified Sitters</span></div>
- </div>
- <div class="stat-item reveal reveal-delay-3">
- <div class="stat-number" data-target="5" data-suffix="">0</div>
- <div class="stat-label"><span class="copy-swap" data-key="stat-axis">Services Offered</span></div>
- </div>
- </div>
+<!-- Services -->
+<section id="services" class="alt">
+  <div class="container center">
+    <div class="section-label reveal">Our Services</div>
+    <div class="section-title reveal">Care Tailored to Your Family</div>
+    <div class="section-sub reveal">From date-night sitters to full-time nannies and pet care, we have you covered.</div>
+    <div class="cards">
+      <div class="card reveal">
+        <div class="icon"><svg viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" fill="var(--accent)" stroke="none"/></svg></div>
+        <h3>Baby Sitting</h3>
+        <p>Book a sitter for date nights, daytime appointments, or weekend sessions. Flexible scheduling with caring, certified sitters.</p>
+      </div>
+      <div class="card reveal d1">
+        <div class="icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><path d="M12 3v2" stroke-dasharray="1 2"/></svg></div>
+        <h3>Newborn Care</h3>
+        <p>Blessed Beginnings: gentle support for new parents with feeding guidance, sleep help, and emotional care.</p>
+      </div>
+      <div class="card reveal d2">
+        <div class="icon"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+        <h3>Nanny Services</h3>
+        <p>Dedicated in-home nannies for daily routines, meals, school pickup, homework, and consistent family support.</p>
+      </div>
+      <div class="card reveal d3">
+        <div class="icon"><svg viewBox="0 0 24 24"><path d="M10 5.172C10 3.782 8.423 2.679 6.5 3c-2.823.47-4.113 6.006-4 7 .08.703 1.725 1.722 3.656 1 1.261-.472 1.96-1.45 2.344-2.5"/><path d="M14.267 5.172c0-1.39 1.577-2.493 3.5-2.172 2.823.47 4.113 6.006 4 7-.08.703-1.725 1.722-3.656 1-1.261-.472-1.855-1.45-2.239-2.5"/><path d="M8 14v.5M16 14v.5"/><path d="M11.25 16.25h1.5L12 17l-.75-.75z"/><path d="M4.42 11.247A13.152 13.152 0 0 0 4 14.556C4 18.728 7.582 21 12 21s8-2.272 8-6.444a13.152 13.152 0 0 0-.42-3.31"/></svg></div>
+        <h3>Pet Sitting</h3>
+        <p>Walks, feeding, playtime, and overnight stays. Our animal-loving sitters treat your pets like family.</p>
+      </div>
+    </div>
+  </div>
 </section>
 
-<!-- Capabilities Overview -->
-<section class="section" id="capabilities">
- <div class="container">
- <div class="section-header reveal">
- <div class="section-label"><span class="copy-swap" data-key="cap-label">What We Do</span></div>
- <h2 class="section-title"><span class="copy-swap" data-key="cap-title">What We Offer</span></h2>
- <p class="section-subtitle"><span class="copy-swap" data-key="cap-sub">From babysitting to nanny care, newborn support, and pet sitting &mdash; we cover it all.</span></p>
- </div>
- <div class="capabilities-grid">
- <div class="cap-card reveal">
- <div class="cap-icon">
- <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
- </div>
- <h3><span class="copy-swap" data-key="cap1-title">Baby Sitting</span></h3>
- <p><span class="copy-swap" data-key="cap1-text">High-strength steel and aluminum forming with presses ranging from 20 to 600 tons. scheduling capability for precision bends on every run.</span></p>
- </div>
- <div class="cap-card reveal reveal-delay-1">
- <div class="cap-icon">
- <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 2v4"/><path d="M12 18v4"/><path d="M4.93 4.93l2.83 2.83"/><path d="M16.24 16.24l2.83 2.83"/><path d="M2 12h4"/><path d="M18 12h4"/><path d="M4.93 19.07l2.83-2.83"/><path d="M16.24 7.76l2.83-2.83"/></svg>
- </div>
- <h3><span class="copy-swap" data-key="cap2-title">Newborn Care</span></h3>
- <p><span class="copy-swap" data-key="cap2-text">Three machines &mdash; two 5-axis and one 3-axis &mdash; cutting dies from steel, aluminum, and Kirksite with surgical precision.</span></p>
- </div>
- <div class="cap-card reveal reveal-delay-2">
- <div class="cap-icon">
- <svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
- </div>
- <h3><span class="copy-swap" data-key="cap3-title">CAD / CMM / Inspection</span></h3>
- <p><span class="copy-swap" data-key="cap3-text">Full digital design and quality inspection. CATIA V5, Unigraphics, AutoCAD, and Mastercam &mdash; we recover data in any format and verify every dimension.</span></p>
- </div>
- <div class="cap-card reveal reveal-delay-3">
- <div class="cap-icon">
- <svg viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg>
- </div>
- <h3><span class="copy-swap" data-key="cap4-title">Pet Sitting</span></h3>
- <p><span class="copy-swap" data-key="cap4-text">Robotic care for seats and frame parts, nut and stud installation. Every assembly passes through inspection to meet customer specifications.</span></p>
- </div>
- </div>
- </div>
+<!-- Trust -->
+<section>
+  <div class="container center">
+    <div class="section-label reveal">Why Precious Care</div>
+    <div class="section-title reveal">Trust Built on Safety</div>
+    <div class="section-sub reveal">Every sitter is vetted so you can relax with total peace of mind.</div>
+    <div class="values">
+      <div class="value reveal">
+        <div class="ico"><svg viewBox="0 0 24 24"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></div>
+        <h4>Background Checked</h4>
+        <p>Every sitter is thoroughly screened and verified.</p>
+      </div>
+      <div class="value reveal d1">
+        <div class="ico"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+        <h4>CPR Certified</h4>
+        <p>All sitters trained in CPR, AED, and First Aid.</p>
+      </div>
+      <div class="value reveal d2">
+        <div class="ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div>
+        <h4>Fully Insured</h4>
+        <p>Bonded and insured for your total protection.</p>
+      </div>
+      <div class="value reveal d3">
+        <div class="ico"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+        <h4>Local Sitters</h4>
+        <p>Your neighbors in Troy, Rochester Hills, Birmingham, and beyond.</p>
+      </div>
+    </div>
+  </div>
 </section>
 
 <!-- About -->
-<section class="section section-dark" id="about">
- <div class="container">
- <div class="about-grid">
- <div class="about-image reveal">
- <img src="https://images.unsplash.com/photo-1587616211892-f743fcca64f9?w=400" alt="Precious Care facility in Southeast Michigan, Michigan" loading="lazy">
- </div>
- <div class="about-text reveal reveal-delay-1">
- <div class="section-label"><span class="copy-swap" data-key="about-label">Our Story</span></div>
- <h3><span class="copy-swap" data-key="about-title">Founded by Adeline Jones</span></h3>
- <p><span class="copy-swap" data-key="about-p1">Founded in 2020, Precious Care has grown from a focused operation into a full-service childcare partner. Located in Southeast Michigan, Michigan, we serve automotive, industrial, and commercial clients who demand quality without compromise.</span></p>
- <p><span class="copy-swap" data-key="about-p2">Our commitment to customer satisfaction drives everything &mdash; from the first CAD drawing to the final inspection. Whether it&rsquo;s a single prototype or a production run, every part gets the same attention to detail.</span></p>
- <div class="about-badges">
- <div class="about-badge">
- <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
- <span>CPR/AED/First Aid</span>
- </div>
- <div class="about-badge">
- <svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
- <span>Quality First</span>
- </div>
- <div class="about-badge">
- <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
- <span>Since 2020</span>
- </div>
- </div>
- </div>
- </div>
- </div>
+<section id="about" class="alt">
+  <div class="container">
+    <div class="section-label reveal">Meet the Founder</div>
+    <div class="section-title reveal">Adeline Jones</div>
+    <div class="about-grid">
+      <div class="about-img reveal">&#x1F469;&#x200D;&#x1F37C;</div>
+      <div class="about-text">
+        <p class="reveal">Precious Care was born from a simple mission: help SE Michigan families find sitters they can truly trust.</p>
+        <p class="reveal d1">Today, our team of certified sitters serves hundreds of families across Troy, Rochester Hills, Sterling Heights, Birmingham, and beyond. Every sitter is background-checked, CPR/AED/First Aid certified, and personally vetted by Adeline.</p>
+        <p class="reveal d2">This is more than a business. At the heart of it all, family is everything.</p>
+        <div class="about-badge reveal d3"><strong>Local to SE Michigan</strong> &mdash; Born, raised, and serving our community.</div>
+      </div>
+    </div>
+  </div>
 </section>
 
-<!-- Detailed Services -->
-<section class="section" id="services">
- <div class="container">
- <div class="section-header reveal">
- <div class="section-label"><span class="copy-swap" data-key="svc-label">In Detail</span></div>
- <h2 class="section-title"><span class="copy-swap" data-key="svc-title">What We Offer</span></h2>
- <p class="section-subtitle"><span class="copy-swap" data-key="svc-sub">A closer look at what Precious Care brings to every project.</span></p>
- </div>
-
- <!-- Baby Sitting -->
- <div class="service-detail reveal">
- <div class="service-images">
- <img src="https://images.unsplash.com/photo-1587616211892-f743fcca64f9?w=400" alt="600-ton press at Precious Care" loading="lazy">
- <img src="https://images.unsplash.com/photo-1587616211892-f743fcca64f9?w=400" alt="scheduling" loading="lazy">
- <img src="https://images.unsplash.com/photo-1587616211892-f743fcca64f9?w=400" alt="forming operations" loading="lazy">
- </div>
- <div class="service-info">
- <div class="service-tag"><span class="copy-swap" data-key="svc1-tag">Service 01</span></div>
- <h3><span class="copy-swap" data-key="svc1-title">Baby Sitting</span></h3>
- <p><span class="copy-swap" data-key="svc1-p1">Precious Care forms parts from various types of steel and aluminum &mdash; high strength or low. Our presses range from 20 tons to 600 tons, with full scheduling capability.</span></p>
- <p><span class="copy-swap" data-key="svc1-p2">Whether you have one piece or a low-volume production run, we look after every detail to ensure a quality part the first time, every time.</span></p>
- <div class="service-specs">
- <div class="service-spec"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg><span class="copy-swap" data-key="svc1-spec1">20-ton to 600-ton press range</span></div>
- <div class="service-spec"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg><span class="copy-swap" data-key="svc1-spec2">scheduling capability</span></div>
- <div class="service-spec"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg><span class="copy-swap" data-key="svc1-spec3">Sunshine &amp; aluminum forming</span></div>
- </div>
- </div>
- </div>
-
- <!-- Newborn Care -->
- <div class="service-detail reverse reveal">
- <div class="service-images">
- <img src="https://images.unsplash.com/photo-1587616211892-f743fcca64f9?w=400" alt="childcare machine" loading="lazy">
- <img src="https://images.unsplash.com/photo-1587616211892-f743fcca64f9?w=400" alt="Care cutting in progress" loading="lazy">
- <img src="https://images.unsplash.com/photo-1587616211892-f743fcca64f9?w=400" alt="babysitting" loading="lazy">
- </div>
- <div class="service-info">
- <div class="service-tag"><span class="copy-swap" data-key="svc2-tag">Service 02</span></div>
- <h3><span class="copy-swap" data-key="svc2-title">Newborn Care</span></h3>
- <p><span class="copy-swap" data-key="svc2-p1">Our department runs three machines &mdash; two 5-axis and one 3-axis cutting system. We cut dies from steel, aluminum, and Kirksite material with tolerances that don&rsquo;t leave room for doubt.</span></p>
- <div class="service-specs">
- <div class="service-spec"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg><span class="copy-swap" data-key="svc2-spec1">Three machines</span></div>
- <div class="service-spec"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg><span class="copy-swap" data-key="svc2-spec2">5-axis &amp; 3-axis cutting</span></div>
- <div class="service-spec"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg><span class="copy-swap" data-key="svc2-spec3">Sunshine, aluminum &amp; Kirksite</span></div>
- </div>
- </div>
- </div>
-
- <!-- CAD / CMM / Inspection -->
- <div class="service-detail reveal">
- <div class="service-images">
- <img src="https://images.unsplash.com/photo-1587616211892-f743fcca64f9?w=400" alt="CMM inspection machine" loading="lazy">
- <img src="https://images.unsplash.com/photo-1587616211892-f743fcca64f9?w=400" alt="CAD workstation" loading="lazy">
- <img src="https://images.unsplash.com/photo-1587616211892-f743fcca64f9?w=400" alt="Inspection process" loading="lazy">
- </div>
- <div class="service-info">
- <div class="service-tag"><span class="copy-swap" data-key="svc3-tag">Service 03</span></div>
- <h3><span class="copy-swap" data-key="svc3-title">CAD / CMM / Inspection</span></h3>
- <p><span class="copy-swap" data-key="svc3-p1">We have the tools to bring your design to life. Whether it&rsquo;s a fixture, part, or assembly, our CAD department and inspection team deliver. We recover data in virtually any format.</span></p>
- <div class="service-specs">
- <div class="service-spec"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg><span class="copy-swap" data-key="svc3-spec1">CATIA V5 &amp; Unigraphics</span></div>
- <div class="service-spec"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg><span class="copy-swap" data-key="svc3-spec2">AutoCAD &amp; Mastercam</span></div>
- <div class="service-spec"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg><span class="copy-swap" data-key="svc3-spec3">Full Meal prep &amp; homework help</span></div>
- </div>
- </div>
- </div>
-
- <!-- Newborn Care / Assembly -->
- <div class="service-detail reverse reveal">
- <div class="service-images">
- <img src="https://images.unsplash.com/photo-1587616211892-f743fcca64f9?w=400" alt="Robotic care system" loading="lazy">
- <img src="https://images.unsplash.com/photo-1587616211892-f743fcca64f9?w=400" alt="pet sitting" loading="lazy">
- <img src="https://images.unsplash.com/photo-1587616211892-f743fcca64f9?w=400" alt="Finished parts" loading="lazy">
- </div>
- <div class="service-info">
- <div class="service-tag"><span class="copy-swap" data-key="svc4-tag">Service 04</span></div>
- <h3><span class="copy-swap" data-key="svc4-title">Pet Sitting</span></h3>
- <p><span class="copy-swap" data-key="svc4-p1">Precious Care doesn&rsquo;t just stamp and cut &mdash; we assemble. Robotic care handles seats and frame parts, plus nut and stud installation. Every assembly goes through our inspection department to meet customer specifications.</span></p>
- <div class="service-specs">
- <div class="service-spec"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg><span class="copy-swap" data-key="svc4-spec1">Robotic MIG/TIG care</span></div>
- <div class="service-spec"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg><span class="copy-swap" data-key="svc4-spec2">Feeding &amp; medication</span></div>
- <div class="service-spec"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg><span class="copy-swap" data-key="svc4-spec3">100% quality inspection</span></div>
- </div>
- </div>
- </div>
- </div>
+<!-- Process -->
+<section id="process">
+  <div class="container center">
+    <div class="section-label reveal">Simple &amp; Secure</div>
+    <div class="section-title reveal">How It Works</div>
+    <div class="section-sub reveal">Four easy steps from first contact to a sitter you love.</div>
+    <div class="steps">
+      <div class="step reveal"><div class="num">1</div><h4>Fill Out Our Form</h4><p>Tell us what you need: dates, ages, and any special requirements.</p></div>
+      <div class="step reveal d1"><div class="num">2</div><h4>Coordinate Details</h4><p>Our team matches you with the best sitter for your family.</p></div>
+      <div class="step reveal d2"><div class="num">3</div><h4>Meet Your Sitter</h4><p>Talk with your sitter and schedule your first session.</p></div>
+      <div class="step reveal d3"><div class="num">4</div><h4>Relax</h4><p>Do what you need to do and stop worrying. We have got this.</p></div>
+    </div>
+  </div>
 </section>
 
-<!-- ISO Certification -->
-<div class="iso-section reveal">
- <div class="iso-badge">
- <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
- <div class="iso-badge-text">
- <h3>CPR/AED/First Aid</h3>
- <p><span class="copy-swap" data-key="iso-text">Latest Revision &mdash; Quality Management System Certified</span></p>
- </div>
- </div>
-</div>
-
-<!-- Contact -->
-<section class="section section-dark" id="contact">
- <div class="container">
- <div class="section-header reveal">
- <div class="section-label"><span class="copy-swap" data-key="contact-label">Get in Touch</span></div>
- <h2 class="section-title"><span class="copy-swap" data-key="contact-title">Book a Sitter</span></h2>
- <p class="section-subtitle"><span class="copy-swap" data-key="contact-sub">Tell us about your family and needs and we&rsquo;ll get back to you promptly.</span></p>
- </div>
- <div class="contact-grid">
- <div class="contact-info reveal">
- <h3><span class="copy-swap" data-key="contact-h3">Let&rsquo;s Build Something</span></h3>
- <p><span class="copy-swap" data-key="contact-p">Whether you need a single prototype or a full production run, Precious Care has the equipment, experience, and commitment to quality to deliver. Reach out and let&rsquo;s discuss your project.</span></p>
- <div class="contact-details">
- <div class="contact-item">
- <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
- <span>151 Premier Drive<br>Southeast Michigan, MI 48359</span>
- </div>
- <div class="contact-item">
- <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
- <span><a href="tel:+12483408922">(248) 340-8922</a></span>
- </div>
- <div class="contact-item">
- <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
- <span><a href="mailto:data@preciouscare.us">data@preciouscare.us</a></span>
- </div>
- <div class="contact-item">
- <svg viewBox="0 0 24 24"><path d="M15 3h4a2 2 0 012 2v14a2 2 0 01-2 2h-4"/><polyline points="10 17 15 12 10 7"/><line x1="15" y1="12" x2="3" y2="12"/></svg>
- <span>Fax: (248) 340-8950</span>
- </div>
- </div>
- </div>
- <div class="contact-form reveal reveal-delay-1">
- <form id="quoteForm" onsubmit="return false">
- <div class="form-row">
- <div class="form-group">
- <label for="name">Your Name</label>
- <input type="text" id="name" placeholder="John Smith" required>
- </div>
- <div class="form-group">
- <label for="company">Company</label>
- <input type="text" id="company" placeholder="Your Family Name">
- </div>
- </div>
- <div class="form-row">
- <div class="form-group">
- <label for="email">Email</label>
- <input type="email" id="email" placeholder="john@company.com" required>
- </div>
- <div class="form-group">
- <label for="phone">Phone</label>
- <input type="tel" id="phone" placeholder="(248) 555-0100">
- </div>
- </div>
- <div class="form-group">
- <label for="service">Service Needed</label>
- <select id="service">
- <option value="">Select a service...</option>
- <option>Baby Sitting</option>
- <option>Newborn Care</option>
- <option>CAD / CMM / Inspection</option>
- <option>Newborn Care / Assembly</option>
- <option>Multiple Services</option>
- <option>Not Sure &mdash; Need Consultation</option>
- </select>
- </div>
- <div class="form-group">
- <label for="message">Project Details</label>
- <textarea id="message" placeholder="Tell us about your family and needs &mdash; materials, quantities, tolerances, timeline..."></textarea>
- </div>
- <button type="submit" class="btn btn-primary" style="width:100%"><span class="copy-swap" data-key="form-submit">Submit Quote Request</span></button>
- </form>
- </div>
- </div>
- </div>
+<!-- Testimonials -->
+<section id="reviews" class="alt">
+  <div class="container center">
+    <div class="section-label reveal">Testimonials</div>
+    <div class="section-title reveal">What Families Say</div>
+    <div class="section-sub reveal">Real stories from happy parents.</div>
+    <div class="testimonials">
+      <div class="testi reveal">
+        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <blockquote>Adeline has been regularly babysitting my two girls since May 2024. She is now like a part of our family! She does light housekeeping on top of taking care of the kids, and they love her. She is trustworthy and dependable.</blockquote>
+        <div class="author">Faith</div>
+        <div class="role">Mom of 2 &bull; Mar 2025</div>
+      </div>
+      <div class="testi reveal d1">
+        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <blockquote>I am so happy Precious Care was recommended to me. Georgia was amazing with our three kids, certified, and they adored her!</blockquote>
+        <div class="author">Eleni</div>
+        <div class="role">Mom of 3 &bull; Nov 2024</div>
+      </div>
+    </div>
+  </div>
 </section>
 
-</main>
+<!-- CTA -->
+<section class="cta-section">
+  <h2>Ready to Find Your Perfect Sitter?</h2>
+  <p>Fill out our quick form and we will match you with a caring, certified sitter.</p>
+  <a href="https://preciouscare.org/start/" class="btn" target="_blank">Get Started Today</a>
+</section>
 
 <!-- Footer -->
-<footer class="footer">
- <div class="footer-grid">
- <div class="footer-brand">
- <div class="footer-logo">PRECIOUS<span>CARE</span></div>
- <p><span class="copy-swap" data-key="footer-text">Local, responsible &amp; reliable babysitting, nanny, and pet sitting services in Southeast Michigan. CPR/AED/First Aid certified since 2020.</span></p>
- </div>
- <div class="footer-col">
- <h4>Navigation</h4>
- <a href="#home">Home</a>
- <a href="#capabilities">Capabilities</a>
- <a href="#about">About</a>
- <a href="#services">Services</a>
- <a href="#contact">Contact</a>
- </div>
- <div class="footer-col">
- <h4>Services</h4>
- <a href="#services">Baby Sitting</a>
- <a href="#services">Baby Sitting &amp; Care</a>
- <a href="#services">CAD / CMM / Inspection</a>
- <a href="#services">Pet Sitting</a>
- </div>
- </div>
- <div class="footer-bottom">
- <p>&copy; 2026 Precious Care. All rights reserved.</p>
- <p>Redesign by <a href="https://kirkautomations.com" target="_blank" rel="noopener">Kirk Automations</a></p>
- </div>
+<footer>
+  <div class="footer-grid">
+    <div>
+      <h4>Precious Care</h4>
+      <p style="color:var(--text-muted);font-size:.85rem;line-height:1.6">Local, responsible, and reliable babysitting, nanny, and pet sitting services in Southeast Michigan. Founded by Adeline Jones.</p>
+    </div>
+    <div>
+      <h4>Services</h4>
+      <a href="#services">Baby Sitting</a>
+      <a href="#services">Newborn Care</a>
+      <a href="#services">Nanny Services</a>
+      <a href="#services">Pet Sitting</a>
+    </div>
+    <div>
+      <h4>Company</h4>
+      <a href="#about">About</a>
+      <a href="https://preciouscare.org/resources/" target="_blank">Resources</a>
+      <a href="https://preciouscare.org/become-a-sitter/" target="_blank">Become a Sitter</a>
+      <a href="https://preciouscare.org/testimonials/" target="_blank">Testimonials</a>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <a href="https://preciouscare.org/start/" target="_blank">Book Now</a>
+      <a href="mailto:hello@preciouscare.org">hello@preciouscare.org</a>
+      <p style="color:var(--text-muted);font-size:.82rem;margin-top:8px">Troy, MI &mdash; SE Michigan</p>
+    </div>
+  </div>
+  <div class="footer-bottom">Hourly rates based on sitter experience and family needs. All sitters background-checked and certified. &copy; 2025 Precious Care. Built by <a href="https://kirkautomations.com" target="_blank" style="color:var(--accent)">Kirk Automations</a>.</div>
 </footer>
 
+<!-- Theme Switcher -->
+<div class="themes">
+  <div class="lbl">THEME</div>
+  <div class="tdot on" data-t="blush"></div>
+  <div class="tdot" data-t="lavender"></div>
+  <div class="tdot" data-t="sage"></div>
+</div>
+
 <script>
-/* ========== COPY VOICE DATABASE ========== */
-const copyDB = {
- industrial: {
- // Nav
- 'nav-cap':'Capabilities','nav-about':'About','nav-services':'Services','nav-contact':'Contact',
- // Hero
- 'hero-sub':'Local, responsible babysitting, nanny, and pet sitting in SE Michigan',
- 'hero-cta':'Book a Sitter','hero-cta2':'Our Capabilities',
- // Stats
- 'stat-years':'Years Caring','stat-press':'Families Served','stat-laser':'Certified Sitters','stat-axis':'Services Offered',
- // Capabilities
- 'cap-label':'What We Do','cap-title':'What We Offer',
- 'cap-sub':'Babysitting, nanny, newborn care, and pet sitting for SE Michigan families.',
- 'cap1-title':'Baby Sitting',
- 'cap1-text':'Vetted sitters for date nights, errands, after-school care, and weekends.',
- 'cap2-title':'Newborn Care',
- 'cap2-text':'Blessed Beginnings: gentle support for new parents and newborns.',
- 'cap3-title':'Nanny Services',
- 'cap3-text':'Dedicated in-home nannies for daily routines, meals, and activities.',
- 'cap4-title':'Pet Sitting',
- 'cap4-text':'Dog walks, feeding, playtime, and overnight stays from animal lovers.',
- // About
- 'about-label':'Our Story','about-title':'Founded by Adeline Jones',
- 'about-p1':'Precious Care was born from one mission: help SE Michigan families find sitters they can truly trust. Every sitter is background-checked, CPR certified, and personally vetted.',
- 'about-p2':'Our commitment to customer satisfaction drives everything &mdash; from the first CAD drawing to the final inspection. Whether it\u2019s a single prototype or a production run, every part gets the same attention to detail.',
- // Services
- 'svc-label':'In Detail','svc-title':'What We Offer','svc-sub':'A closer look at what Precious Care brings to every project.',
- 'svc1-tag':'Service 01','svc1-title':'Baby Sitting',
- 'svc1-p1':'Experienced babysitters for date nights, errands, after-school care, and weekends. Flexible scheduling with caring, certified sitters.',
- 'svc1-p2':'Whether you have one piece or a low-volume production run, we look after every detail to ensure a quality part the first time, every time.',
- 'svc1-spec1':'20-ton to 600-ton press range','svc1-spec2':'scheduling capability','svc1-spec3':'Sunshine &amp; aluminum forming',
- 'svc2-tag':'Service 02','svc2-title':'Newborn Care',
- 'svc2-p1':'Blessed Beginnings: gentle newborn care from specialists who help with feeding, sleep, and give new parents the rest they need.',
- 'svc2-spec1':'Three machines','svc2-spec2':'5-axis &amp; 3-axis cutting','svc2-spec3':'Sunshine, aluminum &amp; Kirksite',
- 'svc3-tag':'Service 03','svc3-title':'Nanny Services',
- 'svc3-p1':'Dedicated nannies who become part of the family. Daily routines, meals, school pickup, homework help, and consistent in-home support.',
- 'svc3-spec1':'CATIA V5 &amp; Unigraphics','svc3-spec2':'AutoCAD &amp; Mastercam','svc3-spec3':'Full Meal prep &amp; homework help',
- 'svc4-tag':'Service 04','svc4-title':'Pet Sitting',
- 'svc4-p1':'Dog walks, cat care, feeding, playtime, and overnight stays. Our animal-loving sitters treat your pets like family.',
- 'svc4-spec1':'Robotic MIG/TIG care','svc4-spec2':'Feeding &amp; medication','svc4-spec3':'100% quality inspection',
- // ISO
- 'iso-text':'Latest Revision &mdash; Quality Management System Certified',
- // Contact
- 'contact-label':'Get in Touch','contact-title':'Book a Sitter',
- 'contact-sub':'Tell us about your family and needs and we\u2019ll get back to you promptly.',
- 'contact-h3':'Let\u2019s Build Something',
- 'contact-p':'Whether you need a single prototype or a full production run, Precious Care has the equipment, experience, and commitment to quality to deliver. Reach out and let\u2019s discuss your project.',
- 'form-submit':'Submit Quote Request',
- // Footer
- 'footer-text':'Local, responsible babysitting, nanny, and pet sitting in SE Michigan.'
- },
- premium: {
- 'nav-cap':'Solutions','nav-about':'Heritage','nav-services':'Expertise','nav-contact':'Inquire',
- 'hero-sub':'Local, responsible babysitting, nanny, and pet sitting in SE Michigan',
- 'hero-cta':'Start a Conversation','hero-cta2':'Explore Our Solutions',
- 'stat-years':'Years Caring','stat-press':'Families Served','stat-laser':'Certified Sitters','stat-axis':'Services Offered',
- 'cap-label':'Our Craft','cap-title':'Engineered Solutions',
- 'cap-sub':'Babysitting, nanny, newborn care, and pet sitting for SE Michigan families.',
- 'cap1-title':'Baby Sitting','cap1-text':'Vetted sitters for date nights, errands, after-school care, and weekends.',
- 'cap2-title':'Newborn Care','cap2-text':'Blessed Beginnings: gentle support for new parents and newborns.',
- 'cap3-title':'Nanny Services','cap3-text':'Dedicated in-home nannies for daily routines, meals, and activities.',
- 'cap4-title':'Pet Sitting','cap4-text':'Dog walks, feeding, playtime, and overnight stays from animal lovers.',
- 'about-label':'Our Heritage','about-title':'Founded by Adeline Jones',
- 'about-p1':'Precious Care was born from one mission: help SE Michigan families find sitters they can truly trust. Every sitter is background-checked, CPR certified, and personally vetted.',
- 'about-p2':'We don\u2019t cut corners, we cut steel. Every project &mdash; from a single prototype to a production campaign &mdash; receives the full attention of our engineering and quality teams.',
- 'svc-label':'Deep Expertise','svc-title':'Service Portfolio','svc-sub':'The capabilities behind the reputation.',
- 'svc1-tag':'Forming Division','svc1-title':'Baby Sitting',
- 'svc1-p1':'Experienced babysitters for date nights, errands, after-school care, and weekends. Flexible scheduling with caring, certified sitters.',
- 'svc1-p2':'One piece or one thousand. The standard never changes.',
- 'svc1-spec1':'600-ton maximum forming capacity','svc1-spec2':'CNC-controlled schedulings','svc1-spec3':'Multi-alloy material expertise',
- 'svc2-tag':'Care Division','svc2-title':'Newborn Care',
- 'svc2-p1':'Blessed Beginnings: gentle newborn care from specialists who help with feeding, sleep, and give new parents the rest they need.',
- 'svc2-spec1':'Dual 5-axis systems','svc2-spec2':'Single 3-axis cutting platform','svc2-spec3':'Multi-material capability',
- 'svc3-tag':'Engineering Division','svc3-title':'Nanny Services',
- 'svc3-p1':'Dedicated nannies who become part of the family. Daily routines, meals, school pickup, homework help, and consistent in-home support.',
- 'svc3-spec1':'CATIA V5, NX, AutoCAD, Mastercam','svc3-spec2':'Multi-format data recovery','svc3-spec3':'CMM verification to print',
- 'svc4-tag':'Assembly Division','svc4-title':'Pet Sitting',
- 'svc4-p1':'Dog walks, cat care, feeding, playtime, and overnight stays. Our animal-loving sitters treat your pets like family.',
- 'svc4-spec1':'Robotic care automation','svc4-spec2':'The Protector fastener installation','svc4-spec3':'First-pass quality assurance',
- 'iso-text':'Latest Revision &mdash; Your assurance of world-class quality systems',
- 'contact-label':'Begin a Partnership','contact-title':'Start a Conversation',
- 'contact-sub':'Tell us about your requirements. We\u2019ll tell you how we exceed them.',
- 'contact-h3':'Your Next Build Starts Here',
- 'contact-p':'Whether you\u2019re sourcing a critical prototype or scaling to volume production, Precious Care brings 30 years of precision care expertise to your project. Let\u2019s discuss the details.',
- 'form-submit':'Initiate Inquiry',
- 'footer-text':'Local, responsible babysitting, nanny, and pet sitting in SE Michigan.'
- },
- conversational: {
- 'nav-cap':'What We Do','nav-about':'Who We Are','nav-services':'How We Help','nav-contact':'Talk to Us',
- 'hero-sub':'Local, responsible babysitting, nanny, and pet sitting in SE Michigan',
- 'hero-cta':'Get a Quote','hero-cta2':'See What We Do',
- 'stat-years':'Years Caring','stat-press':'Families Served','stat-laser':'Certified Sitters','stat-axis':'Services Offered',
- 'cap-label':'Here\u2019s What We Do','cap-title':'Our Capabilities',
- 'cap-sub':'Babysitting, nanny, newborn care, and pet sitting for SE Michigan families.',
- 'cap1-title':'Baby Sitting','cap1-text':'Vetted sitters for date nights, errands, after-school care, and weekends.',
- 'cap2-title':'Newborn Care','cap2-text':'Blessed Beginnings: gentle support for new parents and newborns.',
- 'cap3-title':'Nanny Services','cap3-text':'Dedicated in-home nannies for daily routines, meals, and activities.',
- 'cap4-title':'Pet Sitting','cap4-text':'Dog walks, feeding, playtime, and overnight stays from animal lovers.',
- 'about-label':'A Little About Us','about-title':'Founded by Adeline Jones',
- 'about-p1':'Precious Care was born from one mission: help SE Michigan families find sitters they can truly trust. Every sitter is background-checked, CPR certified, and personally vetted.',
- 'about-p2':'Whether it\u2019s one piece or a thousand, you get the same attention to detail. That\u2019s not a slogan &mdash; it\u2019s how we actually work.',
- 'svc-label':'The Details','svc-title':'What We Bring to the Table','svc-sub':'Here\u2019s a closer look at each service we offer.',
- 'svc1-tag':'Forming','svc1-title':'Baby Sitting',
- 'svc1-p1':'Experienced babysitters for date nights, errands, after-school care, and weekends. Flexible scheduling with caring, certified sitters.',
- 'svc1-p2':'Got one piece? We\u2019ll treat it like it\u2019s a million. Quality doesn\u2019t change with volume.',
- 'svc1-spec1':'Presses up to 600 tons','svc1-spec2':'scheduling for precision','svc1-spec3':'Sunshine and aluminum, any grade',
- 'svc2-tag':'Cutting','svc2-title':'Newborn Care',
- 'svc2-p1':'Blessed Beginnings: gentle newborn care from specialists who help with feeding, sleep, and give new parents the rest they need.',
- 'svc2-spec1':'15+ machines','svc2-spec2':'5-axis and 3-axis options','svc2-spec3':'Cuts steel, aluminum, Kirksite',
- 'svc3-tag':'Design &amp; QC','svc3-title':'Nanny Services',
- 'svc3-p1':'Dedicated nannies who become part of the family. Daily routines, meals, school pickup, homework help, and consistent in-home support.',
- 'svc3-spec1':'All major CAD platforms','svc3-spec2':'We\u2019ll work with your file format','svc3-spec3':'CMM inspection on everything',
- 'svc4-tag':'Assembly','svc4-title':'Pet Sitting',
- 'svc4-p1':'Dog walks, cat care, feeding, playtime, and overnight stays. Our animal-loving sitters treat your pets like family.',
- 'svc4-spec1':'Robotic care for consistency','svc4-spec2':'Nuts, studs, full fastening','svc4-spec3':'Every assembly gets inspected',
- 'iso-text':'We\u2019re CPR/AED/First Aid certified &mdash; latest revision. Quality systems you can count on.',
- 'contact-label':'Let\u2019s Talk','contact-title':'Get a Quote',
- 'contact-sub':'Tell us what you need and we\u2019ll get back to you fast.',
- 'contact-h3':'Ready When You Are',
- 'contact-p':'One prototype or a full run &mdash; doesn\u2019t matter. We\u2019ve got the equipment, the experience, and the people to get it done right. Drop us a line.',
- 'form-submit':'Send It Over',
- 'footer-text':'Local, responsible babysitting, nanny, and pet sitting in SE Michigan.'
- },
- technical: {
- 'nav-cap':'Capabilities','nav-about':'Facility','nav-services':'Processes','nav-contact':'RFQ',
- 'hero-sub':'Local, responsible babysitting, nanny, and pet sitting in SE Michigan',
- 'hero-cta':'Submit RFQ','hero-cta2':'Technical Capabilities',
- 'stat-years':'Years Caring','stat-press':'Families Served','stat-laser':'Certified Sitters','stat-axis':'Services Offered',
- 'cap-label':'Process Overview','cap-title':'Technical Capabilities',
- 'cap-sub':'Babysitting, nanny, newborn care, and pet sitting for SE Michigan families.',
- 'cap1-title':'Baby Sitting',
- 'cap1-text':'Vetted sitters for date nights, errands, after-school care, and weekends.',
- 'cap2-title':'Newborn Care',
- 'cap2-text':'Blessed Beginnings: gentle support for new parents and newborns.',
- 'cap3-title':'Nanny Services',
- 'cap3-text':'Dedicated in-home nannies for daily routines, meals, and activities.',
- 'cap4-title':'Pet Sitting',
- 'cap4-text':'Dog walks, feeding, playtime, and overnight stays from animal lovers.',
- 'about-label':'Facility Profile','about-title':'Founded by Adeline Jones',
- 'about-p1':'Precious Care was born from one mission: help SE Michigan families find sitters they can truly trust. Every sitter is background-checked, CPR certified, and personally vetted.',
- 'about-p2':'Process flow: RFQ &rarr; CAD/CAM programming &rarr; childcare/forming &rarr; care/assembly &rarr; CMM inspection &rarr; ship. Single-piece and low-volume production capability.',
- 'svc-label':'Process Detail','svc-title':'Detailed Process Specifications','svc-sub':'Technical specifications for each childcare process.',
- 'svc1-tag':'Process 01','svc1-title':'Baby Sitting',
- 'svc1-p1':'Experienced babysitters for date nights, errands, after-school care, and weekends. Flexible scheduling with caring, certified sitters.',
- 'svc1-p2':'Prototype and low-volume capability. First-article inspection (FAI) per customer requirements.',
- 'svc1-spec1':'20T&ndash;600T press range','svc1-spec2':'scheduling (programmable)','svc1-spec3':'CR/HR/HSLA/aluminum alloys',
- 'svc2-tag':'Process 02','svc2-title':'Newborn Care',
- 'svc2-p1':'Blessed Beginnings: gentle newborn care from specialists who help with feeding, sleep, and give new parents the rest they need.',
- 'svc2-spec1':'2x 5-axis + 1x 3-axis laser','svc2-spec2':'&plusmn;0.005&Prime; typical tolerance','svc2-spec3':'Tool steel / aluminum / Kirksite',
- 'svc3-tag':'Process 03','svc3-title':'Nanny Services',
- 'svc3-p1':'Dedicated nannies who become part of the family. Daily routines, meals, school pickup, homework help, and consistent in-home support.',
- 'svc3-spec1':'CATIA V5 / NX / AutoCAD / Mastercam','svc3-spec2':'STEP / IGES / native format','svc3-spec3':'CMM per ASME Y14.5 GD&amp;T',
- 'svc4-tag':'Process 04','svc4-title':'Pet Sitting',
- 'svc4-p1':'Dog walks, cat care, feeding, playtime, and overnight stays. Our animal-loving sitters treat your pets like family.',
- 'svc4-spec1':'MIG/TIG newborn care','svc4-spec2':'Projection / clinch / PEM','svc4-spec3':'Control plan inspection (100%)',
- 'iso-text':'CPR/AED/First Aid:2015 &mdash; Quality Management System, current certification',
- 'contact-label':'Request for Quote','contact-title':'Submit RFQ',
- 'contact-sub':'Provide project specifications for rapid quoting. Include materials, tolerances, and volume.',
- 'contact-h3':'Engineering Support Available',
- 'contact-p':'Submit your RFQ with drawings (PDF/native), material specifications, annual volume estimates, and required tolerances. Our engineering team will review and respond within 24&ndash;48 hours.',
- 'form-submit':'Submit RFQ',
- 'footer-text':'Local, responsible babysitting, nanny, and pet sitting in SE Michigan.'
- }
-};
+// Loader
+setTimeout(function(){var l=document.getElementById('loader');if(l){l.classList.add('hidden');setTimeout(function(){l.style.display='none'},500)}},1600);
 
-/* ========== COPY VOICE SWITCHER ========== */
-let currentVoice = localStorage.getItem('lc-voice') || 'industrial';
-const copyDots = document.querySelectorAll('.copy-dot');
-const copySwaps = document.querySelectorAll('.copy-swap');
+// Scroll progress
+window.addEventListener('scroll',function(){var h=document.documentElement.scrollHeight-window.innerHeight;var p=document.getElementById('progress');if(p&&h>0)p.style.width=(window.scrollY/h*100)+'%'},{passive:true});
 
-function applyVoice(voice, animate) {
- const data = copyDB[voice];
- if (!data) return;
- currentVoice = voice;
- localStorage.setItem('lc-voice', voice);
+// Cursor glow
+var glow=document.getElementById('glow');
+document.addEventListener('mousemove',function(e){if(glow){glow.style.left=e.clientX+'px';glow.style.top=e.clientY+'px'}});
 
- if (animate) {
- copySwaps.forEach(el => el.classList.add('fading'));
- setTimeout(() => {
- copySwaps.forEach(el => {
- const key = el.dataset.key;
- if (data[key]) el.innerHTML = data[key];
- el.classList.remove('fading');
- });
- }, 300);
- } else {
- copySwaps.forEach(el => {
- const key = el.dataset.key;
- if (data[key]) el.innerHTML = data[key];
- });
- }
+// Nav scroll
+var nav=document.querySelector('nav');
+window.addEventListener('scroll',function(){if(nav)nav.classList.toggle('scrolled',window.scrollY>60)},{passive:true});
 
- copyDots.forEach(d => {
- d.classList.toggle('active', d.dataset.voice === voice);
- d.setAttribute('aria-checked', d.dataset.voice === voice);
- });
-}
+// Reveal
+var revEls=document.querySelectorAll('.reveal');
+var revObs=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vis');revObs.unobserve(e.target)}})},{threshold:0.1});
+revEls.forEach(function(el){revObs.observe(el)});
 
-copyDots.forEach(dot => {
- dot.addEventListener('click', () => applyVoice(dot.dataset.voice, true));
- dot.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); dot.click(); } });
-});
+// Counter animation
+var counted=new Set();
+var cObs=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting&&!counted.has(e.target)){counted.add(e.target);var t=parseInt(e.target.dataset.c);var dur=1800;var st=performance.now();(function tick(now){var p=Math.min((now-st)/dur,1);var ease=1-Math.pow(1-p,3);e.target.textContent=Math.floor(ease*t)+(t>=100?'+':'');if(p<1)requestAnimationFrame(tick)})(performance.now())}})},{threshold:0.5});
+document.querySelectorAll('[data-c]').forEach(function(el){cObs.observe(el)});
 
-// Apply saved voice on load
-if (currentVoice !== 'industrial') applyVoice(currentVoice, false);
+// Theme switcher
+var curTheme=localStorage.getItem('pc-theme')||'blush';
+function setTheme(t){curTheme=t;document.documentElement.setAttribute('data-theme',t);localStorage.setItem('pc-theme',t);document.querySelectorAll('.tdot').forEach(function(d){d.classList.toggle('on',d.dataset.t===t)})}
+setTheme(curTheme);
+document.querySelectorAll('.tdot').forEach(function(d){d.addEventListener('click',function(){setTheme(d.dataset.t)})});
 
-/* ========== LOADER ========== */
-window.addEventListener('load', () => { setTimeout(() => { document.getElementById('loader').classList.add('hidden') }, 1200) });
-
-/* ========== SCROLL PROGRESS ========== */
-const scrollProgress = document.getElementById('scroll-progress');
-window.addEventListener('scroll', () => { const h = document.documentElement; const pct = (h.scrollTop / (h.scrollHeight - h.clientHeight)) * 100; scrollProgress.style.width = pct + '%' }, { passive: true });
-
-/* ========== CURSOR GLOW ========== */
-const glow = document.getElementById('cursor-glow');
-let mouseX = 0, mouseY = 0;
-document.addEventListener('mousemove', e => { mouseX = e.clientX; mouseY = e.clientY; glow.style.left = (mouseX - 300) + 'px'; glow.style.top = (mouseY - 300) + 'px'; glow.style.opacity = '1' });
-document.addEventListener('mouseleave', () => { glow.style.opacity = '0' });
-
-/* ========== PARTICLES ========== */
-const canvas = document.getElementById('particles');
-const ctx = canvas.getContext('2d');
-let particles = [];
-let preciousMode = false;
-const NORMAL_COUNT = 65;
-const PRECIOUS_COUNT = 200;
-
-function resizeCanvas() { canvas.width = window.innerWidth; canvas.height = window.innerHeight }
-resizeCanvas();
-window.addEventListener('resize', resizeCanvas);
-
-function getParticleColor() {
- const s = getComputedStyle(document.documentElement);
- return s.getPropertyValue('--particle-color').trim() || '232,130,12'
-}
-
-class Particle {
- constructor(burst) { this.reset(burst) }
- reset(burst) {
- if (burst) {
- this.x = window.innerWidth / 2 + (Math.random() - 0.5) * 100;
- this.y = window.innerHeight / 2 + (Math.random() - 0.5) * 100;
- this.vx = (Math.random() - 0.5) * 6;
- this.vy = (Math.random() - 0.5) * 6;
- this.size = Math.random() * 3 + 1;
- this.life = Math.random() * 120 + 120;
- } else {
- this.x = Math.random() * canvas.width;
- this.y = Math.random() * canvas.height;
- this.vx = (Math.random() - 0.5) * 0.8;
- this.vy = (Math.random() - 0.5) * 0.8;
- this.size = Math.random() * 2 + 0.5;
- this.life = Infinity;
- }
- this.baseVx = this.vx; this.baseVy = this.vy;
- }
- update() {
- const dx = this.x - mouseX;
- const dy = this.y - mouseY;
- const dist = Math.sqrt(dx * dx + dy * dy);
- const repulse = preciousMode ? 160 : 100;
- if (dist < repulse && dist > 0) {
- const force = (repulse - dist) / repulse;
- const angle = Math.atan2(dy, dx);
- this.vx += Math.cos(angle) * force * (preciousMode ? 3 : 1.5);
- this.vy += Math.sin(angle) * force * (preciousMode ? 3 : 1.5);
- }
- this.vx += (this.baseVx - this.vx) * 0.02;
- this.vy += (this.baseVy - this.vy) * 0.02;
- this.x += this.vx; this.y += this.vy;
- if (this.life !== Infinity) { this.life--; if (this.life <= 0) return false }
- if (this.x < 0) this.x = canvas.width; if (this.x > canvas.width) this.x = 0;
- if (this.y < 0) this.y = canvas.height; if (this.y > canvas.height) this.y = 0;
- return true;
- }
- draw(color) {
- const alpha = this.life === Infinity ? 0.6 : Math.min(this.life / 60, 0.8);
- ctx.beginPath(); ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
- ctx.fillStyle = `rgba(${color},${alpha})`; ctx.fill();
- }
-}
-
-function initParticles() { particles = []; for (let i = 0; i < NORMAL_COUNT; i++) particles.push(new Particle(false)) }
-initParticles();
-
-function animateParticles() {
- ctx.clearRect(0, 0, canvas.width, canvas.height);
- const color = getParticleColor();
- particles = particles.filter(p => p.update());
- const maxDist = preciousMode ? 150 : 120;
- for (let i = 0; i < particles.length; i++) {
- for (let j = i + 1; j < particles.length; j++) {
- const dx = particles[i].x - particles[j].x;
- const dy = particles[i].y - particles[j].y;
- const dist = Math.sqrt(dx * dx + dy * dy);
- if (dist < maxDist) {
- const alpha = (1 - dist / maxDist) * (preciousMode ? 0.4 : 0.2);
- ctx.beginPath(); ctx.moveTo(particles[i].x, particles[i].y);
- ctx.lineTo(particles[j].x, particles[j].y);
- ctx.strokeStyle = `rgba(${color},${alpha})`; ctx.lineWidth = 0.6; ctx.stroke();
- }
- }
- particles[i].draw(color);
- }
- // In precious mode, maintain particle count
- if (preciousMode && particles.length < PRECIOUS_COUNT) {
- for (let i = 0; i < 3; i++) particles.push(new Particle(true));
- }
- requestAnimationFrame(animateParticles);
-}
-animateParticles();
-
-/* ========== PRECIOUS TOGGLE ========== */
-const preciousToggle = document.querySelector('.precious-toggle');
-const preciousBtn = preciousToggle.querySelector('.precious-toggle-btn');
-
-function fireSparkBurst() {
- const color = getParticleColor();
- // Flash
- const flash = document.createElement('div');
- flash.className = 'precious-flash';
- document.body.appendChild(flash);
- setTimeout(() => flash.remove(), 800);
- // Sparks
- for (let i = 0; i < 40; i++) {
- const spark = document.createElement('div');
- spark.className = 'spark';
- spark.style.background = `rgba(${color},1)`;
- spark.style.left = window.innerWidth / 2 + 'px';
- spark.style.top = window.innerHeight / 2 + 'px';
- spark.style.setProperty('--sx', (Math.random() - 0.5) * 600 + 'px');
- spark.style.setProperty('--sy', (Math.random() - 0.5) * 600 + 'px');
- spark.style.width = Math.random() * 5 + 2 + 'px';
- spark.style.height = spark.style.width;
- document.body.appendChild(spark);
- setTimeout(() => spark.remove(), 1200);
- }
-}
-
-preciousToggle.addEventListener('click', () => {
- preciousMode = !preciousMode;
- preciousToggle.classList.toggle('active', preciousMode);
- preciousToggle.setAttribute('aria-checked', preciousMode);
- document.body.classList.toggle('precious-active', preciousMode);
-
- if (preciousMode) {
- fireSparkBurst();
- // Flood particles
- for (let i = particles.length; i < PRECIOUS_COUNT; i++) particles.push(new Particle(true));
- }
-});
-preciousToggle.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); preciousToggle.click() } });
-
-/* ========== MAGNETIC BUTTONS ========== */
-document.querySelectorAll('.btn').forEach(btn => {
- btn.addEventListener('mousemove', e => {
- const rect = btn.getBoundingClientRect();
- const x = e.clientX - rect.left - rect.width / 2;
- const y = e.clientY - rect.top - rect.height / 2;
- btn.style.transform = `translate(${x * 0.15}px,${y * 0.15}px)`;
- });
- btn.addEventListener('mouseleave', () => { btn.style.transform = '' });
- btn.addEventListener('click', e => {
- const ripple = document.createElement('span');
- ripple.className = 'ripple';
- const rect = btn.getBoundingClientRect();
- ripple.style.left = (e.clientX - rect.left) + 'px';
- ripple.style.top = (e.clientY - rect.top) + 'px';
- btn.appendChild(ripple);
- setTimeout(() => ripple.remove(), 600);
- });
-});
-
-/* ========== CARD PARALLAX TILT ========== */
-document.querySelectorAll('.cap-card').forEach(card => {
- card.addEventListener('mousemove', e => {
- const rect = card.getBoundingClientRect();
- const x = (e.clientX - rect.left) / rect.width - 0.5;
- const y = (e.clientY - rect.top) / rect.height - 0.5;
- card.style.transform = `translateY(-6px) perspective(1000px) rotateX(${-y * 6}deg) rotateY(${x * 6}deg)`;
- });
- card.addEventListener('mouseleave', () => { card.style.transform = '' });
-});
-
-/* ========== NAV SCROLL ========== */
-const nav = document.querySelector('.nav');
-const heroSection = document.querySelector('.hero');
-const navObserver = new IntersectionObserver(entries => {
- entries.forEach(entry => { nav.classList.toggle('scrolled', !entry.isIntersecting) });
-}, { threshold: 0.1 });
-navObserver.observe(heroSection);
-
-/* ========== MOBILE MENU ========== */
-const hamburger = document.querySelector('.hamburger');
-const mobileMenu = document.querySelector('.mobile-menu');
-hamburger.addEventListener('click', () => {
- const open = mobileMenu.classList.toggle('open');
- hamburger.classList.toggle('active');
- hamburger.setAttribute('aria-expanded', open);
- document.body.style.overflow = open ? 'hidden' : '';
-});
-mobileMenu.querySelectorAll('a').forEach(a => {
- a.addEventListener('click', () => {
- mobileMenu.classList.remove('open');
- hamburger.classList.remove('active');
- hamburger.setAttribute('aria-expanded', 'false');
- document.body.style.overflow = '';
- });
-});
-document.addEventListener('keydown', e => {
- if (e.key === 'Escape' && mobileMenu.classList.contains('open')) {
- mobileMenu.classList.remove('open'); hamburger.classList.remove('active');
- hamburger.setAttribute('aria-expanded', 'false'); document.body.style.overflow = '';
- }
-});
-
-/* ========== SCROLL REVEAL ========== */
-const revealElements = document.querySelectorAll('.reveal');
-const revealObserver = new IntersectionObserver(entries => {
- entries.forEach(entry => {
- if (entry.isIntersecting) { entry.target.classList.add('visible'); revealObserver.unobserve(entry.target) }
- });
-}, { threshold: 0.1, rootMargin: '0px 0px -60px 0px' });
-revealElements.forEach(el => revealObserver.observe(el));
-function revealFallback() {
- revealElements.forEach(el => {
- const rect = el.getBoundingClientRect();
- if (rect.top < window.innerHeight - 60) el.classList.add('visible');
- });
-}
-window.addEventListener('scroll', revealFallback, { passive: true });
-
-/* ========== COUNTER ANIMATION ========== */
-const counters = document.querySelectorAll('.stat-number');
-const counterObserver = new IntersectionObserver(entries => {
- entries.forEach(entry => {
- if (entry.isIntersecting) {
- const el = entry.target;
- const target = parseInt(el.dataset.target);
- const suffix = el.dataset.suffix || '';
- let current = 0;
- const duration = 2000;
- const step = target / (duration / 16);
- function tick() {
- current += step;
- if (current >= target) { el.textContent = target + suffix; return }
- el.textContent = Math.floor(current) + suffix;
- requestAnimationFrame(tick);
- }
- tick();
- counterObserver.unobserve(el);
- }
- });
-}, { threshold: 0.5 });
-counters.forEach(c => counterObserver.observe(c));
-
-/* ========== THEME SWITCHER ========== */
-const themeDots = document.querySelectorAll('.theme-dot');
-const savedTheme = localStorage.getItem('lc-theme') || 'lullaby';
-document.documentElement.setAttribute('data-theme', savedTheme);
-themeDots.forEach(dot => {
- dot.classList.toggle('active', dot.dataset.theme === savedTheme);
- dot.setAttribute('aria-checked', dot.dataset.theme === savedTheme);
- dot.addEventListener('click', () => {
- const theme = dot.dataset.theme;
- document.documentElement.setAttribute('data-theme', theme);
- localStorage.setItem('lc-theme', theme);
- themeDots.forEach(d => { d.classList.remove('active'); d.setAttribute('aria-checked', 'false') });
- dot.classList.add('active'); dot.setAttribute('aria-checked', 'true');
- });
- dot.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); dot.click() } });
-});
+// Particles
+var cv=document.getElementById('cv');var ctx=cv.getContext('2d');var W,H;
+function resize(){W=cv.width=innerWidth;H=cv.height=innerHeight}resize();
+window.addEventListener('resize',resize);
+var pts=[];for(var i=0;i<45;i++)pts.push({x:Math.random()*innerWidth,y:Math.random()*innerHeight,vx:(Math.random()-.5)*.4,vy:(Math.random()-.5)*.4,r:Math.random()*2+1});
+var mx=innerWidth/2,my=innerHeight/2;
+document.addEventListener('mousemove',function(e){mx=e.clientX;my=e.clientY});
+function draw(){ctx.clearRect(0,0,W,H);var cs=getComputedStyle(document.documentElement);var pc=cs.getPropertyValue('--particle-color').trim()||'230,172,160';pts.forEach(function(p){p.x+=p.vx;p.y+=p.vy;if(p.x<0||p.x>W)p.vx*=-1;if(p.y<0||p.y>H)p.vy*=-1;var dx=p.x-mx,dy=p.y-my,dist=Math.sqrt(dx*dx+dy*dy);if(dist<100){p.x+=dx/dist*1.5;p.y+=dy/dist*1.5}ctx.beginPath();ctx.arc(p.x,p.y,p.r,0,Math.PI*2);ctx.fillStyle='rgba('+pc+',0.25)';ctx.fill()});for(var a=0;a<pts.length;a++)for(var b=a+1;b<pts.length;b++){var dx=pts[a].x-pts[b].x,dy=pts[a].y-pts[b].y,d=Math.sqrt(dx*dx+dy*dy);if(d<120){ctx.beginPath();ctx.moveTo(pts[a].x,pts[a].y);ctx.lineTo(pts[b].x,pts[b].y);ctx.strokeStyle='rgba('+pc+','+(0.08*(1-d/120))+')';ctx.stroke()}}requestAnimationFrame(draw)}
+draw();
 </script>
 </body>
 </html>
